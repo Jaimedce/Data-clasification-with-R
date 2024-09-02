@@ -1,0 +1,1094 @@
+edad	EstadoCivil	Direccion	Ingresos	tipovehiculo	Educacion	Anostrabajando	Satisfaclab	Personashogar	Baja
+55	Casado	12	50-70	Lujo	Basicos	Mas de 15	Muy satisfecho	4	No
+56	Soltero	29	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+28	Casado	9	25-49	Economico	Diplomado	Menos de 5	Neutro	3	No
+24	Casado	4	25-49	Economico	Licenciado	Menos de 5	Muy insatisfecho	3	No
+25	Soltero	2	-25	Economico	Bachillerato	5 a 15	Algo insatisfecho	2	No
+45	Casado	9	50-70	Estandar	Diplomado	5 a 15	Algo insatisfecho	2	No
+42	Soltero	19	25-49	Estandar	Diplomado	5 a 15	Algo insatisfecho	1	No
+35	Soltero	15	50-70	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+46	Soltero	26	-25	Economico	Basicos	5 a 15	Muy satisfecho	2	No
+34	Casado	0	70	Lujo	Diplomado	5 a 15	Algo satisfecho	6	No
+55	Casado	17	50-70	Lujo	Diplomado	Menos de 5	Neutro	2	No
+28	Soltero	3	-25	Economico	Licenciado	Menos de 5	Muy satisfecho	1	No
+31	Casado	9	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	4	No
+42	Soltero	8	70	Lujo	Diplomado	Menos de 5	Muy insatisfecho	1	No
+35	Soltero	8	50-70	Lujo	Diplomado	5 a 15	Algo satisfecho	3	No
+52	Casado	24	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	2	No
+21	Casado	1	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	7	No
+32	Soltero	0	-25	Economico	Basicos	Menos de 5	Algo satisfecho	2	No
+42	Soltero	9	25-49	Economico	Diplomado	Mas de 15	Neutro	1	No
+40	Casado	12	50-70	Estandar	Bachillerato	Mas de 15	Muy satisfecho	4	No
+30	Soltero	3	-25	Economico	Basicos	Menos de 5	Neutro	1	No
+48	Soltero	14	-25	Economico	Diplomado	Menos de 5	Neutro	1	No
+39	Casado	17	-25	Economico	Licenciado	Menos de 5	Neutro	5	No
+24	Soltero	5	-25	Economico	Bachillerato	Menos de 5	Neutro	1	No
+56	Soltero	7	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	1	No
+24	Soltero	2	-25	Economico	Bachillerato	Menos de 5	Neutro	1	No
+41	Soltero	13	50-70	Estandar	Diplomado	Mas de 15	Neutro	1	No
+57	Casado	30	70	Lujo	Bachillerato	Mas de 15	Algo insatisfecho	3	No
+32	Soltero	2	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	6	No
+24	Soltero	5	-25	Economico	Licenciado	Menos de 5	Algo insatisfecho	1	No
+49	Casado	12	25-49	Estandar	Basicos	Menos de 5	Neutro	3	No
+21	Soltero	0	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	2	No
+33	Casado	12	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	5	No
+56	Soltero	12	50-70	Economico	Bachillerato	Mas de 15	Neutro	1	No
+54	Casado	16	70	Lujo	Basicos	Mas de 15	Algo insatisfecho	6	No
+44	Casado	8	25-49	Economico	Licenciado	5 a 15	Neutro	2	No
+20	Soltero	1	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+47	Soltero	15	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	No
+48	Soltero	15	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	1	No
+25	Soltero	2	50-70	Lujo	Licenciado	Menos de 5	Algo insatisfecho	3	No
+52	Soltero	13	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	1	No
+38	Casado	0	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	2	No
+65	Casado	5	-25	Economico	Bachillerato	5 a 15	Neutro	2	No
+28	Casado	2	25-49	Estandar	Diplomado	Menos de 5	Neutro	2	No
+51	Casado	28	50-70	Estandar	Bachillerato	5 a 15	Neutro	4	No
+61	Casado	34	70	Lujo	Bachillerato	Mas de 15	Neutro	2	No
+46	Casado	10	70	Lujo	Tercer ciclo	Mas de 15	Muy satisfecho	3	No
+43	Casado	8	70	Lujo	Bachillerato	Mas de 15	Neutro	2	No
+28	Soltero	7	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	1	No
+39	Soltero	6	50-70	Estandar	Diplomado	5 a 15	Algo insatisfecho	1	No
+37	Soltero	16	-25	Economico	Diplomado	5 a 15	Muy insatisfecho	2	No
+59	Casado	35	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	2	No
+55	Soltero	29	50-70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	No
+30	Casado	0	-25	Economico	Diplomado	Menos de 5	Algo satisfecho	4	No
+40	Casado	5	25-49	Estandar	Diplomado	Mas de 15	Muy satisfecho	4	No
+55	Soltero	18	70	Estandar	Licenciado	Menos de 5	Algo insatisfecho	1	No
+48	Casado	0	70	Estandar	Bachillerato	5 a 15	Neutro	4	No
+48	Casado	4	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	4	No
+29	Casado	2	25-49	Economico	Bachillerato	5 a 15	Algo insatisfecho	2	No
+30	Casado	10	25-49	Economico	Basicos	Menos de 5	Algo insatisfecho	4	No
+48	Soltero	7	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	No
+51	Casado	24	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	No
+40	Casado	15	50-70	Estandar	Licenciado	5 a 15	Neutro	2	No
+66	Casado	34	25-49	Estandar	Basicos	Menos de 5	Algo satisfecho	4	No
+25	Soltero	6	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+47	Soltero	1	25-49	Economico	Diplomado	5 a 15	Neutro	5	No
+59	Casado	18	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	No
+25	Casado	5	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	No
+63	Casado	31	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	No
+42	Soltero	9	25-49	Estandar	Basicos	5 a 15	Neutro	3	No
+26	Soltero	6	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	3	No
+25	Soltero	6	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	2	No
+53	Soltero	23	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	No
+32	Casado	1	25-49	Estandar	Bachillerato	Menos de 5	Neutro	2	No
+46	Soltero	7	70	Lujo	Bachillerato	5 a 15	Algo insatisfecho	3	No
+44	Casado	5	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	6	No
+37	Soltero	15	50-70	Estandar	Licenciado	5 a 15	Muy insatisfecho	6	No
+59	Casado	15	25-49	Estandar	Diplomado	5 a 15	Neutro	4	No
+38	Soltero	8	25-49	Estandar	Licenciado	Menos de 5	Muy insatisfecho	2	No
+56	Soltero	35	25-49	Estandar	Diplomado	5 a 15	Neutro	1	No
+48	Casado	19	-25	Economico	Basicos	5 a 15	Algo satisfecho	2	No
+28	Casado	2	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	3	No
+20	Casado	0	-25	Economico	Bachillerato	Menos de 5	Algo satisfecho	8	No
+39	Soltero	12	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	No
+47	Casado	13	70	Lujo	Licenciado	5 a 15	Algo insatisfecho	3	No
+36	Soltero	2	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	No
+61	Soltero	17	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	1	No
+38	Casado	4	50-70	Estandar	Diplomado	5 a 15	Algo insatisfecho	4	No
+33	Casado	10	25-49	Estandar	Licenciado	Menos de 5	Neutro	5	No
+46	Casado	12	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	No
+29	Soltero	5	50-70	Lujo	Licenciado	Menos de 5	Neutro	1	No
+38	Casado	7	50-70	Estandar	Diplomado	Menos de 5	Muy insatisfecho	6	No
+38	Soltero	1	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	No
+39	Casado	1	25-49	Economico	Basicos	5 a 15	Neutro	2	No
+34	Casado	3	50-70	Lujo	Tercer ciclo	Menos de 5	Algo satisfecho	7	No
+60	Casado	38	70	Lujo	Basicos	Mas de 15	Neutro	2	No
+32	Soltero	7	25-49	Economico	Licenciado	Menos de 5	Algo satisfecho	2	No
+35	Soltero	7	25-49	Estandar	Diplomado	5 a 15	Algo satisfecho	1	No
+26	Soltero	1	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+44	Soltero	13	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	No
+41	Soltero	9	25-49	Economico	Bachillerato	Menos de 5	Neutro	1	No
+26	Casado	7	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	3	No
+34	Casado	15	25-49	Estandar	Licenciado	5 a 15	Muy satisfecho	5	No
+32	Casado	5	25-49	Estandar	Basicos	5 a 15	Neutro	4	No
+35	Soltero	12	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	No
+22	Casado	1	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	4	No
+25	Soltero	0	25-49	Economico	Diplomado	Menos de 5	Muy satisfecho	2	No
+42	Casado	13	50-70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	4	No
+35	Soltero	4	50-70	Estandar	Bachillerato	5 a 15	Neutro	1	No
+22	Soltero	3	25-49	Estandar	Basicos	5 a 15	Neutro	2	No
+55	Soltero	22	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	3	No
+63	Soltero	43	-25	Economico	Basicos	Mas de 15	Neutro	1	No
+40	Casado	21	50-70	Lujo	Diplomado	5 a 15	Algo satisfecho	2	No
+29	Soltero	10	50-70	Estandar	Basicos	5 a 15	Algo insatisfecho	1	No
+32	Casado	6	50-70	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+47	Soltero	18	70	Lujo	Licenciado	5 a 15	Algo insatisfecho	5	No
+42	Soltero	16	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	No
+29	Casado	10	25-49	Estandar	Diplomado	5 a 15	Algo insatisfecho	4	No
+28	Soltero	2	25-49	Economico	Basicos	Menos de 5	Algo insatisfecho	1	No
+47	Casado	24	50-70	Estandar	Diplomado	5 a 15	Algo satisfecho	5	No
+45	Casado	14	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	2	No
+24	Soltero	0	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	No
+41	Casado	13	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	4	No
+18	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	2	No
+42	Soltero	23	70	Lujo	Diplomado	Mas de 15	Neutro	1	No
+45	Casado	25	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	2	No
+34	Casado	2	25-49	Estandar	Tercer ciclo	5 a 15	Muy insatisfecho	6	No
+38	Casado	1	70	Lujo	Diplomado	5 a 15	Algo satisfecho	4	No
+66	Soltero	21	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+31	Soltero	5	50-70	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+31	Soltero	4	25-49	Economico	Bachillerato	Menos de 5	Algo satisfecho	2	No
+36	Casado	1	50-70	Estandar	Licenciado	5 a 15	Muy satisfecho	6	No
+34	Casado	14	70	Lujo	Licenciado	5 a 15	Algo insatisfecho	4	No
+37	Casado	6	25-49	Estandar	Diplomado	5 a 15	Neutro	5	No
+34	Casado	11	50-70	Estandar	Basicos	5 a 15	Muy satisfecho	2	No
+36	Casado	7	70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	2	No
+42	Soltero	17	25-49	Estandar	Licenciado	5 a 15	Algo satisfecho	1	No
+63	Soltero	12	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+30	Casado	5	50-70	Estandar	Licenciado	5 a 15	Muy satisfecho	4	No
+40	Soltero	12	70	Lujo	Bachillerato	Menos de 5	Muy satisfecho	1	No
+61	Soltero	27	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	1	No
+25	Casado	3	-25	Economico	Basicos	5 a 15	Algo insatisfecho	3	No
+35	Soltero	11	70	Lujo	Tercer ciclo	5 a 15	Neutro	1	No
+51	Casado	4	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+39	Casado	0	25-49	Economico	Basicos	Menos de 5	Algo satisfecho	2	No
+54	Casado	33	50-70	Lujo	Basicos	5 a 15	Muy satisfecho	2	No
+54	Soltero	21	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	No
+28	Soltero	6	25-49	Estandar	Bachillerato	5 a 15	Neutro	4	No
+40	Casado	8	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+39	Casado	15	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	3	No
+35	Soltero	8	50-70	Estandar	Diplomado	5 a 15	Algo satisfecho	1	No
+45	Casado	17	70	Lujo	Diplomado	5 a 15	Algo satisfecho	2	No
+48	Casado	17	50-70	Estandar	Licenciado	Mas de 15	Muy satisfecho	6	No
+71	Soltero	50	50-70	Lujo	Basicos	Mas de 15	Neutro	1	No
+31	Soltero	11	25-49	Estandar	Bachillerato	Menos de 5	Algo satisfecho	1	No
+50	Casado	16	70	Lujo	Tercer ciclo	Mas de 15	Muy insatisfecho	2	No
+55	Soltero	13	70	Lujo	Tercer ciclo	Mas de 15	Muy satisfecho	2	No
+32	Casado	7	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	4	No
+51	Soltero	15	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	1	No
+52	Soltero	18	25-49	Estandar	Bachillerato	Mas de 15	Algo satisfecho	1	No
+46	Soltero	7	25-49	Estandar	Diplomado	Menos de 5	Neutro	1	No
+49	Soltero	30	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	No
+48	Soltero	23	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	2	No
+23	Soltero	0	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	1	No
+52	Casado	24	50-70	Lujo	Basicos	Mas de 15	Algo satisfecho	3	No
+50	Soltero	19	50-70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	No
+60	Casado	35	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	No
+21	Soltero	1	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	4	No
+36	Casado	1	25-49	Estandar	Tercer ciclo	5 a 15	Neutro	2	No
+49	Soltero	8	50-70	Estandar	Basicos	5 a 15	Neutro	1	No
+48	Casado	25	70	Lujo	Licenciado	Mas de 15	Neutro	6	No
+25	Soltero	4	50-70	Lujo	Diplomado	Menos de 5	Neutro	3	No
+35	Casado	4	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	3	No
+49	Soltero	25	70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	1	No
+47	Casado	11	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	3	No
+27	Soltero	5	25-49	Economico	Bachillerato	5 a 15	Neutro	3	No
+34	Casado	11	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	7	No
+36	Casado	17	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	5	No
+50	Casado	22	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+29	Soltero	2	25-49	Economico	Tercer ciclo	Menos de 5	Algo satisfecho	1	No
+33	Casado	13	-25	Economico	Basicos	Menos de 5	Neutro	3	No
+42	Soltero	13	25-49	Economico	Basicos	5 a 15	Neutro	1	No
+33	Casado	13	-25	Economico	Basicos	5 a 15	Neutro	4	No
+30	Casado	6	25-49	Estandar	Diplomado	5 a 15	Muy insatisfecho	3	No
+51	Soltero	32	70	Lujo	Tercer ciclo	Mas de 15	Muy satisfecho	1	No
+27	Soltero	3	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	No
+29	Soltero	7	-25	Economico	Diplomado	5 a 15	Algo satisfecho	1	No
+32	Soltero	3	25-49	Estandar	Licenciado	5 a 15	Muy insatisfecho	1	No
+44	Casado	5	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	4	No
+34	Casado	15	70	Lujo	Licenciado	5 a 15	Muy satisfecho	5	No
+20	Casado	1	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	2	No
+49	Soltero	17	70	Lujo	Licenciado	Mas de 15	Neutro	1	No
+34	Soltero	14	70	Lujo	Licenciado	5 a 15	Muy satisfecho	1	No
+34	Casado	9	25-49	Economico	Bachillerato	5 a 15	Neutro	2	No
+31	Soltero	10	50-70	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	No
+39	Casado	20	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	2	No
+33	Casado	14	25-49	Estandar	Licenciado	Menos de 5	Neutro	6	No
+54	Casado	29	50-70	Lujo	Basicos	Mas de 15	Algo insatisfecho	6	No
+31	Soltero	5	50-70	Estandar	Licenciado	Menos de 5	Algo insatisfecho	1	No
+34	Soltero	6	50-70	Lujo	Basicos	5 a 15	Neutro	2	No
+29	Casado	2	25-49	Economico	Licenciado	Menos de 5	Algo satisfecho	4	No
+24	Soltero	2	-25	Economico	Basicos	Menos de 5	Algo satisfecho	1	No
+49	Casado	22	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	6	No
+19	Casado	0	-25	Economico	Basicos	Menos de 5	Algo satisfecho	3	No
+49	Soltero	5	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	1	No
+40	Soltero	16	50-70	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	No
+28	Soltero	0	50-70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	1	No
+36	Casado	6	70	Lujo	Diplomado	5 a 15	Muy satisfecho	5	No
+46	Soltero	6	25-49	Estandar	Licenciado	Mas de 15	Muy satisfecho	1	No
+24	Casado	3	25-49	Economico	Diplomado	Menos de 5	Algo insatisfecho	6	No
+38	Casado	3	70	Lujo	Diplomado	5 a 15	Neutro	4	No
+31	Soltero	5	25-49	Economico	Diplomado	5 a 15	Muy satisfecho	1	No
+37	Soltero	7	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	No
+58	Soltero	1	-25	Economico	Tercer ciclo	Menos de 5	Neutro	1	No
+37	Soltero	6	25-49	Estandar	Tercer ciclo	5 a 15	Neutro	2	No
+73	Soltero	25	-25	Economico	Basicos	Mas de 15	Neutro	1	No
+44	Soltero	15	25-49	Economico	Bachillerato	5 a 15	Neutro	1	No
+66	Soltero	1	50-70	Lujo	Bachillerato	5 a 15	Neutro	1	No
+50	Soltero	4	50-70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	No
+30	Soltero	10	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	1	No
+41	Soltero	7	25-49	Economico	Diplomado	5 a 15	Muy insatisfecho	2	No
+57	Soltero	13	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+71	Soltero	11	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	1	No
+53	Casado	26	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	2	No
+38	Soltero	15	50-70	Estandar	Bachillerato	5 a 15	Neutro	1	No
+46	Soltero	17	70	Lujo	Licenciado	5 a 15	Algo insatisfecho	1	No
+61	Soltero	32	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	2	No
+48	Casado	0	25-49	Economico	Basicos	Menos de 5	Neutro	5	No
+35	Casado	14	-25	Economico	Tercer ciclo	5 a 15	Muy satisfecho	4	No
+55	Casado	1	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	3	No
+51	Soltero	10	70	Lujo	Bachillerato	Mas de 15	Neutro	2	No
+45	Soltero	10	50-70	Lujo	Bachillerato	Mas de 15	Algo insatisfecho	1	No
+50	Casado	29	70	Lujo	Diplomado	5 a 15	Algo satisfecho	2	No
+36	Soltero	11	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+44	Casado	13	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	3	No
+38	Soltero	11	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+50	Soltero	8	50-70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	No
+37	Soltero	9	50-70	Estandar	Diplomado	5 a 15	Algo satisfecho	1	No
+48	Soltero	11	70	Lujo	Licenciado	Mas de 15	Muy insatisfecho	1	No
+46	Casado	5	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	2	No
+51	Soltero	10	50-70	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	No
+22	Casado	2	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	7	No
+72	Soltero	20	-25	Economico	Basicos	Mas de 15	Muy satisfecho	1	No
+61	Soltero	12	-25	Economico	Bachillerato	5 a 15	Neutro	1	No
+40	Casado	19	25-49	Economico	Diplomado	Menos de 5	Neutro	4	No
+49	Soltero	27	25-49	Estandar	Basicos	Mas de 15	Algo satisfecho	1	No
+43	Casado	15	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	4	No
+26	Soltero	1	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	1	No
+41	Casado	18	70	Lujo	Basicos	Mas de 15	Algo insatisfecho	4	No
+44	Casado	9	25-49	Estandar	Basicos	5 a 15	Neutro	2	No
+27	Soltero	4	70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	2	No
+48	Soltero	16	70	Lujo	Licenciado	Menos de 5	Algo insatisfecho	1	No
+44	Casado	19	25-49	Estandar	Diplomado	5 a 15	Algo insatisfecho	4	No
+53	Soltero	16	70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	No
+41	Soltero	14	50-70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	No
+63	Soltero	23	70	Lujo	Bachillerato	Mas de 15	Neutro	1	No
+29	Casado	3	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	3	No
+39	Soltero	6	70	Lujo	Bachillerato	Mas de 15	Neutro	1	No
+39	Casado	1	25-49	Economico	Diplomado	5 a 15	Neutro	2	No
+36	Soltero	15	70	Lujo	Licenciado	5 a 15	Neutro	1	No
+28	Casado	4	50-70	Lujo	Basicos	5 a 15	Muy satisfecho	6	No
+54	Soltero	5	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+36	Casado	8	70	Lujo	Diplomado	Mas de 15	Neutro	4	No
+57	Soltero	13	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	No
+41	Soltero	16	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	1	SI
+31	Casado	3	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	7	SI
+39	Casado	7	70	Lujo	Licenciado	5 a 15	Neutro	2	SI
+54	Soltero	23	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	1	SI
+49	Soltero	20	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	2	SI
+54	Casado	31	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	SI
+36	Casado	5	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	3	SI
+53	Casado	29	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	4	SI
+60	Casado	8	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	2	SI
+29	Casado	9	25-49	Economico	Basicos	5 a 15	Neutro	6	SI
+50	Casado	0	-25	Economico	Basicos	5 a 15	Algo insatisfecho	2	SI
+62	Casado	7	50-70	Estandar	Bachillerato	5 a 15	Neutro	2	SI
+44	Soltero	16	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	1	No
+65	Casado	35	70	Lujo	Basicos	Mas de 15	Neutro	2	SI
+56	Soltero	23	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+32	Casado	2	25-49	Estandar	Licenciado	Menos de 5	Muy insatisfecho	4	No
+40	Soltero	1	70	Lujo	Licenciado	5 a 15	Algo insatisfecho	1	SI
+20	Casado	0	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	4	No
+59	Casado	1	50-70	Economico	Diplomado	Mas de 15	Muy satisfecho	3	No
+58	Soltero	7	-25	Economico	Bachillerato	Mas de 15	Algo satisfecho	1	SI
+37	Casado	2	70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	3	SI
+52	Soltero	1	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	SI
+29	Casado	3	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	6	SI
+48	Casado	18	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	SI
+25	Soltero	3	-25	Economico	Basicos	Menos de 5	Muy satisfecho	1	SI
+35	Soltero	7	70	Lujo	Licenciado	Menos de 5	Neutro	1	SI
+28	Casado	1	70	Lujo	Tercer ciclo	Menos de 5	Algo satisfecho	5	SI
+42	Casado	14	50-70	Lujo	Tercer ciclo	5 a 15	Algo satisfecho	2	SI
+53	Casado	1	70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	SI
+67	Casado	16	-25	Economico	Basicos	Menos de 5	Neutro	2	SI
+31	Casado	7	70	Lujo	Diplomado	5 a 15	Algo satisfecho	2	SI
+43	Soltero	13	50-70	Lujo	Basicos	Mas de 15	Algo insatisfecho	1	SI
+60	Casado	24	50-70	Estandar	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+41	Soltero	18	70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	SI
+62	Casado	6	50-70	Lujo	Licenciado	5 a 15	Algo satisfecho	2	SI
+37	Soltero	7	25-49	Economico	Basicos	Menos de 5	Muy insatisfecho	2	SI
+37	Soltero	6	25-49	Estandar	Licenciado	5 a 15	Neutro	4	SI
+19	Casado	0	-25	Economico	Tercer ciclo	Menos de 5	Neutro	5	No
+63	Casado	34	50-70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	SI
+41	Soltero	15	50-70	Lujo	Diplomado	Mas de 15	Algo insatisfecho	4	No
+59	Casado	40	50-70	Estandar	Basicos	Menos de 5	Neutro	2	SI
+70	Soltero	26	-25	Economico	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+44	Casado	8	25-49	Estandar	Diplomado	5 a 15	Neutro	3	SI
+53	Soltero	13	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	SI
+37	Casado	7	25-49	Estandar	Basicos	5 a 15	Neutro	4	SI
+64	Casado	43	-25	Economico	Bachillerato	5 a 15	Neutro	2	SI
+56	Casado	7	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	SI
+31	Casado	3	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	3	SI
+29	Casado	10	25-49	Economico	Diplomado	Menos de 5	Algo insatisfecho	3	SI
+51	Casado	23	70	Lujo	Diplomado	Menos de 5	Muy insatisfecho	4	SI
+25	Casado	2	-25	Economico	Basicos	5 a 15	Neutro	5	SI
+44	Casado	3	70	Lujo	Licenciado	5 a 15	Muy satisfecho	2	SI
+35	Soltero	14	25-49	Estandar	Bachillerato	Menos de 5	Algo satisfecho	1	SI
+29	Soltero	0	25-49	Economico	Diplomado	5 a 15	Neutro	1	SI
+60	Casado	8	70	Lujo	Licenciado	Mas de 15	Neutro	4	SI
+49	Casado	28	25-49	Estandar	Licenciado	Menos de 5	Muy insatisfecho	2	SI
+21	Soltero	2	25-49	Economico	Diplomado	Menos de 5	Neutro	4	SI
+63	Soltero	6	-25	Economico	Bachillerato	Mas de 15	Algo satisfecho	1	SI
+20	Soltero	1	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+33	Soltero	11	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	1	SI
+61	Soltero	28	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	SI
+53	Casado	32	25-49	Estandar	Diplomado	5 a 15	Neutro	4	SI
+35	Soltero	1	25-49	Estandar	Diplomado	5 a 15	Muy satisfecho	1	SI
+46	Soltero	2	25-49	Estandar	Basicos	Mas de 15	Algo satisfecho	1	SI
+23	Soltero	1	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	1	SI
+47	Soltero	12	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+49	Casado	29	70	Lujo	Bachillerato	Menos de 5	Algo satisfecho	2	SI
+43	Soltero	6	70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	1	SI
+64	Soltero	3	-25	Economico	Licenciado	Mas de 15	Algo satisfecho	1	SI
+53	Casado	19	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	4	SI
+32	Casado	5	-25	Economico	Bachillerato	Menos de 5	Neutro	4	No
+28	Casado	9	25-49	Estandar	Licenciado	Menos de 5	Neutro	5	No
+25	Casado	6	25-49	Economico	Licenciado	Menos de 5	Muy insatisfecho	4	SI
+31	Casado	11	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	4	SI
+46	Soltero	6	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	SI
+34	Casado	14	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	5	SI
+26	Casado	1	-25	Economico	Basicos	5 a 15	Neutro	5	SI
+42	Casado	23	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	6	SI
+58	Casado	29	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	4	SI
+55	Soltero	29	70	Lujo	Licenciado	Mas de 15	Neutro	1	SI
+63	Casado	26	70	Lujo	Bachillerato	Mas de 15	Neutro	2	SI
+59	Casado	11	70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	SI
+43	Casado	14	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	4	SI
+41	Soltero	10	25-49	Economico	Basicos	Menos de 5	Algo insatisfecho	1	SI
+34	Casado	13	25-49	Estandar	Diplomado	Menos de 5	Neutro	2	SI
+19	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	SI
+27	Soltero	5	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	1	SI
+38	Soltero	2	25-49	Estandar	Diplomado	5 a 15	Algo satisfecho	1	SI
+59	Soltero	10	25-49	Estandar	Diplomado	Menos de 5	Neutro	1	SI
+21	Casado	2	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	4	SI
+36	Casado	16	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	2	SI
+43	Casado	6	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	3	SI
+41	Casado	22	-25	Economico	Basicos	5 a 15	Neutro	3	SI
+52	Soltero	28	25-49	Economico	Bachillerato	Menos de 5	Algo satisfecho	1	SI
+25	Casado	4	25-49	Economico	Bachillerato	Menos de 5	Muy satisfecho	6	SI
+24	Casado	4	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	SI
+32	Soltero	0	50-70	Estandar	Bachillerato	5 a 15	Neutro	2	SI
+60	Casado	15	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	SI
+54	Soltero	0	25-49	Estandar	Diplomado	Mas de 15	Algo insatisfecho	1	SI
+35	Soltero	11	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	SI
+46	Casado	23	50-70	Estandar	Basicos	5 a 15	Muy satisfecho	2	SI
+25	Casado	6	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	3	SI
+34	Casado	8	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	4	SI
+30	Soltero	8	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	2	SI
+24	Casado	3	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	3	SI
+34	Casado	15	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	6	SI
+59	Casado	34	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	3	SI
+38	Casado	18	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	3	SI
+36	Casado	13	25-49	Economico	Diplomado	Menos de 5	Neutro	5	SI
+33	Casado	13	-25	Economico	Bachillerato	5 a 15	Algo satisfecho	3	SI
+34	Casado	10	25-49	Economico	Tercer ciclo	Menos de 5	Algo insatisfecho	4	SI
+57	Soltero	9	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+36	Soltero	5	25-49	Estandar	Licenciado	5 a 15	Algo satisfecho	1	SI
+39	Casado	14	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	2	SI
+26	Casado	0	25-49	Estandar	Diplomado	Menos de 5	Neutro	4	SI
+42	Casado	3	50-70	Estandar	Diplomado	Mas de 15	Muy satisfecho	2	SI
+33	Soltero	6	70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	SI
+42	Soltero	5	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+46	Soltero	0	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	SI
+28	Casado	9	25-49	Economico	Diplomado	Menos de 5	Neutro	6	SI
+40	Soltero	16	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	1	SI
+47	Casado	23	25-49	Estandar	Bachillerato	Menos de 5	Algo satisfecho	4	SI
+25	Casado	1	25-49	Economico	Bachillerato	5 a 15	Algo insatisfecho	4	SI
+30	Soltero	9	-25	Economico	Tercer ciclo	Menos de 5	Algo insatisfecho	1	SI
+57	Soltero	20	70	Lujo	Tercer ciclo	Mas de 15	Algo satisfecho	1	SI
+23	Casado	0	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	6	SI
+23	Soltero	0	-25	Economico	Diplomado	Menos de 5	Algo satisfecho	1	SI
+38	Casado	0	25-49	Estandar	Licenciado	5 a 15	Neutro	4	SI
+37	Soltero	8	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+47	Soltero	7	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	SI
+20	Casado	0	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	4	SI
+19	Casado	0	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	3	SI
+26	Soltero	2	-25	Economico	Basicos	5 a 15	Neutro	1	SI
+25	Soltero	1	70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	1	SI
+39	Soltero	19	25-49	Estandar	Licenciado	Mas de 15	Algo satisfecho	1	SI
+31	Casado	5	25-49	Economico	Tercer ciclo	Menos de 5	Algo insatisfecho	3	SI
+37	Soltero	13	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	1	SI
+44	Casado	19	-25	Economico	Licenciado	5 a 15	Algo insatisfecho	5	SI
+43	Soltero	6	50-70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	SI
+50	Soltero	31	25-49	Estandar	Basicos	5 a 15	Neutro	1	SI
+45	Soltero	23	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	SI
+62	Casado	10	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	2	SI
+51	Casado	14	25-49	Estandar	Bachillerato	Menos de 5	Muy satisfecho	2	SI
+34	Soltero	14	50-70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	SI
+47	Soltero	7	70	Lujo	Bachillerato	Mas de 15	Algo insatisfecho	3	SI
+49	Casado	7	50-70	Lujo	Licenciado	5 a 15	Neutro	4	SI
+40	Soltero	16	50-70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	SI
+37	Casado	9	70	Lujo	Diplomado	5 a 15	Neutro	5	SI
+32	Casado	6	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	3	SI
+57	Casado	2	-25	Economico	Basicos	Mas de 15	Muy insatisfecho	2	SI
+26	Soltero	6	-25	Economico	Basicos	5 a 15	Algo satisfecho	1	SI
+36	Soltero	0	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+29	Casado	8	70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	4	SI
+22	Casado	1	25-49	Estandar	Licenciado	Menos de 5	Muy insatisfecho	2	SI
+28	Casado	3	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	5	SI
+44	Soltero	15	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+21	Casado	1	-25	Economico	Basicos	Menos de 5	Neutro	5	SI
+39	Soltero	16	25-49	Economico	Bachillerato	5 a 15	Neutro	2	SI
+43	Casado	15	-25	Economico	Bachillerato	Menos de 5	Algo satisfecho	2	SI
+30	Casado	6	25-49	Estandar	Licenciado	5 a 15	Neutro	4	SI
+35	Casado	3	-25	Economico	Basicos	5 a 15	Muy insatisfecho	5	SI
+54	Casado	9	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	2	SI
+48	Casado	25	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	SI
+30	Soltero	3	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	1	SI
+34	Soltero	1	50-70	Lujo	Bachillerato	5 a 15	Muy satisfecho	4	SI
+58	Casado	30	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	SI
+62	Soltero	13	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+39	Soltero	2	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	2	SI
+60	Casado	3	70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	SI
+64	Soltero	43	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	SI
+43	Casado	8	50-70	Estandar	Licenciado	5 a 15	Algo satisfecho	2	SI
+42	Casado	17	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	2	SI
+19	Soltero	0	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	2	SI
+37	Casado	10	25-49	Economico	Diplomado	5 a 15	Neutro	3	SI
+57	Casado	32	25-49	Economico	Basicos	5 a 15	Algo satisfecho	2	SI
+57	Casado	8	25-49	Economico	Basicos	Menos de 5	Algo satisfecho	3	No
+23	Casado	2	-25	Economico	Basicos	Menos de 5	Algo satisfecho	2	SI
+39	Soltero	9	50-70	Estandar	Bachillerato	5 a 15	Neutro	1	SI
+35	Soltero	13	25-49	Estandar	Bachillerato	5 a 15	Neutro	1	SI
+34	Casado	6	50-70	Estandar	Licenciado	5 a 15	Algo satisfecho	3	SI
+46	Soltero	15	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	SI
+48	Casado	8	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	SI
+37	Soltero	0	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+28	Soltero	5	25-49	Estandar	Basicos	5 a 15	Neutro	1	SI
+26	Casado	1	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	3	SI
+62	Casado	3	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	2	SI
+63	Casado	23	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	3	No
+32	Casado	6	25-49	Economico	Basicos	5 a 15	Algo satisfecho	5	SI
+49	Soltero	19	70	Lujo	Bachillerato	5 a 15	Neutro	1	No
+49	Casado	10	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	2	No
+22	Soltero	1	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+53	Casado	12	70	Lujo	Basicos	Mas de 15	Neutro	2	SI
+34	Casado	9	70	Lujo	Bachillerato	5 a 15	Muy satisfecho	4	SI
+52	Casado	0	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	2	SI
+43	Soltero	23	-25	Economico	Licenciado	Menos de 5	Neutro	1	SI
+40	Casado	20	25-49	Estandar	Basicos	Menos de 5	Neutro	2	SI
+52	Soltero	19	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	SI
+56	Soltero	36	70	Lujo	Diplomado	Mas de 15	Neutro	1	SI
+48	Casado	17	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	4	SI
+38	Soltero	7	50-70	Economico	Bachillerato	5 a 15	Neutro	1	No
+34	Casado	0	25-49	Estandar	Licenciado	Menos de 5	Neutro	4	SI
+46	Casado	2	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	SI
+60	Soltero	22	25-49	Estandar	Diplomado	Menos de 5	Neutro	1	SI
+31	Soltero	4	25-49	Estandar	Bachillerato	5 a 15	Muy insatisfecho	1	SI
+30	Casado	9	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	3	SI
+41	Soltero	17	50-70	Lujo	Basicos	Mas de 15	Muy satisfecho	3	SI
+49	Casado	25	25-49	Estandar	Bachillerato	Menos de 5	Algo satisfecho	3	SI
+27	Casado	3	25-49	Estandar	Bachillerato	5 a 15	Neutro	6	SI
+25	Casado	5	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	No
+28	Casado	2	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	4	SI
+30	Soltero	0	50-70	Lujo	Licenciado	5 a 15	Algo insatisfecho	1	SI
+26	Casado	0	-25	Economico	Licenciado	Menos de 5	Algo insatisfecho	5	SI
+32	Soltero	13	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+38	Soltero	13	50-70	Lujo	Licenciado	Menos de 5	Neutro	1	SI
+30	Casado	3	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	4	SI
+50	Casado	7	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	2	SI
+44	Soltero	25	70	Lujo	Bachillerato	Mas de 15	Neutro	2	SI
+38	Soltero	13	25-49	Economico	Basicos	5 a 15	Muy satisfecho	1	SI
+44	Soltero	7	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	1	SI
+28	Casado	5	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	4	SI
+33	Soltero	6	70	Lujo	Diplomado	5 a 15	Algo satisfecho	1	SI
+30	Casado	2	25-49	Economico	Licenciado	5 a 15	Algo insatisfecho	2	SI
+26	Casado	1	25-49	Economico	Bachillerato	Menos de 5	Neutro	3	SI
+37	Soltero	4	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	3	SI
+39	Casado	14	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	2	SI
+31	Casado	4	50-70	Economico	Bachillerato	Menos de 5	Algo insatisfecho	7	No
+50	Casado	7	50-70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	SI
+29	Casado	0	-25	Economico	Licenciado	5 a 15	Algo insatisfecho	4	SI
+39	Casado	7	25-49	Estandar	Basicos	Menos de 5	Neutro	4	SI
+39	Casado	19	25-49	Estandar	Bachillerato	Mas de 15	Algo insatisfecho	2	SI
+53	Casado	16	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	3	SI
+71	Casado	30	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	2	SI
+60	Soltero	27	50-70	Lujo	Tercer ciclo	5 a 15	Algo insatisfecho	2	SI
+42	Casado	8	70	Lujo	Basicos	5 a 15	Algo satisfecho	2	SI
+36	Soltero	7	70	Lujo	Licenciado	Menos de 5	Neutro	2	SI
+48	Casado	10	70	Lujo	Bachillerato	5 a 15	Algo insatisfecho	4	SI
+42	Soltero	8	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+59	Soltero	31	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+49	Casado	0	70	Lujo	Licenciado	Menos de 5	Algo satisfecho	4	SI
+32	Soltero	8	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	SI
+26	Soltero	1	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	SI
+27	Casado	4	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	4	SI
+49	Soltero	3	25-49	Estandar	Basicos	5 a 15	Neutro	1	SI
+53	Soltero	30	70	Lujo	Basicos	Mas de 15	Muy insatisfecho	1	SI
+54	Soltero	3	70	Lujo	Tercer ciclo	Mas de 15	Muy satisfecho	1	SI
+31	Soltero	12	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+66	Casado	7	50-70	Estandar	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+38	Soltero	16	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	2	SI
+47	Casado	16	-25	Economico	Diplomado	Menos de 5	Neutro	2	SI
+43	Soltero	12	25-49	Estandar	Bachillerato	5 a 15	Neutro	1	SI
+24	Casado	4	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+65	Casado	18	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+41	Soltero	19	25-49	Economico	Bachillerato	Menos de 5	Algo satisfecho	2	No
+36	Soltero	17	-25	Economico	Licenciado	Menos de 5	Neutro	1	SI
+35	Casado	5	25-49	Estandar	Licenciado	5 a 15	Neutro	6	SI
+28	Soltero	0	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	1	SI
+65	Soltero	16	50-70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	SI
+28	Soltero	3	25-49	Estandar	Bachillerato	5 a 15	Muy insatisfecho	3	SI
+47	Soltero	3	70	Lujo	Tercer ciclo	5 a 15	Algo satisfecho	1	SI
+44	Soltero	1	70	Lujo	Diplomado	Mas de 15	Algo insatisfecho	3	No
+42	Casado	21	25-49	Estandar	Diplomado	Menos de 5	Muy satisfecho	2	SI
+49	Casado	11	25-49	Estandar	Licenciado	Menos de 5	Algo satisfecho	2	SI
+54	Casado	14	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	SI
+28	Soltero	4	-25	Economico	Bachillerato	5 a 15	Algo satisfecho	1	SI
+55	Casado	7	70	Lujo	Licenciado	5 a 15	Muy insatisfecho	3	No
+26	Soltero	6	50-70	Lujo	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+38	Soltero	11	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	SI
+29	Soltero	5	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	4	SI
+30	Casado	10	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	4	SI
+30	Casado	0	25-49	Estandar	Tercer ciclo	Menos de 5	Neutro	4	No
+58	Soltero	22	25-49	Estandar	Bachillerato	Mas de 15	Algo insatisfecho	1	SI
+47	Casado	4	70	Lujo	Basicos	Mas de 15	Algo insatisfecho	2	SI
+60	Soltero	36	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	2	SI
+53	Soltero	30	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+38	Casado	19	50-70	Estandar	Bachillerato	Mas de 15	Neutro	4	SI
+31	Casado	3	25-49	Estandar	Licenciado	Menos de 5	Algo satisfecho	5	SI
+70	Soltero	28	-25	Economico	Basicos	Mas de 15	Muy satisfecho	1	SI
+54	Soltero	29	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	SI
+41	Soltero	19	50-70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	SI
+31	Soltero	4	25-49	Estandar	Tercer ciclo	Menos de 5	Muy insatisfecho	1	SI
+45	Soltero	8	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+24	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Neutro	1	No
+50	Casado	13	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+42	Soltero	15	-25	Economico	Licenciado	Menos de 5	Algo insatisfecho	1	SI
+22	Casado	2	50-70	Estandar	Licenciado	Menos de 5	Algo insatisfecho	4	SI
+29	Casado	9	50-70	Economico	Bachillerato	5 a 15	Neutro	3	SI
+43	Soltero	14	25-49	Estandar	Tercer ciclo	Menos de 5	Neutro	1	SI
+31	Casado	11	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	4	No
+28	Soltero	1	25-49	Estandar	Tercer ciclo	Menos de 5	Algo insatisfecho	1	SI
+28	Casado	9	25-49	Estandar	Tercer ciclo	Menos de 5	Muy insatisfecho	2	SI
+41	Casado	8	70	Lujo	Tercer ciclo	5 a 15	Neutro	5	SI
+52	Soltero	19	70	Lujo	Basicos	Mas de 15	Neutro	2	SI
+45	Casado	13	50-70	Lujo	Bachillerato	Mas de 15	Neutro	3	SI
+36	Soltero	12	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+25	Casado	2	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	7	SI
+34	Casado	15	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	2	SI
+20	Casado	1	25-49	Estandar	Diplomado	Menos de 5	Neutro	4	SI
+31	Casado	4	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	SI
+35	Casado	16	25-49	Estandar	Licenciado	5 a 15	Algo satisfecho	4	SI
+21	Casado	0	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	4	SI
+42	Soltero	5	50-70	Estandar	Basicos	5 a 15	Muy satisfecho	1	No
+33	Soltero	0	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+40	Soltero	16	70	Lujo	Diplomado	5 a 15	Muy satisfecho	1	SI
+47	Casado	2	50-70	Estandar	Diplomado	Mas de 15	Algo insatisfecho	4	SI
+65	Casado	21	70	Lujo	Basicos	Mas de 15	Algo satisfecho	3	SI
+34	Soltero	10	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+26	Casado	0	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	6	SI
+61	Casado	26	-25	Economico	Bachillerato	Menos de 5	Algo satisfecho	2	SI
+42	Casado	3	70	Lujo	Basicos	Mas de 15	Algo satisfecho	5	SI
+59	Soltero	36	25-49	Estandar	Diplomado	Mas de 15	Neutro	1	SI
+36	Soltero	4	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	1	SI
+55	Soltero	28	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	SI
+41	Casado	19	25-49	Economico	Diplomado	Menos de 5	Algo satisfecho	2	SI
+55	Soltero	9	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	1	SI
+59	Casado	0	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	4	SI
+51	Soltero	27	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	SI
+27	Casado	2	50-70	Lujo	Licenciado	Menos de 5	Algo satisfecho	4	SI
+57	Casado	13	70	Lujo	Bachillerato	Mas de 15	Neutro	3	SI
+58	Casado	22	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	2	SI
+40	Soltero	6	25-49	Economico	Bachillerato	Menos de 5	Neutro	3	SI
+32	Casado	7	25-49	Estandar	Licenciado	5 a 15	Algo satisfecho	2	SI
+29	Soltero	7	50-70	Estandar	Tercer ciclo	Menos de 5	Algo insatisfecho	2	SI
+47	Soltero	8	25-49	Estandar	Diplomado	5 a 15	Muy satisfecho	4	SI
+48	Soltero	19	70	Lujo	Basicos	Mas de 15	Neutro	1	SI
+54	Casado	12	50-70	Lujo	Licenciado	Menos de 5	Muy insatisfecho	3	SI
+42	Casado	10	50-70	Lujo	Bachillerato	5 a 15	Algo insatisfecho	5	SI
+38	Casado	7	50-70	Lujo	Bachillerato	Mas de 15	Neutro	2	SI
+52	Soltero	17	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	SI
+56	Soltero	37	50-70	Estandar	Diplomado	5 a 15	Muy satisfecho	1	No
+19	Soltero	0	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	2	SI
+65	Casado	9	70	Lujo	Basicos	Mas de 15	Neutro	3	SI
+29	Soltero	6	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	3	No
+30	Casado	10	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	2	SI
+41	Casado	10	50-70	Lujo	Diplomado	5 a 15	Neutro	2	SI
+52	Casado	18	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+59	Soltero	2	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	1	SI
+29	Soltero	6	-25	Economico	Bachillerato	5 a 15	Muy satisfecho	1	No
+51	Soltero	14	50-70	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	SI
+42	Soltero	1	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	1	SI
+48	Soltero	14	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	1	SI
+51	Soltero	25	70	Lujo	Bachillerato	Mas de 15	Neutro	3	SI
+50	Soltero	5	25-49	Estandar	Basicos	Menos de 5	Muy satisfecho	2	SI
+29	Soltero	0	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+46	Casado	2	70	Lujo	Basicos	Mas de 15	Algo satisfecho	4	SI
+36	Soltero	16	70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	SI
+58	Casado	5	70	Lujo	Tercer ciclo	Mas de 15	Muy satisfecho	2	No
+50	Casado	13	50-70	Estandar	Licenciado	5 a 15	Neutro	5	No
+32	Casado	13	25-49	Estandar	Tercer ciclo	Menos de 5	Muy insatisfecho	4	SI
+39	Casado	10	-25	Economico	Bachillerato	5 a 15	Neutro	4	No
+52	Soltero	33	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+32	Casado	12	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	SI
+44	Soltero	1	70	Lujo	Diplomado	5 a 15	Muy satisfecho	1	No
+37	Soltero	7	25-49	Economico	Diplomado	5 a 15	Muy satisfecho	1	SI
+35	Soltero	11	50-70	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+35	Casado	11	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	3	SI
+46	Casado	6	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	4	SI
+63	Soltero	31	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	SI
+42	Soltero	23	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	1	SI
+24	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	1	SI
+34	Soltero	4	70	Estandar	Basicos	Mas de 15	Algo insatisfecho	1	No
+36	Soltero	14	-25	Economico	Basicos	5 a 15	Neutro	2	SI
+39	Casado	10	50-70	Estandar	Diplomado	5 a 15	Muy insatisfecho	3	No
+49	Soltero	30	70	Lujo	Basicos	Mas de 15	Neutro	3	SI
+46	Casado	8	50-70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	SI
+53	Soltero	5	70	Lujo	Basicos	Mas de 15	Neutro	2	SI
+49	Casado	22	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	3	No
+55	Casado	18	70	Lujo	Diplomado	Mas de 15	Neutro	4	SI
+25	Soltero	1	50-70	Economico	Bachillerato	Menos de 5	Algo satisfecho	2	SI
+29	Casado	0	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	2	SI
+49	Casado	12	50-70	Economico	Bachillerato	5 a 15	Muy satisfecho	4	SI
+47	Casado	6	25-49	Estandar	Basicos	5 a 15	Neutro	2	SI
+53	Soltero	9	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+38	Soltero	12	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	SI
+47	Casado	2	70	Lujo	Bachillerato	Mas de 15	Neutro	2	SI
+26	Casado	2	50-70	Economico	Licenciado	Menos de 5	Algo insatisfecho	4	SI
+57	Casado	20	70	Lujo	Diplomado	Mas de 15	Neutro	3	SI
+24	Casado	0	70	Lujo	Licenciado	Menos de 5	Algo satisfecho	5	SI
+25	Soltero	3	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	1	SI
+54	Casado	14	70	Lujo	Basicos	Mas de 15	Muy satisfecho	3	SI
+62	Soltero	17	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+56	Casado	30	25-49	Economico	Licenciado	Menos de 5	Muy insatisfecho	2	SI
+26	Casado	3	25-49	Economico	Basicos	Menos de 5	Algo satisfecho	3	SI
+26	Casado	1	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	5	SI
+40	Casado	8	50-70	Lujo	Basicos	Mas de 15	Algo insatisfecho	2	SI
+36	Casado	12	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	7	SI
+42	Casado	5	50-70	Lujo	Bachillerato	Menos de 5	Muy insatisfecho	2	SI
+34	Casado	13	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	3	SI
+48	Casado	22	70	Estandar	Diplomado	Mas de 15	Algo insatisfecho	2	SI
+29	Casado	9	70	Lujo	Diplomado	5 a 15	Muy satisfecho	2	SI
+36	Casado	2	50-70	Lujo	Licenciado	5 a 15	Algo insatisfecho	6	SI
+58	Casado	28	50-70	Lujo	Diplomado	5 a 15	Neutro	2	SI
+42	Soltero	18	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	SI
+57	Soltero	3	70	Lujo	Licenciado	Mas de 15	Algo insatisfecho	1	SI
+31	Casado	11	50-70	Lujo	Bachillerato	5 a 15	Neutro	3	SI
+41	Soltero	9	50-70	Estandar	Basicos	5 a 15	Algo insatisfecho	1	SI
+38	Casado	14	70	Lujo	Licenciado	5 a 15	Algo satisfecho	4	SI
+21	Casado	1	25-49	Economico	Diplomado	Menos de 5	Algo insatisfecho	4	SI
+31	Casado	5	25-49	Estandar	Bachillerato	5 a 15	Muy insatisfecho	5	SI
+30	Soltero	0	25-49	Estandar	Diplomado	5 a 15	Neutro	1	SI
+44	Casado	23	25-49	Estandar	Basicos	Mas de 15	Neutro	3	SI
+31	Soltero	5	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	2	SI
+26	Casado	1	-25	Economico	Licenciado	Menos de 5	Muy satisfecho	2	SI
+51	Casado	3	25-49	Economico	Bachillerato	5 a 15	Neutro	3	SI
+34	Casado	13	50-70	Lujo	Licenciado	5 a 15	Muy satisfecho	4	SI
+52	Casado	8	25-49	Estandar	Bachillerato	5 a 15	Neutro	4	SI
+28	Soltero	5	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	2	SI
+54	Soltero	21	50-70	Estandar	Diplomado	Menos de 5	Neutro	1	SI
+43	Casado	9	70	Lujo	Basicos	Mas de 15	Muy satisfecho	6	SI
+30	Casado	9	50-70	Economico	Licenciado	Menos de 5	Algo satisfecho	2	SI
+44	Soltero	2	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	1	SI
+39	Soltero	9	50-70	Estandar	Tercer ciclo	5 a 15	Neutro	2	SI
+50	Soltero	9	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	1	SI
+48	Soltero	5	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	SI
+43	Casado	16	25-49	Estandar	Diplomado	Menos de 5	Algo satisfecho	2	SI
+41	Casado	11	70	Lujo	Licenciado	Mas de 15	Algo insatisfecho	2	SI
+45	Casado	0	-25	Economico	Basicos	5 a 15	Algo satisfecho	5	SI
+37	Soltero	1	25-49	Economico	Bachillerato	5 a 15	Neutro	1	SI
+56	Casado	17	50-70	Lujo	Basicos	5 a 15	Muy insatisfecho	2	No
+29	Soltero	1	25-49	Estandar	Bachillerato	5 a 15	Muy insatisfecho	1	SI
+54	Casado	28	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	5	SI
+40	Casado	14	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	4	SI
+48	Casado	20	25-49	Estandar	Bachillerato	Menos de 5	Muy satisfecho	5	SI
+50	Soltero	10	70	Lujo	Basicos	Mas de 15	Neutro	1	SI
+22	Soltero	3	-25	Economico	Bachillerato	Menos de 5	Neutro	1	SI
+26	Casado	4	50-70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	2	SI
+44	Casado	4	70	Lujo	Bachillerato	5 a 15	Muy satisfecho	3	SI
+30	Casado	10	-25	Economico	Tercer ciclo	Menos de 5	Algo insatisfecho	5	SI
+53	Casado	16	70	Lujo	Basicos	Mas de 15	Algo insatisfecho	2	SI
+53	Soltero	34	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	No
+52	Soltero	30	25-49	Estandar	Bachillerato	Mas de 15	Algo satisfecho	2	SI
+41	Soltero	13	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	4	SI
+28	Soltero	3	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	SI
+36	Soltero	5	70	Lujo	Diplomado	5 a 15	Algo insatisfecho	3	SI
+25	Soltero	5	-25	Economico	Bachillerato	Menos de 5	Muy satisfecho	2	SI
+77	Casado	3	25-49	Estandar	Licenciado	Mas de 15	Algo satisfecho	2	SI
+21	Casado	1	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	7	SI
+41	Casado	6	70	Lujo	Licenciado	5 a 15	Algo satisfecho	4	SI
+59	Soltero	39	-25	Economico	Basicos	5 a 15	Algo satisfecho	1	SI
+56	Casado	35	50-70	Economico	Licenciado	5 a 15	Algo insatisfecho	2	SI
+47	Soltero	12	70	Lujo	Tercer ciclo	5 a 15	Muy satisfecho	1	SI
+50	Soltero	28	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	SI
+33	Soltero	2	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	SI
+33	Casado	7	50-70	Lujo	Basicos	5 a 15	Algo satisfecho	2	SI
+35	Casado	10	50-70	Lujo	Licenciado	5 a 15	Neutro	5	SI
+38	Casado	4	50-70	Lujo	Licenciado	5 a 15	Neutro	4	SI
+32	Casado	11	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	3	SI
+35	Casado	16	25-49	Economico	Diplomado	5 a 15	Muy insatisfecho	3	SI
+61	Soltero	19	-25	Economico	Bachillerato	Menos de 5	Neutro	1	SI
+56	Casado	21	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	3	SI
+54	Casado	17	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	3	SI
+47	Soltero	13	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	SI
+63	Soltero	2	50-70	Estandar	Bachillerato	Mas de 15	Neutro	1	SI
+39	Casado	0	70	Lujo	Tercer ciclo	5 a 15	Neutro	5	SI
+51	Casado	31	50-70	Estandar	Basicos	Mas de 15	Neutro	2	SI
+32	Casado	13	50-70	Lujo	Licenciado	5 a 15	Algo insatisfecho	6	SI
+45	Soltero	7	70	Lujo	Tercer ciclo	5 a 15	Neutro	1	SI
+36	Casado	17	-25	Economico	Licenciado	Menos de 5	Neutro	2	No
+62	Soltero	2	70	Lujo	Basicos	Mas de 15	Muy insatisfecho	1	SI
+64	Casado	8	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	2	SI
+42	Casado	5	50-70	Lujo	Bachillerato	5 a 15	Muy insatisfecho	2	SI
+31	Casado	1	25-49	Estandar	Basicos	5 a 15	Neutro	3	No
+24	Soltero	1	-25	Economico	Licenciado	Menos de 5	Algo insatisfecho	4	No
+38	Soltero	6	70	Lujo	Diplomado	5 a 15	Neutro	1	SI
+45	Casado	23	70	Estandar	Tercer ciclo	Menos de 5	Muy insatisfecho	2	No
+24	Soltero	5	-25	Economico	Diplomado	Menos de 5	Neutro	1	SI
+42	Soltero	12	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	4	SI
+42	Soltero	8	-25	Economico	Bachillerato	5 a 15	Muy insatisfecho	1	SI
+29	Casado	8	-25	Economico	Diplomado	Menos de 5	Neutro	2	SI
+41	Casado	14	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	5	SI
+55	Casado	27	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	SI
+60	Soltero	38	70	Lujo	Licenciado	5 a 15	Neutro	1	SI
+37	Casado	15	50-70	Lujo	Diplomado	5 a 15	Neutro	2	SI
+26	Soltero	4	70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	1	SI
+53	Soltero	27	50-70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	SI
+45	Casado	0	50-70	Estandar	Bachillerato	5 a 15	Neutro	3	SI
+46	Casado	18	70	Lujo	Basicos	Mas de 15	Algo satisfecho	4	SI
+49	Soltero	22	70	Lujo	Licenciado	5 a 15	Algo satisfecho	1	SI
+38	Soltero	17	50-70	Estandar	Diplomado	Menos de 5	Algo insatisfecho	4	SI
+27	Soltero	8	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	3	SI
+47	Soltero	25	50-70	Lujo	Tercer ciclo	5 a 15	Neutro	1	SI
+33	Soltero	14	25-49	Economico	Basicos	Menos de 5	Neutro	1	No
+22	Soltero	2	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	3	No
+31	Casado	12	25-49	Estandar	Diplomado	5 a 15	Algo satisfecho	4	No
+31	Soltero	12	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	No
+32	Casado	4	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	5	No
+26	Soltero	1	50-70	Economico	Bachillerato	Menos de 5	Neutro	3	No
+65	Casado	4	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	2	No
+54	Casado	31	70	Lujo	Licenciado	Mas de 15	Neutro	4	No
+52	Casado	19	25-49	Estandar	Bachillerato	Mas de 15	Muy satisfecho	2	No
+63	Soltero	20	70	Lujo	Basicos	Mas de 15	Muy insatisfecho	1	No
+38	Soltero	15	70	Lujo	Diplomado	5 a 15	Muy satisfecho	3	No
+43	Soltero	4	50-70	Estandar	Basicos	Mas de 15	Muy satisfecho	1	No
+34	Casado	6	50-70	Estandar	Bachillerato	5 a 15	Neutro	2	No
+30	Casado	9	25-49	Economico	Licenciado	Menos de 5	Muy insatisfecho	4	No
+28	Soltero	6	50-70	Estandar	Licenciado	5 a 15	Neutro	1	No
+56	Casado	13	70	Lujo	Bachillerato	5 a 15	Neutro	3	No
+53	Soltero	22	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	No
+30	Soltero	2	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+41	Casado	10	70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	No
+25	Casado	1	-25	Economico	Bachillerato	Menos de 5	Neutro	5	No
+35	Casado	12	25-49	Estandar	Licenciado	Menos de 5	Neutro	4	No
+39	Soltero	5	70	Lujo	Diplomado	5 a 15	Algo satisfecho	1	No
+37	Soltero	5	25-49	Economico	Diplomado	5 a 15	Algo insatisfecho	1	No
+22	Casado	2	70	Estandar	Licenciado	Menos de 5	Muy insatisfecho	4	No
+63	Casado	17	25-49	Estandar	Diplomado	Mas de 15	Algo insatisfecho	2	No
+46	Soltero	12	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	No
+53	Soltero	3	70	Lujo	Licenciado	Mas de 15	Algo insatisfecho	1	No
+36	Casado	1	25-49	Economico	Diplomado	5 a 15	Muy satisfecho	5	No
+36	Casado	15	50-70	Economico	Basicos	Menos de 5	Muy insatisfecho	2	No
+54	Soltero	0	25-49	Estandar	Bachillerato	Menos de 5	Neutro	2	No
+67	Casado	37	-25	Economico	Basicos	Menos de 5	Algo satisfecho	2	No
+56	Casado	18	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	No
+32	Casado	8	70	Lujo	Tercer ciclo	Menos de 5	Muy insatisfecho	4	No
+37	Soltero	10	70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	No
+55	Casado	19	25-49	Estandar	Bachillerato	Mas de 15	Algo satisfecho	2	No
+23	Casado	4	50-70	Estandar	Licenciado	Menos de 5	Algo insatisfecho	5	No
+54	Casado	28	50-70	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+22	Soltero	0	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	1	No
+40	Soltero	4	25-49	Estandar	Licenciado	Menos de 5	Algo satisfecho	2	No
+36	Soltero	16	70	Estandar	Diplomado	5 a 15	Muy satisfecho	1	No
+29	Soltero	1	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	No
+33	Casado	13	25-49	Estandar	Diplomado	5 a 15	Neutro	6	No
+50	Casado	13	-25	Economico	Bachillerato	Menos de 5	Neutro	3	No
+24	Soltero	4	50-70	Economico	Diplomado	Menos de 5	Muy insatisfecho	1	No
+43	Soltero	3	70	Estandar	Tercer ciclo	Menos de 5	Algo insatisfecho	1	No
+43	Casado	11	-25	Economico	Basicos	Menos de 5	Algo satisfecho	6	No
+40	Casado	21	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	4	No
+31	Casado	1	70	Economico	Bachillerato	5 a 15	Neutro	6	No
+54	Soltero	20	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+48	Casado	28	-25	Economico	Diplomado	Menos de 5	Muy satisfecho	2	No
+60	Soltero	24	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	No
+30	Soltero	3	70	Estandar	Bachillerato	5 a 15	Muy satisfecho	3	No
+52	Casado	3	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	3	No
+24	Casado	4	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	4	No
+54	Soltero	24	25-49	Economico	Diplomado	5 a 15	Algo satisfecho	2	No
+28	Soltero	3	50-70	Economico	Diplomado	5 a 15	Muy insatisfecho	1	No
+30	Casado	10	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	4	No
+42	Casado	15	-25	Economico	Basicos	Menos de 5	Muy satisfecho	4	No
+38	Soltero	16	50-70	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	No
+56	Casado	10	-25	Economico	Bachillerato	Mas de 15	Neutro	2	No
+39	Soltero	8	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	1	No
+59	Soltero	2	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	1	No
+51	Casado	27	70	Lujo	Basicos	Mas de 15	Algo insatisfecho	2	No
+40	Soltero	21	25-49	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+40	Casado	19	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	2	No
+56	Casado	22	50-70	Estandar	Bachillerato	5 a 15	Muy satisfecho	2	No
+38	Soltero	0	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+63	Casado	12	-25	Economico	Licenciado	5 a 15	Algo satisfecho	2	No
+36	Soltero	12	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	No
+45	Casado	13	70	Estandar	Basicos	5 a 15	Algo insatisfecho	2	No
+49	Casado	24	50-70	Estandar	Licenciado	Menos de 5	Muy insatisfecho	2	No
+51	Casado	25	25-49	Estandar	Diplomado	5 a 15	Algo insatisfecho	5	No
+24	Soltero	2	-25	Economico	Bachillerato	5 a 15	Neutro	1	No
+31	Casado	9	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	4	No
+60	Soltero	23	50-70	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	No
+20	Casado	1	-25	Economico	Basicos	Menos de 5	Neutro	3	No
+26	Soltero	4	-25	Economico	Licenciado	Menos de 5	Algo insatisfecho	1	No
+57	Soltero	17	50-70	Estandar	Diplomado	5 a 15	Algo satisfecho	1	No
+59	Casado	35	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	2	No
+59	Casado	36	25-49	Estandar	Bachillerato	5 a 15	Neutro	3	No
+76	Casado	56	-25	Economico	Licenciado	5 a 15	Neutro	2	No
+40	Casado	13	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	5	No
+31	Soltero	10	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	2	No
+61	Casado	35	50-70	Estandar	Basicos	Mas de 15	Muy satisfecho	2	No
+47	Casado	21	50-70	Estandar	Basicos	Mas de 15	Muy satisfecho	3	No
+33	Casado	8	25-49	Estandar	Basicos	Menos de 5	Algo satisfecho	3	No
+61	Soltero	18	-25	Economico	Basicos	5 a 15	Neutro	1	No
+23	Soltero	2	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	2	No
+48	Soltero	6	25-49	Estandar	Licenciado	5 a 15	Neutro	1	No
+21	Casado	1	25-49	Economico	Basicos	5 a 15	Algo insatisfecho	6	No
+34	Soltero	3	70	Lujo	Diplomado	5 a 15	Muy satisfecho	1	No
+45	Casado	14	70	Lujo	Diplomado	5 a 15	Muy satisfecho	3	No
+70	Soltero	26	25-49	Estandar	Licenciado	Mas de 15	Algo insatisfecho	1	No
+45	Casado	3	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	2	No
+52	Soltero	2	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+45	Soltero	13	25-49	Economico	Basicos	5 a 15	Neutro	1	No
+53	Casado	7	70	Lujo	Basicos	Mas de 15	Neutro	2	No
+54	Soltero	28	25-49	Economico	Bachillerato	5 a 15	Algo satisfecho	1	No
+35	Soltero	13	50-70	Lujo	Diplomado	5 a 15	Algo satisfecho	2	No
+37	Soltero	13	50-70	Lujo	Licenciado	5 a 15	Muy satisfecho	2	No
+34	Casado	9	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	6	No
+61	Casado	20	70	Lujo	Basicos	Mas de 15	Muy satisfecho	2	No
+46	Casado	22	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	4	No
+24	Soltero	3	-25	Economico	Diplomado	Menos de 5	Algo satisfecho	1	No
+25	Soltero	3	50-70	Economico	Diplomado	Menos de 5	Algo insatisfecho	1	No
+40	Soltero	18	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+33	Casado	13	70	Lujo	Licenciado	5 a 15	Neutro	4	No
+37	Casado	10	50-70	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+33	Casado	14	25-49	Estandar	Basicos	Menos de 5	Neutro	6	No
+51	Soltero	19	50-70	Lujo	Tercer ciclo	Menos de 5	Muy satisfecho	1	No
+26	Casado	2	-25	Economico	Basicos	5 a 15	Algo insatisfecho	5	No
+33	Soltero	10	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+48	Soltero	23	50-70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+40	Soltero	14	25-49	Economico	Diplomado	Menos de 5	Muy satisfecho	1	No
+30	Casado	3	25-49	Estandar	Bachillerato	5 a 15	Neutro	2	No
+31	Casado	12	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	No
+41	Soltero	5	25-49	Economico	Licenciado	Menos de 5	Neutro	1	No
+47	Casado	27	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	2	No
+52	Soltero	27	70	Lujo	Diplomado	Mas de 15	Algo insatisfecho	1	No
+49	Soltero	28	50-70	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	No
+25	Casado	0	-25	Economico	Bachillerato	Menos de 5	Neutro	5	No
+62	Casado	30	50-70	Economico	Basicos	5 a 15	Algo satisfecho	3	No
+27	Soltero	2	-25	Economico	Bachillerato	5 a 15	Algo satisfecho	2	No
+69	Soltero	40	50-70	Economico	Bachillerato	5 a 15	Neutro	1	No
+65	Soltero	20	-25	Economico	Bachillerato	5 a 15	Algo insatisfecho	1	No
+52	Soltero	20	50-70	Estandar	Bachillerato	Mas de 15	Muy satisfecho	1	No
+49	Soltero	24	-25	Economico	Diplomado	5 a 15	Muy satisfecho	2	No
+37	Casado	0	25-49	Estandar	Bachillerato	Menos de 5	Muy insatisfecho	2	No
+26	Soltero	2	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+39	Casado	7	25-49	Estandar	Basicos	5 a 15	Muy insatisfecho	2	No
+34	Casado	2	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	5	No
+27	Casado	7	50-70	Estandar	Licenciado	Menos de 5	Algo insatisfecho	4	No
+41	Casado	11	25-49	Estandar	Bachillerato	5 a 15	Neutro	4	No
+30	Casado	4	50-70	Estandar	Licenciado	5 a 15	Muy satisfecho	5	No
+40	Casado	14	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	2	No
+27	Soltero	8	-25	Economico	Basicos	5 a 15	Algo insatisfecho	3	No
+53	Soltero	30	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+45	Soltero	5	25-49	Estandar	Diplomado	5 a 15	Neutro	1	No
+72	Casado	48	-25	Economico	Bachillerato	Mas de 15	Neutro	2	No
+36	Casado	15	70	Lujo	Basicos	Mas de 15	Muy satisfecho	4	No
+71	Soltero	51	-25	Economico	Diplomado	Mas de 15	Muy satisfecho	1	No
+39	Casado	8	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	No
+30	Soltero	3	25-49	Economico	Bachillerato	5 a 15	Muy insatisfecho	1	No
+42	Casado	15	50-70	Economico	Bachillerato	5 a 15	Muy insatisfecho	4	No
+55	Casado	0	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	2	No
+26	Casado	6	-25	Economico	Licenciado	Menos de 5	Neutro	5	No
+37	Soltero	9	70	Lujo	Licenciado	5 a 15	Algo satisfecho	4	No
+59	Casado	6	70	Lujo	Licenciado	5 a 15	Neutro	2	No
+60	Casado	31	25-49	Estandar	Bachillerato	Mas de 15	Algo satisfecho	2	No
+61	Casado	7	-25	Economico	Licenciado	Mas de 15	Muy insatisfecho	3	No
+50	Soltero	27	70	Lujo	Basicos	Mas de 15	Muy satisfecho	1	No
+43	Soltero	5	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	1	No
+53	Casado	3	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	5	No
+48	Soltero	22	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	No
+24	Soltero	3	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+39	Soltero	15	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	No
+59	Casado	8	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	2	No
+44	Casado	5	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	5	No
+39	Casado	1	50-70	Estandar	Licenciado	5 a 15	Algo satisfecho	3	No
+63	Casado	1	-25	Economico	Basicos	5 a 15	Muy satisfecho	4	No
+36	Soltero	1	25-49	Economico	Licenciado	5 a 15	Neutro	1	No
+30	Casado	10	50-70	Lujo	Licenciado	5 a 15	Neutro	3	No
+49	Casado	18	50-70	Estandar	Licenciado	Menos de 5	Muy insatisfecho	5	No
+23	Casado	3	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	4	No
+19	Casado	0	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	No
+54	Casado	32	50-70	Estandar	Diplomado	Menos de 5	Algo insatisfecho	2	No
+47	Casado	25	25-49	Economico	Basicos	Menos de 5	Algo satisfecho	2	No
+37	Casado	1	50-70	Economico	Bachillerato	Menos de 5	Neutro	3	No
+22	Soltero	3	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	1	No
+63	Casado	7	25-49	Economico	Bachillerato	Menos de 5	Algo insatisfecho	2	No
+32	Soltero	7	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+37	Casado	6	25-49	Estandar	Bachillerato	5 a 15	Muy insatisfecho	2	No
+36	Casado	17	-25	Economico	Basicos	5 a 15	Algo satisfecho	4	No
+52	Soltero	2	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	1	No
+59	Soltero	9	-25	Economico	Bachillerato	5 a 15	Muy satisfecho	1	No
+40	Casado	9	50-70	Lujo	Tercer ciclo	5 a 15	Algo insatisfecho	5	No
+48	Casado	9	50-70	Estandar	Basicos	5 a 15	Algo insatisfecho	5	No
+34	Casado	10	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	6	No
+51	Soltero	7	50-70	Lujo	Diplomado	5 a 15	Neutro	1	No
+46	Soltero	1	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	3	No
+58	Casado	8	50-70	Economico	Bachillerato	Mas de 15	Algo insatisfecho	2	No
+24	Casado	1	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	6	No
+47	Soltero	24	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+31	Soltero	0	25-49	Economico	Tercer ciclo	Menos de 5	Algo insatisfecho	2	No
+36	Soltero	1	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	1	No
+54	Soltero	12	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	4	No
+58	Soltero	6	25-49	Estandar	Bachillerato	Mas de 15	Neutro	1	No
+73	Soltero	1	70	Lujo	Basicos	Mas de 15	Algo satisfecho	1	No
+38	Soltero	11	25-49	Estandar	Licenciado	Menos de 5	Muy insatisfecho	1	No
+28	Casado	1	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	3	No
+51	Soltero	1	70	Lujo	Diplomado	Mas de 15	Algo satisfecho	1	No
+55	Casado	6	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	2	No
+34	Casado	3	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	2	No
+26	Soltero	7	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	1	No
+28	Soltero	1	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	No
+26	Casado	7	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	4	No
+26	Soltero	2	25-49	Economico	Basicos	5 a 15	Algo satisfecho	2	No
+29	Soltero	3	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	1	No
+51	Casado	27	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	2	No
+62	Casado	11	-25	Economico	Tercer ciclo	5 a 15	Algo satisfecho	2	No
+49	Casado	9	70	Lujo	Licenciado	5 a 15	Neutro	4	No
+20	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Algo satisfecho	1	No
+40	Casado	15	50-70	Lujo	Diplomado	Mas de 15	Muy satisfecho	4	No
+39	Soltero	3	25-49	Estandar	Basicos	5 a 15	Neutro	4	No
+68	Soltero	17	70	Lujo	Bachillerato	Mas de 15	Neutro	1	No
+53	Casado	3	70	Lujo	Licenciado	Mas de 15	Algo satisfecho	2	No
+36	Soltero	4	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	1	No
+34	Soltero	4	70	Lujo	Tercer ciclo	5 a 15	Neutro	1	No
+40	Soltero	0	25-49	Estandar	Tercer ciclo	Menos de 5	Algo insatisfecho	1	No
+60	Soltero	30	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	No
+33	Soltero	9	70	Lujo	Licenciado	5 a 15	Muy satisfecho	1	No
+33	Casado	0	25-49	Estandar	Tercer ciclo	Menos de 5	Algo insatisfecho	2	No
+41	Soltero	8	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	2	No
+39	Casado	3	70	Lujo	Basicos	Mas de 15	Muy satisfecho	4	No
+67	Soltero	10	-25	Economico	Diplomado	5 a 15	Muy insatisfecho	1	No
+28	Soltero	0	25-49	Estandar	Licenciado	Menos de 5	Algo satisfecho	3	No
+28	Soltero	8	-25	Economico	Licenciado	5 a 15	Algo insatisfecho	2	No
+45	Soltero	3	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	1	No
+37	Soltero	2	70	Lujo	Licenciado	5 a 15	Muy insatisfecho	1	No
+38	Casado	0	50-70	Lujo	Bachillerato	Mas de 15	Algo insatisfecho	8	No
+23	Casado	3	50-70	Estandar	Basicos	5 a 15	Algo satisfecho	3	No
+29	Casado	8	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	5	No
+60	Casado	1	25-49	Estandar	Bachillerato	Mas de 15	Muy satisfecho	2	No
+61	Casado	2	-25	Economico	Bachillerato	Mas de 15	Algo satisfecho	2	No
+27	Casado	8	50-70	Estandar	Licenciado	Menos de 5	Neutro	4	No
+22	Casado	3	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	No
+46	Soltero	15	50-70	Estandar	Diplomado	Menos de 5	Muy insatisfecho	1	No
+20	Soltero	0	25-49	Economico	Diplomado	Menos de 5	Neutro	1	No
+74	Casado	24	-25	Economico	Bachillerato	Mas de 15	Neutro	2	No
+61	Casado	4	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	4	No
+29	Casado	7	25-49	Estandar	Diplomado	Menos de 5	Algo insatisfecho	4	No
+37	Soltero	1	50-70	Estandar	Bachillerato	5 a 15	Algo satisfecho	3	No
+50	Soltero	16	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	1	No
+34	Casado	4	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	4	No
+43	Soltero	3	50-70	Estandar	Licenciado	Menos de 5	Neutro	1	No
+27	Casado	0	-25	Economico	Basicos	5 a 15	Muy insatisfecho	7	No
+52	Soltero	23	25-49	Economico	Bachillerato	Menos de 5	Neutro	1	No
+53	Casado	24	70	Lujo	Bachillerato	5 a 15	Muy satisfecho	2	No
+45	Soltero	18	50-70	Estandar	Diplomado	Mas de 15	Algo satisfecho	2	No
+31	Soltero	8	-25	Economico	Basicos	Menos de 5	Neutro	1	No
+47	Soltero	8	25-49	Estandar	Licenciado	5 a 15	Neutro	2	No
+73	Casado	8	70	Lujo	Basicos	Mas de 15	Muy satisfecho	5	No
+44	Soltero	20	70	Lujo	Licenciado	5 a 15	Muy satisfecho	1	No
+57	Soltero	11	70	Lujo	Basicos	5 a 15	Algo insatisfecho	1	No
+65	Casado	41	25-49	Estandar	Diplomado	5 a 15	Algo insatisfecho	2	No
+49	Casado	16	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	3	No
+23	Soltero	1	50-70	Estandar	Diplomado	Menos de 5	Muy insatisfecho	4	No
+60	Casado	0	25-49	Estandar	Basicos	Mas de 15	Muy satisfecho	2	No
+25	Casado	4	25-49	Estandar	Diplomado	Menos de 5	Muy insatisfecho	5	No
+25	Casado	3	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	3	No
+32	Soltero	8	50-70	Estandar	Bachillerato	5 a 15	Neutro	2	No
+48	Casado	12	70	Lujo	Basicos	Mas de 15	Neutro	4	No
+56	Soltero	7	70	Lujo	Licenciado	Mas de 15	Muy satisfecho	1	No
+34	Soltero	6	25-49	Estandar	Bachillerato	Menos de 5	Algo satisfecho	2	No
+40	Soltero	21	25-49	Estandar	Basicos	5 a 15	Neutro	1	No
+37	Casado	2	50-70	Estandar	Diplomado	5 a 15	Algo insatisfecho	4	No
+36	Soltero	8	50-70	Economico	Basicos	Menos de 5	Neutro	1	No
+21	Soltero	0	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+52	Soltero	31	70	Lujo	Diplomado	Mas de 15	Muy satisfecho	1	No
+19	Casado	0	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	3	No
+52	Soltero	32	70	Lujo	Licenciado	5 a 15	Muy insatisfecho	1	No
+36	Soltero	5	70	Lujo	Tercer ciclo	5 a 15	Muy satisfecho	1	No
+53	Casado	9	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	4	No
+61	Soltero	19	-25	Economico	Basicos	Mas de 15	Algo satisfecho	1	No
+27	Casado	4	25-49	Economico	Diplomado	Menos de 5	Algo satisfecho	4	No
+49	Casado	18	70	Lujo	Bachillerato	Mas de 15	Muy satisfecho	2	No
+58	Casado	8	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	2	No
+68	Soltero	28	-25	Economico	Bachillerato	Mas de 15	Muy satisfecho	1	No
+50	Casado	8	25-49	Estandar	Basicos	5 a 15	Algo satisfecho	2	No
+31	Soltero	0	25-49	Estandar	Licenciado	5 a 15	Algo insatisfecho	1	No
+20	Soltero	0	-25	Economico	Diplomado	Menos de 5	Algo insatisfecho	1	No
+71	Casado	36	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	2	No
+32	Casado	10	25-49	Estandar	Licenciado	Menos de 5	Algo satisfecho	2	No
+67	Soltero	34	-25	Economico	Diplomado	5 a 15	Neutro	1	No
+70	Soltero	3	25-49	Economico	Bachillerato	Mas de 15	Algo satisfecho	1	No
+47	Soltero	18	25-49	Estandar	Basicos	5 a 15	Muy satisfecho	1	No
+63	Casado	35	50-70	Lujo	Basicos	5 a 15	Algo insatisfecho	2	No
+61	Soltero	9	25-49	Estandar	Diplomado	Mas de 15	Algo satisfecho	1	No
+43	Soltero	4	50-70	Estandar	Bachillerato	5 a 15	Algo insatisfecho	1	No
+34	Casado	0	50-70	Estandar	Licenciado	Menos de 5	Neutro	3	No
+31	Soltero	6	25-49	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+59	Soltero	28	50-70	Estandar	Basicos	Mas de 15	Algo satisfecho	1	No
+32	Soltero	7	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+64	Casado	30	-25	Economico	Diplomado	5 a 15	Algo insatisfecho	2	No
+38	Soltero	16	25-49	Economico	Tercer ciclo	Menos de 5	Muy insatisfecho	1	No
+34	Soltero	15	25-49	Estandar	Diplomado	5 a 15	Neutro	3	No
+37	Casado	1	50-70	Lujo	Diplomado	Mas de 15	Algo satisfecho	5	No
+33	Soltero	14	50-70	Estandar	Diplomado	Menos de 5	Algo insatisfecho	1	No
+33	Casado	5	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	5	No
+21	Casado	1	25-49	Economico	Diplomado	Menos de 5	Neutro	5	No
+22	Casado	1	25-49	Economico	Licenciado	Menos de 5	Muy insatisfecho	5	No
+53	Soltero	12	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+46	Casado	2	70	Lujo	Bachillerato	Mas de 15	Algo satisfecho	5	No
+68	Soltero	30	-25	Economico	Basicos	5 a 15	Neutro	1	No
+31	Casado	5	25-49	Estandar	Bachillerato	5 a 15	Algo insatisfecho	5	No
+63	Casado	3	-25	Economico	Diplomado	Mas de 15	Algo satisfecho	2	No
+27	Casado	6	25-49	Estandar	Bachillerato	Menos de 5	Algo insatisfecho	4	No
+43	Soltero	9	70	Lujo	Basicos	Mas de 15	Neutro	1	No
+35	Soltero	9	25-49	Estandar	Tercer ciclo	Menos de 5	Neutro	1	No
+41	Soltero	7	-25	Economico	Basicos	Menos de 5	Muy insatisfecho	1	No
+59	Soltero	5	-25	Economico	Bachillerato	5 a 15	Algo insatisfecho	1	No
+51	Soltero	21	25-49	Estandar	Basicos	Menos de 5	Muy insatisfecho	1	No
+30	Casado	0	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	3	No
+53	Casado	3	50-70	Lujo	Basicos	Mas de 15	Algo satisfecho	2	No
+21	Casado	0	-25	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	No
+42	Casado	0	-25	Economico	Basicos	5 a 15	Muy satisfecho	4	No
+65	Soltero	35	-25	Economico	Bachillerato	Mas de 15	Neutro	1	No
+40	Soltero	17	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+26	Soltero	3	-25	Economico	Basicos	5 a 15	Algo satisfecho	1	No
+63	Soltero	28	-25	Economico	Bachillerato	Menos de 5	Muy insatisfecho	1	No
+38	Casado	5	50-70	Estandar	Bachillerato	Mas de 15	Algo satisfecho	4	No
+53	Soltero	5	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	1	No
+35	Casado	14	25-49	Economico	Basicos	5 a 15	Neutro	6	No
+48	Soltero	4	-25	Economico	Licenciado	5 a 15	Algo insatisfecho	1	No
+31	Casado	12	25-49	Estandar	Basicos	5 a 15	Neutro	2	No
+61	Soltero	33	-25	Economico	Bachillerato	Mas de 15	Algo insatisfecho	1	No
+38	Casado	4	25-49	Estandar	Bachillerato	5 a 15	Muy satisfecho	4	No
+35	Soltero	6	70	Lujo	Bachillerato	5 a 15	Algo satisfecho	1	No
+31	Soltero	10	25-49	Estandar	Basicos	5 a 15	Neutro	1	No
+31	Casado	9	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	2	No
+31	Soltero	3	25-49	Estandar	Licenciado	Menos de 5	Algo insatisfecho	1	No
+48	Casado	3	70	Lujo	Diplomado	5 a 15	Neutro	2	No
+45	Casado	26	50-70	Estandar	Diplomado	5 a 15	Neutro	2	No
+54	Soltero	29	70	Lujo	Bachillerato	Mas de 15	Muy insatisfecho	1	No
+50	Soltero	17	50-70	Estandar	Bachillerato	Mas de 15	Algo insatisfecho	1	No
+36	Soltero	6	-25	Economico	Bachillerato	Menos de 5	Algo insatisfecho	1	No
+24	Casado	4	25-49	Economico	Licenciado	Menos de 5	Algo satisfecho	4	No
+49	Casado	8	50-70	Estandar	Bachillerato	Mas de 15	Muy satisfecho	2	No
+25	Casado	3	-25	Economico	Bachillerato	5 a 15	Neutro	3	No
+43	Casado	5	25-49	Estandar	Basicos	Mas de 15	Algo satisfecho	4	No
+42	Casado	15	50-70	Estandar	Diplomado	Mas de 15	Muy satisfecho	4	No
+50	Casado	28	50-70	Lujo	Diplomado	Mas de 15	Muy insatisfecho	2	No
+38	Soltero	1	50-70	Estandar	Licenciado	5 a 15	Algo satisfecho	2	No
+40	Soltero	13	25-49	Economico	Diplomado	5 a 15	Muy satisfecho	3	No
+53	Casado	26	25-49	Estandar	Diplomado	5 a 15	Muy satisfecho	2	No
+44	Casado	9	-25	Economico	Basicos	5 a 15	Algo insatisfecho	2	No
+43	Soltero	4	70	Lujo	Basicos	Mas de 15	Muy satisfecho	3	No
+43	Soltero	2	25-49	Estandar	Bachillerato	5 a 15	Algo satisfecho	1	No
+27	Casado	2	25-49	Estandar	Diplomado	5 a 15	Neutro	2	No
+47	Casado	11	-25	Economico	Licenciado	Menos de 5	Muy insatisfecho	5	No
+39	Casado	10	25-49	Estandar	Basicos	5 a 15	Algo insatisfecho	5	No
+54	Soltero	18	50-70	Estandar	Basicos	Mas de 15	Algo insatisfecho	1	No
+28	Soltero	5	25-49	Economico	Basicos	Menos de 5	Algo insatisfecho	1	No
+44	Casado	12	25-49	Economico	Licenciado	Menos de 5	Algo insatisfecho	5	No
+20	Soltero	1	-25	Economico	Bachillerato	Menos de 5	Algo satisfecho	1	No
+47	Soltero	5	50-70	Estandar	Basicos	Mas de 15	Muy satisfecho	1	No
+37	Casado	6	25-49	Economico	Diplomado	Menos de 5	Muy insatisfecho	3	No
+26	Casado	0	70	Lujo	Bachillerato	Menos de 5	Algo insatisfecho	5	No
+39	Casado	16	-25	Economico	Basicos	Menos de 5	Algo insatisfecho	3	No

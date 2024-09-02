@@ -1,0 +1,352 @@
+Especialidad	sexo	Persona	Frecuencia	Ofertas	Gasto	Tipo comercio
+Delicatesen	Hombre	El mismo	Quincenal	internet	416.33	Mediana
+Delicatesen	Hombre	El mismo	Quincenal	internet	383.24	Mediana
+Delicatesen	Hombre	El mismo y familia	Semanal 	No	577.21	Mediana
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	internet	436.45	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	propaganda	341.64	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	348.27	Grande
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	De ambos	184.62	Grande
+sin especialidad	Hombre	El mismo	Semanal 	No	297.28	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	297.44	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	internet	296.36	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	No	361.69	Grande
+sin especialidad	Hombre	El mismo y familia	Quincenal	propaganda	441.26	Grande
+sin especialidad	Hombre	El mismo y familia	Quincenal	No	401.13	Grande
+sin especialidad	Mujer	El mismo	Semanal 	internet	334.8	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	379.45	Grande
+sin especialidad	Mujer	El mismo y pareja 	diario	propaganda	276.37	Grande
+sin especialidad	Hombre	El mismo	diario	internet	384.57	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	No	346.25	Grande
+sin especialidad	Mujer	El mismo y familia	diario	De ambos	503.21	Grande
+sin especialidad	Hombre	El mismo y familia	Quincenal	No	512.95	Grande
+sin especialidad	Hombre	El mismo y familia	Semanal 	internet	558.23	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	403.94	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	395.28	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	internet	316.09	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	propaganda	448.42	Grande
+sin especialidad	Hombre	El mismo	diario	propaganda	269.74	Grande
+Delicatesen	Hombre	El mismo y familia	Semanal 	propaganda	435.5	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	propaganda	490.28	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	No	352.7	Mediana
+Delicatesen	Mujer	El mismo y familia	Semanal 	No	452.33	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	internet	343.64	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	internet	331.85	Pequeña
+Delicatesen	Hombre	El mismo y familia	Semanal 	No	477.99	Pequeña
+Delicatesen	Hombre	El mismo	diario	internet	364.44	Pequeña
+Delicatesen	Hombre	El mismo	Semanal 	internet	408.65	Pequeña
+Delicatesen	Mujer	El mismo y familia	diario	internet	527.48	Pequeña
+sin especialidad	Mujer	El mismo	Semanal 	De ambos	342.67	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	476.48	Mediana
+sin especialidad	Mujer	El mismo y familia	Semanal 	No	482.47	Mediana
+sin especialidad	Hombre	El mismo y pareja 	diario	De ambos	373.21	Mediana
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	384.64	Mediana
+sin especialidad	Hombre	El mismo y pareja 	diario	internet	417.48	Mediana
+sin especialidad	Mujer	El mismo	diario	propaganda	277.15	Mediana
+Delicatesen	Mujer	El mismo	Quincenal	internet	283.71	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	propaganda	265.1	Mediana
+Delicatesen	Mujer	El mismo	diario	internet	373.28	Mediana
+Delicatesen	Hombre	El mismo	Semanal 	De ambos	407.73	Mediana
+Delicatesen	Hombre	El mismo	diario	propaganda	305.81	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	No	250.89	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	internet	302.78	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	propaganda	241.58	Mediana
+Delicatesen	Hombre	El mismo	Semanal 	propaganda	359.52	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	De ambos	315.09	Mediana
+Delicatesen	Mujer	El mismo	Quincenal	internet	394.84	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	No	445.31	Mediana
+sin especialidad	Hombre	El mismo y familia	Quincenal	propaganda	420.32	Mediana
+sin especialidad	Mujer	El mismo y familia	Semanal 	No	479.81	Mediana
+sin especialidad	Mujer	El mismo y familia	Semanal 	internet	430.57	Mediana
+sin especialidad	Hombre	El mismo y familia	Semanal 	No	576.99	Mediana
+sin especialidad	Mujer	El mismo	Semanal 	propaganda	275	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	393.73	Mediana
+sin especialidad	Hombre	El mismo	Quincenal	propaganda	411.06	Mediana
+Delicatesen	Hombre	El mismo y familia	Semanal 	No	411.09	Grande
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	internet	234.5	Grande
+Delicatesen	Mujer	El mismo y familia	Semanal 	internet	470.58	Grande
+Delicatesen	Hombre	El mismo y pareja 	diario	propaganda	386.92	Grande
+Delicatesen	Hombre	El mismo	Semanal 	No	363.96	Grande
+herbolario	Hombre	El mismo y familia	Semanal 	internet	576.19	Mediana
+herbolario	Hombre	El mismo	Semanal 	No	292.18	Mediana
+herbolario	Hombre	El mismo	diario	De ambos	400.52	Mediana
+herbolario	Hombre	El mismo y familia	Semanal 	internet	478.55	Mediana
+herbolario	Mujer	El mismo y pareja 	diario	De ambos	370.55	Mediana
+herbolario	Hombre	El mismo y pareja 	Quincenal	No	300.54	Mediana
+herbolario	Hombre	El mismo y familia	diario	internet	547.93	Mediana
+Panaderia	Hombre	El mismo y pareja 	Semanal 	internet	463.06	Mediana
+Panaderia	Mujer	El mismo y familia	Semanal 	No	402.63	Mediana
+Panaderia	Hombre	El mismo	Semanal 	No	343.64	Mediana
+Panaderia	Hombre	El mismo y familia	Quincenal	De ambos	434.31	Mediana
+Panaderia	Hombre	El mismo y familia	diario	No	470.81	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	propaganda	305.41	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	238.09	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	275.41	Grande
+sin especialidad	Mujer	El mismo y pareja 	diario	internet	437.37	Grande
+sin especialidad	Mujer	El mismo	diario	internet	404.92	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	456.11	Grande
+sin especialidad	Mujer	El mismo y pareja 	diario	internet	401.28	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	No	332.32	Mediana
+sin especialidad	Hombre	El mismo y familia	Semanal 	De ambos	754.8	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	No	399.22	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	537.28	Mediana
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	463.34	Mediana
+herbolario	Mujer	El mismo y pareja 	Semanal 	propaganda	382.48	Mediana
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	476.92	Mediana
+herbolario	Hombre	El mismo y pareja 	Semanal 	internet	411.57	Mediana
+herbolario	Mujer	El mismo y pareja 	Quincenal	No	368.74	Mediana
+herbolario	Hombre	El mismo y pareja 	Semanal 	De ambos	435.58	Mediana
+sin especialidad	Mujer	El mismo y pareja 	diario	propaganda	325.42	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	internet	380.73	Mediana
+sin especialidad	Mujer	El mismo	Semanal 	De ambos	311.04	Mediana
+sin especialidad	Mujer	El mismo y familia	Quincenal	internet	394.04	Mediana
+herbolario	Hombre	El mismo	Quincenal	De ambos	407.6	Mediana
+herbolario	Hombre	El mismo	diario	propaganda	359.87	Mediana
+herbolario	Mujer	El mismo y pareja 	Semanal 	propaganda	274.64	Mediana
+herbolario	Mujer	El mismo	Quincenal	No	312.27	Mediana
+herbolario	Hombre	El mismo	diario	internet	435.79	Mediana
+herbolario	Hombre	El mismo y familia	Semanal 	No	487.67	Mediana
+herbolario	Mujer	El mismo y pareja 	Semanal 	No	316.74	Mediana
+sin especialidad	Mujer	El mismo y familia	Semanal 	propaganda	568.36	Mediana
+sin especialidad	Mujer	El mismo	diario	internet	414.08	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	408.96	Mediana
+sin especialidad	Mujer	El mismo y familia	Quincenal	propaganda	511.74	Mediana
+sin especialidad	Mujer	El mismo y pareja 	diario	De ambos	425	Mediana
+herbolario	Hombre	El mismo	Semanal 	propaganda	403.29	Pequeña
+herbolario	Hombre	El mismo y familia	Quincenal	internet	521.01	Pequeña
+herbolario	Mujer	El mismo y familia	Semanal 	internet	597.75	Pequeña
+herbolario	Mujer	El mismo y familia	Quincenal	propaganda	425.02	Pequeña
+sin especialidad	Mujer	El mismo	Quincenal	No	264.46	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	225.7	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	internet	379.68	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	516.95	Grande
+sin especialidad	Hombre	El mismo y familia	Quincenal	De ambos	652.86	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	398.47	Grande
+sin especialidad	Hombre	El mismo y familia	Semanal 	No	494.12	Grande
+sin especialidad	Hombre	El mismo	diario	propaganda	472.34	Grande
+Panaderia	Mujer	El mismo y pareja 	Quincenal	No	416.02	Pequeña
+Panaderia	Mujer	El mismo y familia	diario	internet	563.14	Pequeña
+Panaderia	Hombre	El mismo y pareja 	Semanal 	No	382.64	Pequeña
+Panaderia	Hombre	El mismo y pareja 	Semanal 	No	377.91	Pequeña
+Panaderia	Mujer	El mismo y pareja 	Semanal 	De ambos	416.62	Pequeña
+Panaderia	Hombre	El mismo y familia	diario	propaganda	464.47	Pequeña
+Panaderia	Hombre	El mismo y familia	diario	propaganda	484.31	Pequeña
+Delicatesen	Hombre	El mismo y familia	Semanal 	internet	640.84	Pequeña
+Delicatesen	Mujer	El mismo	Semanal 	internet	410.46	Pequeña
+Delicatesen	Mujer	El mismo	Quincenal	propaganda	317.18	Pequeña
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	internet	393.6	Pequeña
+Panaderia	Mujer	El mismo y familia	Semanal 	No	414.62	Pequeña
+Panaderia	Hombre	El mismo	diario	No	350.39	Pequeña
+Panaderia	Hombre	El mismo y pareja 	Semanal 	No	486.85	Pequeña
+Panaderia	Hombre	El mismo y pareja 	Semanal 	propaganda	388.09	Pequeña
+Panaderia	Mujer	El mismo y familia	Semanal 	No	383.12	Grande
+Panaderia	Mujer	El mismo y pareja 	Semanal 	propaganda	314.1	Grande
+Panaderia	Mujer	El mismo y pareja 	diario	propaganda	373.32	Grande
+Panaderia	Mujer	El mismo y pareja 	diario	internet	347.34	Grande
+Panaderia	Mujer	El mismo	Semanal 	propaganda	227.4	Grande
+Panaderia	Mujer	El mismo	Quincenal	No	261.56	Grande
+Panaderia	Mujer	El mismo y pareja 	Semanal 	De ambos	386.83	Grande
+Panaderia	Mujer	El mismo y pareja 	Quincenal	De ambos	358.25	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	propaganda	253.33	Grande
+sin especialidad	Mujer	El mismo	diario	internet	475.24	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	404.62	Grande
+sin especialidad	Mujer	El mismo y familia	diario	internet	555.15	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	propaganda	454.62	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	322.76	Grande
+sin especialidad	Mujer	El mismo y familia	diario	De ambos	530.34	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	internet	256.01	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	364.19	Grande
+sin especialidad	Mujer	El mismo y pareja 	diario	propaganda	413.7	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	269.22	Grande
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	internet	374.74	Grande
+Delicatesen	Hombre	El mismo	Semanal 	propaganda	307.1	Grande
+Delicatesen	Mujer	El mismo y familia	Semanal 	No	385.9	Grande
+Delicatesen	Mujer	El mismo	Semanal 	De ambos	314.59	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	469.79	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	408.57	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	420.3	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	No	435.74	Grande
+sin especialidad	Hombre	El mismo	Semanal 	internet	491.52	Grande
+sin especialidad	Hombre	El mismo	Semanal 	No	394.03	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	297.73	Grande
+Delicatesen	Mujer	El mismo y pareja 	diario	De ambos	406.86	Mediana
+Delicatesen	Mujer	El mismo y familia	Semanal 	No	338	Mediana
+Delicatesen	Hombre	El mismo	Quincenal	No	313.46	Mediana
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	No	507.85	Mediana
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	De ambos	447.13	Mediana
+Delicatesen	Hombre	El mismo	Quincenal	internet	356.87	Mediana
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	447.16	Mediana
+herbolario	Mujer	El mismo y familia	Quincenal	No	420.05	Mediana
+herbolario	Hombre	El mismo	diario	propaganda	311.54	Mediana
+herbolario	Hombre	El mismo	Semanal 	propaganda	423.62	Mediana
+herbolario	Hombre	El mismo	Semanal 	No	333.9	Mediana
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	321.97	Grande
+herbolario	Hombre	El mismo y pareja 	Quincenal	De ambos	412.64	Grande
+herbolario	Hombre	El mismo y familia	Semanal 	propaganda	414.68	Grande
+herbolario	Mujer	El mismo	Semanal 	No	227	Grande
+herbolario	Mujer	El mismo	Semanal 	propaganda	279.12	Grande
+herbolario	Mujer	El mismo	diario	propaganda	308.93	Grande
+Delicatesen	Mujer	El mismo y pareja 	diario	propaganda	314.39	Grande
+Delicatesen	Hombre	El mismo	Semanal 	propaganda	403.81	Grande
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	propaganda	357.65	Grande
+Delicatesen	Mujer	El mismo y familia	Semanal 	propaganda	427.51	Grande
+Delicatesen	Hombre	El mismo y pareja 	Quincenal	internet	404.15	Grande
+sin especialidad	Hombre	El mismo	Semanal 	internet	475.69	Pequeña
+sin especialidad	Mujer	El mismo	Semanal 	No	264.57	Pequeña
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	525.9	Pequeña
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	De ambos	470.01	Pequeña
+sin especialidad	Mujer	El mismo y familia	Semanal 	internet	556.4	Pequeña
+sin especialidad	Mujer	El mismo y familia	diario	propaganda	423.77	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	internet	414.18	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	propaganda	253.11	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	No	322.74	Mediana
+sin especialidad	Hombre	El mismo y pareja 	diario	internet	433.9	Mediana
+sin especialidad	Hombre	El mismo y familia	Semanal 	No	504.42	Mediana
+sin especialidad	Mujer	El mismo y familia	Semanal 	De ambos	369.75	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	382.42	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	No	390.66	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	De ambos	360.08	Grande
+sin especialidad	Mujer	El mismo y familia	Quincenal	internet	420.81	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	propaganda	411.35	Grande
+sin especialidad	Hombre	El mismo	Semanal 	De ambos	337.24	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	propaganda	297.69	Grande
+Delicatesen	Mujer	El mismo y pareja 	diario	internet	411.97	Grande
+Delicatesen	Hombre	El mismo y pareja 	diario	internet	371.03	Grande
+Delicatesen	Mujer	El mismo y familia	Semanal 	internet	504.96	Grande
+Delicatesen	Hombre	El mismo y familia	Semanal 	propaganda	517.25	Grande
+Delicatesen	Mujer	El mismo	Semanal 	propaganda	331.87	Grande
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	No	353.07	Grande
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	propaganda	389.14	Grande
+Delicatesen	Mujer	El mismo y pareja 	diario	De ambos	384.27	Grande
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	propaganda	366.66	Grande
+Delicatesen	Mujer	El mismo	Semanal 	internet	316.76	Grande
+Delicatesen	Mujer	El mismo y pareja 	Quincenal	De ambos	260.74	Grande
+Delicatesen	Hombre	El mismo	diario	No	387.51	Grande
+sin especialidad	Mujer	El mismo	Quincenal	No	207.75	Pequeña
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	propaganda	345.53	Pequeña
+sin especialidad	Hombre	El mismo y familia	Quincenal	propaganda	431.09	Pequeña
+sin especialidad	Hombre	El mismo y familia	Semanal 	internet	640.68	Pequeña
+sin especialidad	Hombre	El mismo y pareja 	diario	propaganda	352.57	Pequeña
+sin especialidad	Mujer	El mismo	Semanal 	propaganda	257.66	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	292.16	Grande
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	internet	269.05	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	299.8	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	386.19	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	367.37	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	internet	354.86	Grande
+sin especialidad	Hombre	El mismo y familia	Semanal 	No	596.65	Grande
+sin especialidad	Mujer	El mismo	Semanal 	internet	269.54	Grande
+sin especialidad	Mujer	El mismo	Semanal 	propaganda	328	Grande
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	propaganda	328.85	Pequeña
+Delicatesen	Mujer	El mismo	Semanal 	No	194.64	Pequeña
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	De ambos	349.08	Pequeña
+Delicatesen	Hombre	El mismo	Semanal 	propaganda	354.44	Pequeña
+Delicatesen	Hombre	El mismo	diario	De ambos	373.09	Pequeña
+sin especialidad	Mujer	El mismo	Semanal 	propaganda	312.09	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	523.14	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	428.09	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	propaganda	396.6	Grande
+sin especialidad	Hombre	El mismo	Semanal 	No	354.22	Grande
+sin especialidad	Hombre	El mismo y familia	Semanal 	No	487.11	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	474.13	Mediana
+sin especialidad	Hombre	El mismo	Semanal 	De ambos	439.14	Mediana
+sin especialidad	Hombre	El mismo y familia	diario	internet	580.98	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	internet	352.25	Mediana
+sin especialidad	Mujer	El mismo	Quincenal	No	239.26	Mediana
+sin especialidad	Mujer	El mismo	Semanal 	internet	339.7	Mediana
+herbolario	Hombre	El mismo y familia	Semanal 	De ambos	584.91	Pequeña
+herbolario	Hombre	El mismo y familia	Semanal 	De ambos	733.54	Pequeña
+herbolario	Mujer	El mismo	Semanal 	internet	314.81	Pequeña
+herbolario	Mujer	El mismo y pareja 	Semanal 	De ambos	514.96	Pequeña
+herbolario	Mujer	El mismo	diario	No	302.29	Pequeña
+herbolario	Mujer	El mismo y familia	Semanal 	De ambos	579.77	Pequeña
+sin especialidad	Mujer	El mismo	Semanal 	No	302.01	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	internet	487.68	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	388.4	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	internet	418.84	Grande
+sin especialidad	Mujer	El mismo	Semanal 	internet	413.49	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	433.78	Grande
+sin especialidad	Mujer	El mismo	Semanal 	De ambos	365.28	Grande
+sin especialidad	Mujer	El mismo y familia	Quincenal	De ambos	418.75	Grande
+herbolario	Hombre	El mismo	Semanal 	De ambos	450.09	Pequeña
+herbolario	Mujer	El mismo y pareja 	Semanal 	De ambos	340.99	Pequeña
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	359.51	Pequeña
+herbolario	Hombre	El mismo y familia	Quincenal	internet	531.83	Pequeña
+herbolario	Hombre	El mismo y familia	Quincenal	internet	663.58	Grande
+herbolario	Hombre	El mismo	Quincenal	No	357.8	Grande
+herbolario	Hombre	El mismo	Semanal 	De ambos	446.89	Grande
+herbolario	Mujer	El mismo y pareja 	Semanal 	De ambos	357.76	Grande
+herbolario	Mujer	El mismo y familia	Semanal 	internet	643.8	Grande
+herbolario	Hombre	El mismo y pareja 	diario	internet	452.22	Grande
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	418.75	Pequeña
+herbolario	Hombre	El mismo	Semanal 	internet	349.06	Pequeña
+herbolario	Hombre	El mismo y familia	Semanal 	De ambos	685.25	Pequeña
+herbolario	Mujer	El mismo	Semanal 	De ambos	348.28	Pequeña
+Panaderia	Mujer	El mismo y familia	Semanal 	No	529.7	Mediana
+Panaderia	Mujer	El mismo	Quincenal	propaganda	251.23	Mediana
+Panaderia	Mujer	El mismo y pareja 	Semanal 	No	405.49	Mediana
+Panaderia	Hombre	El mismo y familia	Semanal 	De ambos	560.92	Mediana
+Panaderia	Hombre	El mismo y familia	Semanal 	De ambos	754.03	Mediana
+sin especialidad	Hombre	El mismo	diario	propaganda	391.68	Grande
+sin especialidad	Mujer	El mismo	Semanal 	No	254.87	Grande
+sin especialidad	Mujer	El mismo y familia	Semanal 	De ambos	463.35	Grande
+sin especialidad	Hombre	El mismo y familia	Semanal 	internet	514.96	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	No	331.41	Grande
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	No	430.47	Grande
+Panaderia	Hombre	El mismo	diario	internet	405.86	Pequeña
+Panaderia	Hombre	El mismo	Semanal 	No	345.17	Pequeña
+Panaderia	Hombre	El mismo	Semanal 	De ambos	348.74	Pequeña
+Panaderia	Mujer	El mismo	Semanal 	propaganda	257.61	Pequeña
+Panaderia	Mujer	El mismo	Semanal 	internet	295.4	Pequeña
+Panaderia	Hombre	El mismo	Semanal 	De ambos	409.18	Pequeña
+herbolario	Hombre	El mismo y familia	Semanal 	internet	560.21	Pequeña
+herbolario	Mujer	El mismo	Semanal 	internet	357.26	Pequeña
+herbolario	Mujer	El mismo	Semanal 	internet	292.98	Pequeña
+Delicatesen	Mujer	El mismo	Semanal 	No	251.6	Mediana
+Delicatesen	Mujer	El mismo y pareja 	diario	propaganda	338.55	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	De ambos	316.48	Mediana
+Delicatesen	Hombre	El mismo y familia	Quincenal	propaganda	403.04	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	internet	435.3	Mediana
+Delicatesen	Mujer	El mismo y familia	Semanal 	De ambos	402.5	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	De ambos	343.49	Mediana
+Delicatesen	Mujer	El mismo	Semanal 	No	289.47	Mediana
+Delicatesen	Mujer	El mismo y familia	Quincenal	No	368.51	Mediana
+Delicatesen	Hombre	El mismo y familia	Semanal 	internet	653.8	Mediana
+Delicatesen	Mujer	El mismo	Quincenal	internet	393.7	Mediana
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	propaganda	367.85	Mediana
+Delicatesen	Hombre	El mismo y pareja 	Semanal 	internet	423.41	Mediana
+Delicatesen	Mujer	El mismo y familia	Semanal 	No	474.33	Mediana
+Delicatesen	Mujer	El mismo y pareja 	Semanal 	internet	369.12	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	No	377.56	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	500.39	Grande
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	internet	385.26	Grande
+sin especialidad	Hombre	El mismo	diario	De ambos	502.84	Grande
+sin especialidad	Mujer	El mismo y pareja 	diario	De ambos	494.36	Grande
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	De ambos	362.48	Grande
+sin especialidad	Hombre	El mismo	Semanal 	propaganda	375.67	Grande
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	No	327.96	Mediana
+sin especialidad	Hombre	El mismo y familia	Quincenal	De ambos	605.02	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Quincenal	De ambos	253.41	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	382.01	Mediana
+sin especialidad	Hombre	El mismo y pareja 	diario	internet	356.7	Mediana
+sin especialidad	Mujer	El mismo	Quincenal	No	202.31	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Quincenal	No	369.82	Mediana
+sin especialidad	Mujer	El mismo	Semanal 	No	263.76	Mediana
+Panaderia	Hombre	El mismo y familia	Semanal 	propaganda	490.81	Mediana
+Panaderia	Mujer	El mismo y familia	Semanal 	No	490.57	Mediana
+Panaderia	Hombre	El mismo	Semanal 	propaganda	386.43	Mediana
+Panaderia	Hombre	El mismo	Semanal 	De ambos	386.48	Mediana
+Panaderia	Hombre	El mismo y pareja 	Semanal 	De ambos	382.15	Mediana
+Panaderia	Mujer	El mismo y familia	Quincenal	No	397.9	Mediana
+sin especialidad	Hombre	El mismo y familia	Semanal 	De ambos	584.98	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	No	385.93	Mediana
+sin especialidad	Hombre	El mismo y pareja 	Semanal 	De ambos	487.52	Mediana
+sin especialidad	Mujer	El mismo y pareja 	Semanal 	internet	344.72	Mediana
+herbolario	Mujer	El mismo	diario	propaganda	386.35	Pequeña
+herbolario	Mujer	El mismo y pareja 	Semanal 	No	389.33	Pequeña
+herbolario	Hombre	El mismo y pareja 	diario	internet	448.77	Pequeña
+herbolario	Hombre	El mismo y pareja 	Semanal 	No	427.31	Pequeña
+sin especialidad	Hombre	El mismo	Quincenal	De ambos	336.18	Mediana
+sin especialidad	Hombre	El mismo y familia	Semanal 	internet	654.75	Mediana
+sin especialidad	Mujer	El mismo y familia	Quincenal	De ambos	644.29	Mediana
+sin especialidad	Hombre	El mismo	Semanal 	No	320.21	Mediana
+sin especialidad	Hombre	El mismo y pareja 	diario	propaganda	375.95	Mediana
