@@ -1,0 +1,867 @@
+---
+title: "Actividad 2"
+output: pdf_document
+date: "2023-03-21"
+---
+
+```{r setup, include=FALSE}
+#install.packages("ggplot2")
+#install.packages("corrplot")
+#install.packages("psych")
+#install.packages("factoextra")
+#install.packages("FactoMineR")
+#install.packages("paran")
+#install.packages("nFactors")
+#install.packages("ade4")
+
+library(ggplot2)
+library(corrplot)
+library(FactoMineR)
+library(factoextra)
+library(psych)
+library(paran)
+library(nFactors)
+library(ade4)
+```
+
+# Ejercicio 1
+
+Con los datos de las pruebas de decathalon masculino de los últimos Juegos Olimpicos, realizar un Análisis
+de Componentes Principales que debe incluir:
+ - Comprobar el fichero de datos y analizar las correlaciones.
+ - Analizar los autovalores. Determinar el número de componentes princiaples a extraer mediante métodos numéricos y gráficos.
+ - Calcular y analizar las contribuciones a las variables y los individuos.
+ - Obtener e interpretar las representaciones gráficas sobres las variables.
+ - Obtener e interpretar las representaciones gráficas sobres los individuos.
+ - Usar la variable puntuación final como variable suplementaria y buscar y añadir como individuo
+suplementario los datos del campeón de España actual.
+
+ 
+
+## Apartado 1
+
+```{r 1.1}
+decat <- read.delim2("C:/Users/tharu/Downloads/decathalon.txt")
+head(decat) 
+summary(decat)
+```
+
+Se han encontrado valores perdidos en cada una de las variables, es decir, en cada una de las pruebas, hay atletas que no han terminado el decatlon, por lo tanto no se contabiliza.
+La variable total no se va a considerar
+```{r 1.12}
+decat2<- na.omit(decat)
+decat3<- decat2[2:11]   ## Eliminamos la varible nombre y score para los analisis
+plot(decat3) 
+```
+
+Se han eliminado los datos de aquellos que no tienen puntuacion en alguna prueba, ya que esto implica que no se ha completado el decathlon
+
+```{r 1.13}
+boxplot(decat3)  
+datos<- scale(decat3)
+boxplot(datos)
+```
+
+Dado que los datos se encuentran en distintas dimensiones, se han escalado el conjunto de valores para realizar los calculos pertinentes. Ahora si, calculamos las correlaciones
+
+
+```{r 1.14}
+R<-cor(datos,method="pearson")
+R
+```
+
+Se aprecian valores muy pequeños entre las pruebas de peso - longitud, peso- X100mv, etc, pero siempre encontramos valores mayores, en valor absoluto, que 0.
+
+Vamos a comprobar cuales son las pruebas que menor correlacion tienen entre ellas:
+```{r 1.15}
+corrplot(R,sig.level=0.05,typ="lower")
+```
+
+Se comprueba lo propuesto anteriormente, siendo las pruebas de jabalina y altura menos relacionadas
+
+
+
+## Apartado 2
+
+Para este apartado, en primer lugar tenemos que verificar test de Barlett para contrastar que nuestros datos tengan una cierta correlacion y se pueda hacer el analisis de componentes principales
+Siendo la hipotesis nula $H_{0}$: La matriz de correlaciones es la identidad
+
+```{r 1.2}
+cortest(R,n1=17)
+```
+
+Obteniendose un p-valor de 0.045<0.05 $\Rightarrow$ Existe cierto grado de correlacion.
+Pasamos al ACP.
+
+Para estimar el numero de componentes del modelo tenemos que calcular los valores propios y ver cuales son mayores que 1
+Graficamente lo vamos a poder representar tambien
+```{r 1.21}
+eigen(R) #Descomposicion en valores propios de la matriz de correlaciones
+```
+
+En esta primera instacia, se han obtenido un total de 4 componentes principales, vamos a graficarlo para comprobar estos resultados
+```{r 1.22}
+scree(R,factors=F,pc=T)
+```
+
+El grafico nos vuelve a indicar lo mismo, pero debemos tener en cuenta que, a pesar de estar por debajo de 1, la quinta variable se situa muy cerca en este Scree plot para el analisis de componentes principales. Por otra parte se puede ver que la cuarta componente principal se situa tambien muy cerca de la linea de control, vamos a estudiar este resultado mas a fondo
+
+
+```{r 1.23}
+paran(R, iterations=5000,graph=T,color=T) 
+# Por este metodo nos quedariamos con dos y retenemos las otras dos, en el grafico se han obtenido dos componentes principales, con respecto a los resultados anteriores no hay un acuerdo total sobre el numero de componentes principales que se van a usar
+
+nBartlett(R, N=17,alpha=0.05,cor=T,details=F) 
+```
+
+Los tests mas conservadores indican otros resultados, llegando a retener un total de 5 variables con este metodo
+
+```{r 1.24}
+ACP<-dudi.pca(datos,nf=3,scannf = F)
+summary(ACP)
+```
+
+Finalmente, se van a coger 3 componentes principales, ya que destacan claramente en el grupo de componentes
+
+```{r 1.25}
+#install.packages("stringi")
+#library(stringi)
+#stri_enc_toutf8()
+#ACP2<-PCA(datos, scale.unit = FALSE,ncp=3, graph = TRUE)
+```
+
+Entre las tres componentes elegidas, se representa un total del 66.74% variabilidad explicada, finalmente nos quedaremos con estas tres componentes principales
+
+Este segundo grafico nos muestra con mas detalles las caracteristicas de cada variable
+
+
+## Apartado 3
+
+
+Contribuciones de los individuos
+
+```{r 1.34}
+acpi<-inertia.dudi(ACP, row.inertia=T, col.inertia=T)
+acpi$row.contrib
+acpi$row.abs
+```
+
+Los individuos que mas han contribuido implica que han quedado los primeros, con mayor puntuacion, en este apartado podemos destacar a Ayden, seguido por Sander y Pierce, el que menos ha contribuido, es decir, el ultimo en terminar el decatlon ha sido Kai
+
+Las contribuciones absolutas apoyan esta hipotesis. Siendo los valores mas altos en cada componente principal el participante que mayor contribucion ha tenido en esta, se puede apreciar que Ayden ha obtenido de las contribuciones mas altas a cada uno de los ejes.
+
+
+El siguiente cuadro de resultados nos indica cuanto es explicado por cada individuo del modelo de ACP (representatividad de los individuos sobre las componentes principales)
+
+```{r 1.35}
+ACP2<-PCA(datos, scale.unit = FALSE,ncp=3, graph = TRUE)
+fviz_pca_ind(ACP2, col.ind = "cos2",
+             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+             repel = TRUE )
+```
+
+Se puede considerar como un mapa de calor, donde se podria apreciar de manera visual los participantes que mas han destacado en general de un color rojo/naranja intenso.
+
+
+Se aprecian que las pruebas de disco, peso y X1500 se situan en la parte inferior izquierda, la de longitud la encontramos sola en la parte inferior derecha, tambien se aprecia un grupo con X100, X100mv y altura; otro con jabalina y pertiga y por ultimo, tambien un tanto alejado de este ultimo grupo el de X400
+Esto indica que para las pruebas que se encuentran agrupadas necesitas habilidades similares, es por esto que el salto de longitud esta mas aislado
+Para otros casos como el grupo de jabalina, pertiga, que requieren mas habilidad tecnica, o en el grupo de altura, X100mv y X100 se requiere una habilidad similar para tener exito en estas pruebas, etc
+
+
+
+## Apartado 4
+
+
+En primer lugar, vamos a ver la descomposicion de la inercia sobre las variables
+```{r 1.3}
+acpi<-inertia.dudi(ACP, row.inertia=T, col.inertia=T)
+acpi$tot.inertia
+## Contribuicion sobre las variables
+acpi$col.contrib
+```
+
+Todas se distribuyen igualmente
+
+```{r 1.31}
+acpi$col.abs #descomposición por ejes
+```
+
+Se aprecia que el primer eje viene marcado por Peso, disco, jabalina y X1500
+El segundo eje lo marcan las pruebas de X100, altura, X400 y X100mv
+El tercer eje lo marca sobre todo la prueba de longitud, seguido por X100, pertiga y altura
+
+Ahora vamos a ver la contribucion de cada variable por parte de las componentes principales
+```{r 1.42}
+acpi$col.rel #explicación relativa por ejes
+
+fviz_cos2(ACP2, choice = "var", axes = 1) #contribución de cada variable por la dimensión 1, destacan las pruebas de disco, seguida por peso y X1500, como hemos visto anteriormente
+
+fviz_cos2(ACP2, choice = "var", axes = 2)#contribución de cada variable por la dimensión 2, en este caso las pruebas que mayor contribucion tienen a esta dimension son las de X400, X100mv, altura y X100
+```
+
+
+
+Conclusiones:
+- La prueba de 100m esta explicada en un 33.8% por la segunda componente principal y en un 43.49% por la tercera
+- El salto de longitud lo explica la CP 3 en un 81.81%
+- La prueba que mas variabilidad distribuye entre las componentes principales es la del salto de pertiga, con un 21.35% en la CP1, 13.30% en la segunda y 38.2% en la tercera componente principal
+- La prueba que mayor variabilidad explicada tiene entre estas 3 componentes es la de salto de longitud, anteriormente comentada
+
+Estas conclusiones se aprecian mas facilmente en el siguiente resultado
+
+
+```{r 1.43}
+round(acpi$col.cum,2) #acumulado por ejes
+
+fviz_cos2(ACP2, choice = "var", axes = c(1:3)) ## Representatividad total de cada una de las pruebas sobre las tres compomentes principales de manera conjunta
+
+dimdesc(ACP2, axes = c(1:3), proba = 0.05) 
+```
+
+
+Las contribuciones obtenidas para cada una de las dimensiones es significativa respecto a esta componente principal:
+- En el caso de la primera componente principal, las pruebas que han sido identificadas como significativa son las de disco, peso, X1500 y jabalina
+- Para la segunda componente principal, salen significativas las pruebas de X400, X110 mv, altura y X100
+- Por ultimo, para la tercera componente principal han dado significativas las pruebas de longitud, pertiga, altura y X100
+
+
+
+
+## Apartado 5
+
+```{r 1.5}
+ACP$li #CP en el espacio de las filas
+
+s.label(ACP$li)  ### Representacion grafica de los atletas
+```
+
+
+En este caso vemos un grupo centrico que tiene bastante dispersion, y luego vemos a los atletas que mejor puntuacion han obtenido segun los grupos vistos anteriormente, 
+Maicel ha sido el que mejor se ha desarrollado en X400; Pierce el que mejor ha competido en x1500, disco y peso; Ayden en longitud, etc.
+
+Contribucion de cada atleta sobre las componentes principales
+```{r 1.51}
+fviz_contrib(ACP2, choice = "ind", axes = 1:3)
+```
+
+Aunque antes hemos hecho un mapa de calor sobre los mismos datos, en este caso podemos diferenciar a los atletas que mas han contribuido a nuestras componentes principales, se aprecia que a partir de "Lindon" todos los atletas tienen una representacion baja, es posible que esto se deba a las puntuaciones, es decir, que han quedado en ultimas posiciones
+
+
+Vamos a hacer un grafico con elipsoides para ver los distintos grupos que puede haber segun las puntuaciones
+```{r 1.52}
+decat2[,"score2"]<-cut(decat2$total, breaks=c(7000,8100,8450,9000),
+                           labels = c("a","b","c")) 
+
+fviz_pca_ind(ACP2,
+             geom.ind = "point",
+             col.ind = decat2$score2, # grupos
+             palette = c("#00AFBB", "#E7B800", "#FC4E07"),
+             addEllipses = TRUE, # elipses
+             legend.title = "Grupos")
+```
+
+Como era de esperar, nuestras elipses no quedan muy definidas, debido a los pocos participantes que consiguieron completar el decathlon
+
+
+## Apartado 6
+
+Agregamos las marcas del campeon nacional de decathlon, David Abrines
+
+```{r 1.6}
+decatlon<-rbind(decat3,c(11.15,7.09,13.29,2,49.97,14.6,37.98,3.7,59.22,292.24,7355))
+ACP3<-PCA( decatlon, scale.unit = T,ncp=3, graph = T)
+
+fviz_pca_biplot(ACP3, repel = TRUE,
+                col.var = "#2E9FDF",
+                col.ind = "#696969" 
+                  )
+```
+
+En este ultimo 'biplot' se puede apreciar mejor el desarrollo de los individuos en las distintas pruebas. Se puede apreciar que el individuo que hemos agregado se situa en la parte central izquierda, bastante alejado del conjunto de atletas participantes, con una  fuerte correlacion negativa respecto la primera componente principal
+
+\newpage
+
+# Ejercicio 2
+
+## Apartado 1. Comprobar el fichero de datos y analizar las correlaciones.
+
+```{r}
+datos<- read.delim2("C:/Users/tharu/Downloads/clientes.txt")
+head(datos)
+```
+Ahora que los datos están bien cargados vamos a realizar un resumen estadístico de los datos. Eliminamos las variables \textit{IDcliente} porque no aporta ninguna información complementaria y \textit{Direccion} porque es un caracter y no es relevante para el análisis numérico. Las variables están en distintas unidades de medida como años o cantidad monetaria, por lo que también tipificamos las variables para tener una representación gráfica y análisis más fidedignos.  
+
+```{r}
+summary(datos)
+plot(datos)
+
+datos2<-datos[,-1]
+datos2<-datos2[,-7]#Eliminamos las variables indicadas
+
+head(datos2)
+
+library(ggplot2)
+boxplot(datos2) #representamos los datos no tipificados
+
+datos3<-scale(datos2) #tipificamos
+boxplot(datos3) #representamos los datos tipificados
+```
+
+Si nos fijamos en las variables podemos ver que solo la variable edad parece tener una distribución normal (aunque no nos meteremos mucho en ese tipo de análisis), y sobre todo, notamos una gran cantidad de datos atípicos. Como tratamos datos bancarios entendemos que existan esta gran cantidad de datos atípicos por las posibles diferencias económicas entre los individuos muestrados y no los tratamos de ninguna manera. Estudiamos ahora el grado de correlación entre las variables. 
+
+```{r}
+R<-cor(datos3,method="pearson")
+R
+
+library(corrplot)
+corrplot(R,sig.level=0.05,typ="lower")
+```
+
+Vemos que no existen correlaciones negativas entre las variables (quizás un poco entre \textit{antiguedad} y \textit{educacion}), la correlación entre las variables está entre 0.2 y 0.8. Vamos a aplicar el test de Barlett para contrastar más la correlación, siendo la hipótesis nula: 
+
+$$H_0: La \: matriz \: de \: correlaciones \: es \: la \: identidad$$
+```{r}
+library(psych)
+cortest(R,n1=850) #hay que indicar el tamaño de muestra
+```
+Contrastamos que existe correlación entre las variables al rechazarse la hipótesis nula que indica que la matriz identidad es la de correlaciones. 
+
+## Apartado 2: Analizar los autovalores. Determinar el número de componentes principales a extraer mediante métodos numéricos y gráficos.
+
+Procedemos a calcular los autovalores del dataframe y su representación gráfica. 
+
+```{r}
+eigen(R)
+scree(R,factors=F,pc=T) # si factor es TRUE es para análisis factorial
+round(eigen(R)$values,2) # redondeo
+```
+Vemos que hay 3 valores mayores que la unidad, por lo que haremos el análisis con 3 componentes principales.
+
+```{r}
+library(paran)
+paran(R, iterations=5000,graph=T,color=T) #test menos conservador
+
+library(nFactors)
+nBartlett(R, N=850,alpha=0.01,cor=T,details=F) #test más conservador
+
+```
+
+Dependiendo del test utilizado nos insta a quedarnos con menos CP (2) o con más (6). Descartamos utilizar 6 por ser demasiadas para la cantidad de variables que tenemos y con 2 por la ssopecha de que alguna columna necesite de la tercera dimensión para ser mayormente explicada, comenzaremos a realizar el análisis con 3. 
+
+## Apartado 3: Calcular y analizar las contribuciones a las variables y los individuos.
+
+Comenzamos calculando las componentes principales: 
+
+```{r}
+library(ade4)
+ACP<-dudi.pca(datos3,nf=3,scannf = F) #al seleccionar el numero realiza el ACP con 3 componentes
+
+summary(ACP) # resumen de los autovalores y porcentajes de inercia
+```
+La información relevante que este resumen nos indica son los porcentajes de variabilidad explicada de cada eje y principalmente, que las tres primeras componentes principales ya nos explica el 80% de la variabilidad, por lo que no vamos desencaminados con la elección del número de componentes principales. 
+
+### Contribuciones
+
+El problema fundamental del ACP consiste en explicar y representar como se descompone esta inercia sobre
+las variables y los individuos. Para ello usamos la orden inertia.dudi sobre los resultados de un ACP. En primer lugar vemos la descomposición total (y no de las 5 primeros autovalores) de nuestros ejemplo. 
+
+
+```{r}
+acpi<-inertia.dudi(ACP, row.inertia=T, col.inertia=T)
+acpi$tot.inertia # descomposición de la inercia
+```
+
+### Contribuciones de las variables
+
+Vamos a ver varias descomposiciones de las contribuciones de las variables. 
+
+```{r}
+acpi$col.contrib #contribuciones a la inercia de las columnas (va)
+acpi$col.abs #descomposición por ejes
+acpi$col.rel #explicación relativa por ejes
+round(acpi$col.cum,2) #acumulado por ejes
+```
+```{r}
+acpi$col.contrib #contribuciones a la inercia de las columnas (va)
+```
+Las variables son todas igualmente distribuidas. 
+
+```{r}
+acpi$col.abs #descomposición por ejes
+```
+
+En el primer eje vienen explicadas la mayoría de las variables, siendo la segunda componente la siguiente que más explica y la tercera la que menos, pero con muvha importancia en una variable en concreto.    
+
+```{r}
+acpi$col.rel #explicación relativa por ejes
+```
+
+Vemos resultados bastante similares a los del comando anterior, explicado esta vez en porcentajes. 
+
+
+```{r}
+round(acpi$col.cum,2) #acumulado por ejes
+```
+
+Vemos lo que se explica y lo que se deja de explicar en cada variable, veremos esto más adelante. 
+
+Podemos ver que la variabilidad de *edad* y *antiguedad* se reparten en las dos primeras componentes principales, y por ejemplo *educación* tiene casi toda su variabilidad explicada en la tercera componente. Las demás variables tienen una distribución más uniforme. la variable *edad* es la que menos explicada está, alrededor del 60%. 
+
+### Contribuciones de los individuos
+
+```{r}
+head(acpi$row.contrib) #Tenemos las contribuciones de las filas en vez de las columnas 
+
+head(round(acpi$row.abs,2))
+head(round(acpi$row.rel,2))
+head(round(acpi$row.cum,2))
+```
+
+Lo ponemos con la función **head()** por que al ser tantos datos vamos a tener una salida bastante larga, y sobretodo innecesaria. La contribuciones de los individuos no nos dan una información muy relevante sobre las características que queremos estudiar. Es un aspecto que explicaremos mejor más adelante. 
+
+
+## Apartado 4. Obtener e interpretar las representaciones gráficas sobres las variables.
+
+Representamos el verdadero valor de las componentes principales
+
+```{r}
+ACP$co # CP en el espacio de las columnas
+```
+
+```{r}
+library(ade4)
+s.label(ACP$co)
+s.corcircle(ACP$co)
+```
+
+Se puede observar que, por ejemplo, hay similitudes entre las variables de *ingreso*, *edad* y *antiguedad*. La variable *Ratioingresodeuda* se separa de las demás. Ahora vamos a ocupar otras formas de graficar este tipo de soluciones.  
+
+```{r}
+library("FactoMineR")
+library("factoextra")
+ACP2<-PCA(datos3, scale.unit = FALSE,ncp=3, graph = TRUE) #como tenemos los datos normalizados
+ACP2$eig
+fviz_eig(ACP2, addlabels = TRUE, ylim = c(0, 70))
+```
+En base a estos gráficos se decidira si se quita, se añade o se deja el número de componentes principales que hay ahora mismo. En este caso vamos a decidir seguir con el mismo número que antes. 
+
+### Contribuciones de las variables 
+
+```{r}
+ACP2$var
+library(corrplot)
+corrplot(ACP2$var$cor, title = "correlaciones",addCoef.col=T)
+```
+
+Vemos que la dimesnión 1 es la que más explica la variabilidad de las diferentes variables. La dimesnión 2 explica de forma contundente la variable *Ratioingresodeuda*, lo mismo para la variable *educacion* por la dimensión 3. Ahora vamos a ver la representación de las variables en gráficos bidimensionales cuyos ejes son las dimensiones dadas por el modelo. 
+
+```{r}
+fviz_pca_var(ACP2, axes=c(1,2), repel = TRUE,
+col.var = "#2E9FDF", # Variables color
+col.ind = "#696969" # Individuos color
+)
+
+fviz_pca_var(ACP2, axes=c(1,3), repel = TRUE,
+col.var = "#2E9FDF", # Variables color
+col.ind = "#696969" # Individuos color
+)
+
+fviz_pca_var(ACP2, axes=c(2,3), repel = TRUE,
+col.var = "#2E9FDF", # Variables color
+col.ind = "#696969" # Individuos color
+)
+```
+Vemos que variables como *educacion* cambian mucho su inclinación cuando la dimension 3 está o no está presente en el gráfico, ya que esta dimensión es la que explica su variabilidad en casi su totalidad. Esto nos hace pensar que ha sido muy buena idea hacer un modelo de por lo menos 3 dimensiones por que si no perderíamos mucha información sobre esta variable, aunque sea la que menos explique con alrededor del 15%. Pasa lo mismo a su vez con la variable *Ratioingresodeuda*. Ahora mostraremos unos gráficos que enseñan esto de una manera más clara. 
+
+```{r}
+fviz_cos2(ACP2, choice = "var", axes = 1) #contribución de cada variable por la dimensión 1
+fviz_cos2(ACP2, choice = "var", axes = 2) #contribución de cada variable por la dimensión 2
+fviz_cos2(ACP2, choice = "var", axes = 3) #contribución de cada variable por la dimensión 3
+fviz_cos2(ACP2, choice = "var", axes = 1:2) #contribución de cada variable por las dimesniones 1 y 2
+fviz_cos2(ACP2, choice = "var", axes = 2:3) #contribución de cada variable por las dimesniones 2 y 3
+fviz_cos2(ACP2, choice = "var", axes = c(1,3)) #contribución de cada variable por las dimesniones 1 y 3
+fviz_cos2(ACP2, choice = "var", axes = 1:3) #contribución de cada variable por las dimesniones 1, 2 y 3
+(1-rowSums(ACP2$var$cos2))*100 #LO que dejamos de represntar de cada variable 
+```
+
+Estos gráficos muestran de una manera más clara el concepto explicado anteriormente, Además realizamos un cáculo para saber que variables dejan más variabilidad que explicar, siendo la variable *edad* la que más con un porcentaje no expliaco superior al 40%. Las representaciones a continuación mostrarán gráficos con algunas ayudas, como la correlación. 
+
+```{r}
+fviz_pca_var(ACP2, col.var = "cos2", axes = c(1,2),
+gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+repel = TRUE
+)
+fviz_pca_var(ACP2, col.var = "cos2", axes = c(1,3),
+gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+repel = TRUE
+)
+fviz_pca_var(ACP2, col.var = "cos2", axes = c(2,3),
+gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+repel = TRUE
+)
+```
+Ahora vamos a estudiar las contribuciones de las distintas variables de una manera gráfica. 
+
+```{r}
+corrplot(ACP2$var$contrib, is.corr=FALSE,addCoef.col=T)
+fviz_contrib(ACP2, choice = "var", axes = 1, top = 10)
+fviz_contrib(ACP2, choice = "var", axes = 2, top = 10)
+fviz_contrib(ACP2, choice = "var", axes = 3, top = 10)
+```
+Tenemos que la variable *educación* contribuye mucho a la dimensión 3. Los resultados de este tipo nos hacen ver que la fuente de varibilidad de esta variable es distinta a la de las demás y que las explicaciones sobre sus valores se obtendrán de manera distinta. 
+
+## Apartado 5. Obtener e interpretar las representaciones gráficas sobres los individuos. 
+
+```{r}
+#ACP2$ind
+```
+Para hacer la representación de los individuos en el modelo realizamos el comando que se muestra anteriormente, pero no lo vamos a ejecutar en esta ocasión porque se realizaría sobre 850 individuos, lo que dejaría una salida innecesariamente larga que no nos ayudaría mucho. Vamos a probar a realizar gráficos y ver las salidas. 
+
+```{r}
+fviz_contrib(ACP2, choice = "ind", axes = 1, top = 10)
+fviz_contrib(ACP2, choice = "ind", axes = 2, top = 10)
+fviz_contrib(ACP2, choice = "ind", axes = 3, top = 10)
+fviz_contrib(ACP2, choice = "ind", axes = 1:2, top = 10)
+fviz_contrib(ACP2, choice = "ind", axes = 2:3, top = 10)
+fviz_contrib(ACP2, choice = "ind", axes = c(1,3), top = 10)
+```
+Estos son los pocos gráficos que nos darán algo de información sobre los individuos porque nos muestran el top 10 de contribuciones sobre las dimensiones, que nos indican que valores individuales como *282*, *498* o *533* son las que contribuyen más. Esto puede ser porque al estar hablando de datos bancarios, haya gente con muho más ingresos que otra y esto se nos muestra como valores que contribuyen mucho más a la varibilidad de los datos (así como lo pueden hacer valores muy bajos). No se va a hacer un estudio más extenso sobre este tipo de representaciones individuales porque la información a la que vamos a llegar no es excesivamente relevante. 
+
+\newpage
+
+# Ejercicio 3
+
+## Apartado 1. Comprobar el fichero de datos y analizar las correlaciones.
+
+Empezamos leyendo los datos:
+
+```{r}
+mandibula <- read.delim("C:/Users/tharu/OneDrive/Desktop/Estadística/TERCERO/2º CUATRI/ÁREAS DE APLICACIÓN/mandibula.txt")
+```
+
+Y ahora, determinaremos si existen valores perdidos en alguna variable:
+
+```{r}
+colSums(is.na(mandibula))
+
+```
+```{r}
+apply(is.na(mandibula), 2, which) 
+```
+La especie 67 contiene valores perdidos, así que la eliminaremos.
+
+```{r}
+datos<-na.omit(mandibula)
+dim(datos)
+```
+Ahora nos quedaremos solo con aquellas variables que sean numéricas para poder calcular la correlación.
+
+```{r}
+datoss <- sapply(datos, is.numeric)
+datoss
+```
+
+```{r}
+R<-cor(datos[,datoss],method="pearson")
+R
+```
+
+```{r}
+library("corrplot")
+corrplot(R,sig.level=0.05,typ="lower")
+```
+Vemos como la longitud está correlada con la variable temporal, masetero con peso y longitud con anchura, entre otros. También podemos apreciar como carnasial está poco correlada con temporal. Aunque hemos visto existencia de correlación realizaremos el test de barlett que contrasta como hipótesis nula:
+H0 : la matriz de correlaciones es la identidad
+
+```{r}
+library("psych")
+cortest(R,n1=149)
+```
+Existe cierto grado de correlación y, por tanto, pasaremos a realizar el ACP.
+
+Ahora, usaremos el paquete PCA, y realizaremos el gráfico de la correlación de cada variable con la dimensión.
+:
+
+```{r}
+library("FactoMineR")
+library("factoextra")
+library("corrplot")
+datos2<-datos[,datoss]
+ACP2<-PCA(datos2, scale.unit = FALSE,ncp=2, graph = TRUE)
+ACP2$var$cor
+```
+Veremos las correlaciones de las variables en la dimensión 1 y 2.
+
+```{r}
+corrplot(ACP2$var$cor, title = "correlaciones",addCoef.col=T)
+```
+Podemos ver como se correlacionan de forma positiva o negativa y en que magnitud.
+
+
+## Apartado 2. Analizar los autovalores. Determinar el número de componentes principales a extraer mediante métodos numéricos y gráficos.
+
+Para determinar el número de componentes principales a extraer vamos a calcular los autovalores y su representación gráfica:
+
+```{r}
+eigen(R)
+```
+```{r}
+scree(R,factors=F,pc=T)#
+```
+```{r}
+round(eigen(R)$values,2)
+```
+Si redondeamos los autovalores, vemos que hay uno mayor de la unidad por lo que quedarnos con 1 componente principal será suficiente.
+
+Verifiquemos, sin embargo, esta hipótesis:
+```{r}
+library("paran")
+paran(R, iterations=5000,graph=T,color=T)
+```
+Sin embargo, por este método nos indicaría quedarnos con 2, así qué, en vez de 1 nos quedaremos con 2.
+
+```{r}
+library("nFactors")
+nBartlett(R, N=149,alpha=0.01,cor=T,details=F)
+```
+Como vemos los test son mucho más conservadores y nos indican retener por lo menos 5 factores que evidentemente son bastante en en este caso, donde tenemos 6 variables.
+
+Ahora usaremos la librería PCA:
+
+Dentro de las salidas más importantes podemos destacar en primer lugar los autovalores para poder decir el número de Componentes Principales:
+
+```{r}
+ACP2$eig
+```
+Con los porcentajes de varianza explicada determinaremos que dos componentes principales explican un 97,2% de la varianza a explicar. Este paquete permite representar estos autovalores para ver el punto de corte:
+```{r}
+fviz_eig(ACP2, addlabels = TRUE, ylim = c(0, 70))
+```
+Finalmente podemos ver si las correlaciones de cada variable con la componente son significativas (ACP2$var$cor contra Dim)
+```{r}
+dimdesc(ACP2, axes = c(1,2), proba = 0.05)
+```
+Vemos con la primera componente son todas significativas a un nivel $\alpha$ = 0, 05 frente a la segunda que es peso, masetero y longitud.
+
+
+
+
+## Apartado 3. Calcular y analizar las contribuciones a las variables y los individuos.
+
+Una vez decidido que vamos a trabajar con dos componentes principales, pasaremos a estimar el modelo:
+
+```{r}
+library("ade4")
+datos2<-(datos[,datoss])
+ACP<-dudi.pca(datos2,nf=2,scannf = F)
+summary(ACP)
+```
+Con dos componente que hemos seleccionado tendríamos una explicación o inercia acumulada del 91.32%. 
+
+En primer lugar vemos la descomposición total (y no de las 5 primeros autovalores) de nuestros ejemplo:
+```{r}
+acpi<-inertia.dudi(ACP, row.inertia=T, col.inertia=T)
+acpi$tot.inertia#descomposición de la inercia
+```
+
+Empezaremos con las contribuciones de las variables, el cual es más importante que el de los individuos:
+
+En este caso analizaremos varias descomposiciones de las contribuciones de las variables.
+
+
+```{r}
+acpi$col.contrib
+```
+Sobre la contribución de cada variable, son todas igualmente distribuidas. No hay ninguna más determinante.
+
+```{r}
+acpi$col.abs
+```
+
+
+Observamos como el primer eje viene marcado por muchas variables sobre todo anchura y longitud, y el segundo sobresale masetero, seguido de peso.
+
+Ahora calcularemos la explicación de cada variable por parte de las componentes principales:
+
+```{r}
+acpi$col.rel
+```
+
+Vemos como por ejemplo, la variable anchura está explicada en un 92.78% por la primera CP y un 1.16 por la segunda, y así con todas las variables. Además, podemos ver como en la primera CP no hay enfrentamientos, mientras que en la segunda no destaca especialmente ninguna.
+
+
+```{r}
+round(acpi$col.cum,2)
+```
+
+No hay ninguna variable que esté mal explicado, aunque si nos tenemos que quedar con una es "carnasial".
+
+Ahora pasaremos a las contribuciones de los individuos:
+
+Si analizamos que individuos son más determinantes (aportan más al modelo), en general ninguno destaca, ninguno supera el 3% (esto se debe a que hay 149 individuios), aunque el que más destaca es el individuo 22.
+```{r}
+acpi$row.contrib
+```
+
+La contribución absoluta implica cuanto aporta cada individuo a cada componente. Cuanto mayor sea un valor quiere decir que más influyente será ese individuo en esa componente. En la Primera componente son el individuo 22 y 8, y para la segunda son el 135 y 136
+
+
+```{r}
+round(acpi$row.abs,1)
+```
+
+La contribución relativa a las filas nos indica cuanto es explicado por el modelo de ACP, indicando el signo el sentido de la relación con la componente principal:
+
+```{r}
+round(acpi$row.rel,2)
+```
+Los indivudios 8 y 22, que eran los individuos que más aportaban a la primera componente también destacan.
+
+La explicación acumulada nos ofrece cuanto es explicado por la primera y segunda dimensión, y cuanto se deja de explicar. Podemos ver que el modelo explica un 91% eso quiere decir que se deja casi un 10% explicado por la tercera, cuarta... componentes; esto quiere decir que entre los grupos que se forman esas componentes que no calculamos las diferenciarán.
+
+```{r}
+round(acpi$row.cum,2)
+```
+
+Ahora usaremos las liberías PCA:
+```{r}
+ACP2$var
+```
+
+Lo siguiente en estudiar es como esta representada cada variable y en que magnitud:
+```{r}
+fviz_cos2(ACP2, choice = "var", axes = 1)#contribución de cada variable por la dimensión 1
+```
+```{r}
+fviz_cos2(ACP2, choice = "var", axes = 2) #contribución de cada variable por la dimensión 2
+```
+
+```{r}
+fviz_cos2(ACP2, choice = "var", axes = 1:2) #contribución de cada variable por la dimensión 1 y 2
+```
+Podemos calcular cuanto dejamos de representar de cada variable de la forma:
+```{r}
+(1-rowSums(ACP2$var$cos2))*100
+```
+Con las contribuciones vemos cuanto contribuye, en porcentaje cada variable
+```{r}
+corrplot(ACP2$var$contrib, is.corr=FALSE,addCoef.col=T)
+```
+```{r}
+fviz_contrib(ACP2, choice = "var", axes = 1, top = 10)
+```
+```{r}
+fviz_contrib(ACP2, choice = "var", axes = 2, top = 10)
+```
+Como ya vimos antes, la dimensión 1 es explicada por peso y longitud, al igual que la 2.
+
+Ahora pasaremos a estudiar la contribución de los individuos con el paquete PCA:
+Empezaremos calculando la coordenada de cada individuo:
+```{r}
+ACP2$ind
+```
+
+Si vemos como es la contribución de cada individuo a la representación de cada dimensión
+
+```{r}
+fviz_contrib(ACP2, choice = "ind", axes = 1:2)
+```
+```{r}
+fviz_contrib(ACP2, choice = "ind", axes = 1)
+```
+```{r}
+fviz_contrib(ACP2, choice = "ind", axes = 2)
+```
+
+
+## Apartado 4.Obtener e interpretar las representaciones gráficas sobres las variables.
+
+```{r}
+ACP$co
+```
+```{r}
+s.label(ACP$co)
+```
+Vemos que todas las variables se agrupan a la derecha: carnasial, peso y masetero arriba, mientras que anchura, longitud y corporal abajo.
+
+```{r}
+s.corcircle(ACP$co)
+```
+Usaremos las librerías PCA
+
+Si representamos las variables con sus coordenadas con respecto a cada componente, tendremos:
+
+```{r}
+fviz_pca_var(ACP2)
+```
+Podemos ver como siempre es más importante lo correspondiente a la primera componente. que a la segunda. Por lo tanto la separación de las variables de izquierda a derecha será más importante que de arriba a abajo.
+
+Destacamos que cuanto mayor sea la correlación más oscuro será su color y mas cercano será su valor al 1.
+```{r}
+fviz_pca_var(ACP2, col.var = "cos2",
+gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+repel = TRUE
+)
+```
+
+## Apartado 5. Obtener e interpretar las representaciones gráficas sobres los individuos.
+
+```{r}
+ACP$li
+```
+```{r}
+s.label(ACP$li)
+```
+
+Con tantos individuos es difícil realizar un análisis, aunque podemos apreciar como por ejemplo, el individuo 24 es el que más difiere de los demás.
+
+```{r}
+s.corcircle(ACP$li)
+```
+Vamos a probar con los paquetes FactoMineR y factorextra
+```{r}
+library("FactoMineR")
+library("factoextra")
+ACP2<-PCA(datos2, scale.unit = TRUE,ncp=2, graph = TRUE)
+```
+
+Donde al igual que en para las variables, vamos a representar estos valores dibujando según el valor de surepresentatividad:
+
+```{r}
+fviz_pca_ind(ACP2, col.ind = "cos2",
+gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+repel = TRUE )
+```
+Por último, dibujaremos el gráfico conjunto:
+```{r}
+fviz_pca_biplot(ACP2, repel = TRUE,
+col.var = "#2E9FDF", # Variables color
+col.ind = "#696969" # Individuos color
+)
+```
+
+## Apartado 6.Obtener una clasificación mediante la variable especie.
+
+Vamos a cambiar el nombre de la columna "species" por 1, 2 y 3.
+```{r}
+library("dplyr")
+datos <- datos %>% rename(nueva_columna = species) %>% 
+  mutate(nueva_columna = ifelse(nueva_columna == "A.cinerea", 1, 
+                                ifelse(nueva_columna == "E.lutris", 2, 3)))
+
+```
+
+```{r}
+datos[,"species2"]<-cut(datos$nueva_columna, breaks=c(0.5,1,2,3),
+                           labels = c("a","b","c"))
+```
+
+```{r}
+fviz_pca_ind(ACP2,
+             geom.ind = "point",
+             col.ind = datos$species2,
+             palette = c("#00AFBB", "#E7B800", "#FC4E07"),
+             addEllipses = TRUE,
+             legend.title = "Gropos"
+)
+```

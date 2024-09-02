@@ -1,0 +1,426 @@
+---
+title: "Regresión Logística"
+date: "2023-06-02"
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# EJERCICIO 1
+
+Empezaremos leyendo los datos y pasando las variables necesarias a
+factor. Nuestra variable a predecir será $Baja$
+
+```{r}
+datos<-read.delim("C:/Users/Jaime/Desktop/Universidad/GRADO ESTADISTICA/TERCERO/Areas de aplicacion/DATOS/binomial.txt")
+str(datos)
+```
+
+```{r}
+
+datos$EstadoCivil<-as.factor(datos$EstadoCivil)
+datos$Ingresos<-as.factor(datos$Ingresos)
+datos$tipovehiculo<-as.factor(datos$tipovehiculo)
+datos$Educacion<-as.factor(datos$Educacion)
+datos$Anostrabajando<-as.factor(datos$Anostrabajando)
+datos$Satisfaclab<-as.factor(datos$Satisfaclab)
+datos$Baja<-as.factor(datos$Baja)
+```
+
+Para calcular la regresión logística se usa la función glm con la
+familia binomial.
+
+```{r}
+logistica<-glm(Baja ~ edad + EstadoCivil + Direccion + Ingresos + tipovehiculo + Educacion + Anostrabajando + Satisfaclab + Personashogar, data = datos, family="binomial")
+summary(logistica)
+```
+
+Determinarermos si los parámetros son significativos. Para esto,
+establecemos los contrastes de Wald, que miden si el parámetro es
+estadísticamente significativo, y por tanto si la variable asociada o
+seráo no.
+
+Las variables cuantitativas son: - Edad, cuyo p-valor es 0.7351 -
+Dirección, cuyo p-valor es 0.8954 - Personas en el hogar, cuyo p-valor
+es 0.0638. Por lo que ninguna variable numérica es significativa.
+
+Para las variables cualitativas: - Observamos que los trabajadores con
+ingresos de entre 25-49 y 50-70 tienen comportamiento diferente a los
+que tienen ingresos superiores a 70, por lo que mediremos si es
+significativa globalmente:
+
+```{r}
+library(aod)
+wald.test(b = coef(logistica), Sigma = vcov(logistica), Terms = 5:7)
+```
+
+Por lo que la variable ingresos es significativa globalmente.
+
+-   También mediremos si globalmente la variable $Tipo de vehículo$ es
+    significativa, ya que tienen comportamiento diferente los
+    trabajadores con coche estandar y con coche de lujo.
+
+```{r}
+wald.test(b = coef(logistica), Sigma = vcov(logistica), Terms = 8:9)
+```
+
+También es significativa globalmente
+
+Por tanto, las variables significativas son $tipovehiculo$ $EstadoCivil$
+y $Ingresos$.
+
+Ahora, volvemos a calcular el modelo con las variables quitando el resto
+de variables.
+
+```{r}
+logistica2<-glm(formula = Baja ~ tipovehiculo + Ingresos + EstadoCivil, family = "binomial", data = datos)
+summary(logistica2)
+
+```
+
+Vemos que todas las variables son significativas ahora. Todas las
+variables de las categorías $tipovehiculo$ y $Ingresos$ lo son.
+
+```{r}
+wald.test(b = coef(logistica2), Sigma = vcov(logistica2), Terms = 2:3)
+
+```
+
+```{r}
+wald.test(b = coef(logistica2), Sigma = vcov(logistica2), Terms = 4:6)
+
+```
+
+## INTERPRETACIÓN DE PARÁMETROS.
+
+Vamos a estudiar las exponenciales de los parámetros a las que se
+denominan Odd Ratios:
+
+```{r}
+exp(cbind(OR = coef(logistica2),confint(logistica2,level = 0.95)))
+```
+
+Por tanto:
+
+-   TIPO DE VEHÍCULO:
+    -   LUJO: Como el valor OR es 3.75, la probabilidad de que los que
+        tienen este tipo de vehículos cojan la baja es más baja que los
+        que tienen vehículos económicos. (3 veces más)
+    -   ESTANDAR: Como el valor OR es 1.25, la probabilidad de que los
+        que tienen este tipo de vehículos cojan la baja es más baja que
+        los que tienen vehículos económicos. (1.25 veces más)
+-   INGRESOS:
+    -   25-49: El valor OR es 1.22, por lo que la probabilidad de que
+        los que tienen estos ingresos cojan la baja es menor que los que
+        tienen ingresos inferiores a 29.
+    -   50-70: El valor OR es 0.56, por lo que la probabilidad de que
+        los que tienen estos ingresos cojan la baja es menor que los que
+        tienen ingresos inferiores a 29. $\frac{1}{0.56} = 1.78$ tienen
+        más de probabilidades
+    -   70: El valor OR es 0.42, por lo que la probabilidad de que los
+        que tienen estos ingresos cojan la baja es menor que los que
+        tienen ingresos inferiores a 29. $\frac{1}{0.42}= 2.38$ tienen
+        más de probabilidades.
+    -   ESTADO CIVIL: Como el valor OR es de 0.8, la probabilidad de que
+        se cojan la baja antes los solteros que los casados es de
+        $\frac{1}{0.8}= 1.25$ veces más
+
+## EVALUACIÓN DEL MODELO
+
+Contrastaremos si hay diferencias significativas entre el modelo sin
+variables y el que hemos creado:
+
+```{r}
+dev <- logistica2$deviance # verosimilitud del modelo
+nullDev <- logistica2$null.deviance # verosimilitud del modelo
+modelChi <- nullDev - dev
+modelChi
+```
+
+Como el valor el positivo, se redice la verosimilitud. Ahora
+contrastaremos si esta reducción es significativa, sabiendo que este
+estadistico sigue una $\chi^2$.
+
+```{r}
+chidf <- logistica2$df.null -logistica2$df.residual
+chisq.prob <- 1 - pchisq(modelChi, df=chidf)
+chisq.prob
+
+```
+
+Como el p-valor es menor que 0.05 entonces hay una reducción
+verosimilitud significatica, es decir, la diferencia entre los valores
+es significatica.
+
+Cambien se puede comparar si hay diferencias significativas entre el
+modelo completo y el que hemos calculado
+
+```{r}
+anova(logistica,logistica2,test = "Chisq")
+```
+
+Estadísticamente, este modelo no será significativo.
+
+## BONDAD DE AJUSTE
+
+Primero, calcularemos algunos valores de $R^2$. El valor de $R^2$ de
+McFadden es:
+
+```{r}
+R2McF <- modelChi/logistica2$null.deviance
+R2McF
+```
+
+De la R de Cox y Shell
+
+```{r}
+R.cs=1-exp((logistica2$deviance-logistica2$null.deviance)/nrow(datos))
+R.cs
+```
+
+La R de Nagelkerke:
+
+```{r}
+R.n=R.cs/(1-(exp(-(logistica2$null.deviance/nrow(datos)))))
+R.n
+
+```
+
+Si usamos la librería pscl o la DescTools
+
+```{r}
+library(pscl)
+pR2(logistica2)
+```
+
+```{r}
+library(DescTools)
+PseudoR2(logistica2,which = c("CoxSnell","Nagelkerke","McFadden"))
+```
+
+Vemos que dan valores muy bajos, aunque estos no son del todo fiables.
+
+Realizamos la prueba de Hosmer-Lemeshow para calibrar el análisis:
+
+```{r}
+library("vcdExtra")
+HL<-HLtest(logistica2,g=8)
+HL$table
+```
+
+```{r}
+HL
+```
+
+En la tabla se ve a los distintos niveles de probabilidad cuantos casos
+hay en ese grupo que se de el éxito (baja) y además un test de la
+$\chi^2$, donde el p-valor es 0.23 y por tanto el ajuste será óptimo.
+
+Finalmente vamos a generar la matriz de confusión de la forma:
+
+```{r}
+library(vcd)
+predicciones <- ifelse(test = logistica2$fitted.values > 0.5, yes = 1, no = 0)
+matriz_confusion <- table(logistica2$model$Baja, predicciones,
+dnn = c("observaciones", "predicciones"))
+matriz_confusion
+
+```
+
+Podemos ver que para los que no se dan de baja, acierta a 637 y falla en
+18. Los que sí se dan de baja falla 413 y acierta en 28.
+
+Si calculamos la tasa de individuos mal clasificados será:
+
+```{r}
+tmc=sum(413+1)/nrow(datos)
+tmc*100
+```
+
+```{r}
+100-tmc*100
+```
+
+Por tanto clasifica mal a un 37,8774 de individuos y bien a un 62.1226
+
+```{r}
+mosaic(matriz_confusion, shade = T, colorize = T,
+gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
+```
+
+## PREDICCIONES
+
+Por ejemplo, si queremos predecir la probabilidad de que se de de baja
+una persona casada, con vehículo de lujo e ingresos 50-70 o \>70
+tendríamos:
+
+```{r}
+datonuevo <- data.frame(EstadoCivil = c("Casado"), tipovehiculo=c("Lujo"), Ingresos=c("50-70"))
+datonuevo2 <- data.frame(EstadoCivil = c("Casado"), tipovehiculo=c("Lujo") , Ingresos=c("70"))
+```
+
+```{r}
+predict(logistica2, newdata = datonuevo, type = "response")
+```
+
+```{r}
+predict(logistica2, newdata = datonuevo2, type = "response")
+```
+
+Nos da unas probabilidades de 0.54 de no darse de baja si tiene ingresos
+de entre 50-70 y 0.26 si tiene \>70.
+
+##CAPACIDAD DISCRIMINANTE DEL MODELO.
+
+```{r}
+library(Epi)
+ROC(data=datos, form= Baja ~ tipovehiculo + Ingresos + EstadoCivil)
+```
+
+# EJERCICIO 2
+
+Lo primero que vamos a hacer es leer los datos y convertir las variables
+cualitativas en factor para poder estudiarlas de mejor manera:
+
+```{r}
+datos<-read.delim("C:/Users/Jaime/Desktop/Universidad/GRADO ESTADISTICA/TERCERO/Areas de aplicacion/DATOS/multinomial.txt")
+
+datos$Tipo.comercio<-as.factor(datos$Tipo.comercio)
+datos$Especialidad<-as.factor(datos$Especialidad)
+datos$sexo<-as.factor(datos$sexo)
+datos$Persona<-as.factor(datos$Persona)
+datos$Frecuencia<-as.factor(datos$Frecuencia)
+datos$Ofertas<-as.factor(datos$Ofertas)
+```
+
+Ahora, vamos a realizar el análisis logístico de todas las variables
+sobre la variable *tipo de comercio*.
+
+```{r}
+library(nnet)
+multi <- multinom(Tipo.comercio ~. , data = datos,model = TRUE)
+
+summary(multi)
+
+```
+
+Vamos a comprobar ahora si el modelo es significativo y si todas las
+variables lo son. Primero comprobaremos si el modelo es significativo.
+
+```{r}
+multisinparametros <- multinom(Tipo.comercio ~ 1, data = datos)
+summary(multisinparametros)
+```
+
+Ahora, vamos a realizar el constraste de la $\chi^2$ entre ambos
+modelos, tomando como hipótesis nula que las verosimilitudes de los dos
+son iguales.
+
+```{r}
+anova(multisinparametros,multi)
+```
+
+Podemos ver que existe una diferencia significativa entre las
+verosimilitudes (734.3810 y 643.3671) y el p-valor es bastante más
+pequeño que 0.05, por lo que podemos decir que el modelo es
+significativo. Ahora tenemos que estudiar si todas las variables son
+significativas, por lo que compararemos el modelo con todas las
+variables con los modelos quitando cada una de las variables.
+
+```{r}
+library(lmtest)
+```
+
+```{r}
+library(jmv)
+lrtest(multi, "Especialidad")
+lrtest(multi, "sexo")
+lrtest(multi, "Persona")
+lrtest(multi, "Frecuencia")
+lrtest(multi, "Ofertas")
+lrtest(multi, "Gasto")
+```
+
+Rechazaremos la hipótesis nula solo para dos variables, Especialidad y
+Gasto, todas las demas variables serán eliminadas del modelo.
+
+```{r}
+multi2 <- multinom(Tipo.comercio ~Especialidad+Gasto , data = datos,model = TRUE)
+anova(multisinparametros,multi2)
+```
+
+Este modelo tiene el mismo objetivo que el anterior. El p-valor es muy
+pequeño por lo que sabemos que el modelo será significativo.
+Comprobaremos que todas las variables del modelo son útiles.
+
+```{r}
+lrtest(multi2, "Especialidad")$`Pr(>Chisq)`
+lrtest(multi2, "Gasto")$`Pr(>Chisq)`
+```
+
+Vemos que los p-valores son menores que 0.05, por lo que no quitaremos
+ninguna variable. Probaremos ahora varios método de calcular los valores
+de las pseudo $R^2$
+
+```{r}
+library(DescTools)
+PseudoR2(multi2, which = c("CoxSnell","Nagelkerke","McFadden"))
+```
+
+Los p-valores son bastante bajos, por lo que no se darán buenas
+predicciones a priori. Vamos a obtener ahora la matriz de confusión.
+
+```{r}
+library(summarytools)
+tabla<-table(datos$Tipo.comercio,predict(multi2))
+tabla
+
+(sum(diag(tabla))/sum(tabla))*100
+```
+
+Tan solo clasifica bien un 52.70% de los parámetros. Esto indica que
+quizás hay variables que no se han utilizado para el modelo que serían
+útiles para el estudio, ya que el modelo optimizado no es capaz de
+predecir del todo bien.
+
+## Estimación e interpretación de los parámetros
+
+Vamos a obtener para ello la exponencial del parámetro que queremos
+estudiar y si son significativos. Lo obtenemos de manera manual:
+
+```{r}
+z <- summary(multi2)$coefficients/summary(multi2)$standard.errors
+z
+
+p <- (1 - pnorm(abs(z), 0, 1))*2
+p
+```
+
+Los paráemtros serán:
+
+```{r}
+exp(coef(multi2))
+```
+
+Se va a tomar como referencia para el análisis uno de los valores
+extremos del modelo. En este caso "Grande". -ESPECIALIDAD: -Los
+herbolarios tienen 1.1328 veces más probabilidad de comprar en una
+tienda Grande frente a una Mediana. Es 3.3563 veces mayor si lo comparas
+con las tiendas Pequeñas. -Las panaderías tienen 1.1785 veces menos
+probabilidad de comprar en una tienda Grande frente a una Mediana. Es
+3.6556 veces mayor si lo comparas con las tiendas Pequeñas. -Las tiendas
+sin especialidad tienen 0.3467 veces menos probabilidad de comprar en
+una tienda Grande frente a una Mediana. Es 0.1688 veces mayor si lo
+comparas con las tiendas Pequeñas.
+
+-GASTO: - La probabilidad de comprar en una tienda grande frente a una
+mediana es 1.0029 veces mayor conforme aumenta el gasto. - La
+probabilidad de comprar en una tienda grande frente a una mediana es
+1.0042 veces mayor conforme aumenta el gasto.
+
+Sólo nos interesará el AUC. Como es 0.584 es bastante bueno.

@@ -1,0 +1,568 @@
+---
+title: "Ejercicios Análisis Discriminante"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+date: "2023-05-26"
+---
+
+MENSAJE IMPORTANTE: NO NOS EJECUTA LATEX PARA MOSTRAR PDF Y HEMOS OPTADO POR CONVERTIR UN ARCHIVO HTML A PDF, CREEMOS QUE POR LAS NUEVAS ACTUALIZACIONES DE RSTUDIO Y ALGUNA INCOMPATIBILIDAD CON MIXTEX, SI QUIERE PUEDE PROBAR A EJECUTAR EL ARCHIVO.RMD PARA QUE LE SEA MÁS CÓMODO. DISCULPE LAS MOLESTIAS.  
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicio 1 
+
+*Los datos del fichero Wisconsin18.RData proceden de un estudio sobre diagnóstico del cáncer de mama por*
+*imagen. Mediante una punción con aguja fina se extrae una muestra del tejido sospechoso de la paciente.*
+*La muestra se tiñe para resaltar los núcleos de las células y se determinan los límites exactos de los núcleos.*
+
+*El fichero contiene un data.frame, llamado Wisconsin cuyas variables son:*
+
+• Las 10 variables explicativas medidas en pacientes cuyos tumores fueron diagnosticados posteriormente. \newline • La variable tipo que contiene el tipo de tumor (benigno o maligno).
+
+*Toda la información de los datos está en enlace*
+*Se pide realizar un análisis de discriminante y realizar una predicción para dos valores elegidos por el*
+*investigador*
+
+*Empezamos cargando las librerías necesarias.*
+
+```{r}
+
+library(tidyverse)
+library(MASS)
+library(klaR)
+library(psych)
+library(ggplot2)
+library(scatterplot3d)
+library(car)
+library(carData)
+library(pastecs)
+library(corrplot)
+library(biotools)
+
+```
+
+Así como los datos.
+
+```{r 1}
+load("Wisconsin18.RData")
+head(Wisconsin)
+str(Wisconsin)
+summary(Wisconsin)
+```
+
+Graficamos la función. 
+
+```{r}
+scatterplotMatrix(Wisconsin[1:10])
+```
+
+Obtenemos el gráfico de puntos de cada una de las variables comparada con cada una de las otras. Podemos ver que los valores solo se posicionan en un grupo, por lo que podemos presuponer que solo vamos a formar un grupo en nuestro análisis. También podemos ver que algunas variables si tiene una formas más normal, pero otras desvían su centro de gravedad hacia un lado.  
+
+```{r}
+pairs.panels(Wisconsin[1:10],
+             gap = 0,
+             bg = c("red", "green")[Wisconsin$tipo],
+             pch = 21)
+```
+
+Ni aún utilizando colores para diferenciar los valores de cada variable factor identificamos más de un grupo a simple vista en los datos. Analizamos a continuación si los datos siguen una distribución normal.  
+
+```{r}
+stat.desc(Wisconsin[,-11],basic=FALSE,norm=TRUE)
+```
+
+Vemos que todas las variables cumplen las hipótesis de normalidad. Aunque si no las cumplieran podríamos seguir realizando el análisis, es un muy buen primer paso. Una de las causas de esto podría ser la gran cantidad de datos de los que disponemos. Continuamos analizando si cumple las hipótesis de igualdad de la matriz de covarianzas. 
+
+```{r}
+library(biotools)
+boxM(Wisconsin[,-11],Wisconsin$tipo)
+```
+
+Al tener un p-valor tan pequeño (2.2e-16) podemos suponer que también cumple esta hipótesis. 
+
+```{r}
+anova<-manova(cbind (Wisconsin$radius, Wisconsin$texture, Wisconsin$perimeter, Wisconsin$area, Wisconsin$smoothness, Wisconsin$compactness, Wisconsin$concavity, Wisconsin$concavepoints, Wisconsin$symmetry, Wisconsin$fractal) ~ Wisconsin$tipo)
+summary(anova)
+```
+
+También podemos concluir que las variables tienen medias diferentes debido al p-valor tan pequeño que se nos muestra. a partir de estos resultados podemos empezar a realizar el análisis discriminante lineal. 
+
+```{r}
+discriminante <- lda(tipo~., data = Wisconsin)
+discriminante
+```
+
+Como hemos supuesto anteriormente, vamos a tener una sola funación discriminante. Definida de la siguiente manera. 
+
+
+
+$$ LD1=2.1738⋅radius+0.0974⋅texture−0.2438⋅perimeter−0.004⋅area+8.6102·smoothness+0.4314·compactness+3.5923·concavity+28.5297·concavepoints+4.4890·symmetry-0.5292·fractal$$
+Lo primero que podemos ver en la salida son las probabilidades a priori, que se decantan hacia un lado ya que hay más elementos de un tipo que de otro. Nos pone también las medias de grupo, la variable benigno suele tener medias más pequeñas en las variables analizadas. Lo de abajo representa la ecuación de los dos grupos. pasamos a represntra gráficamente lo calculado. 
+
+```{r}
+plot(discriminante)
+```
+
+Podemos ver como no hay demasiada separación entre los dos grupos. Con la siguiente función también podemos observar los histogramas. 
+
+```{r}
+plot(discriminante, dimen = 1,type="b")
+```
+
+A continuación, pasaremos a definir una matriz de gráficos para cada combinación de dos variables. Las regiones
+coloreadas delimitan cada área de clasificación. Cualquier observación que se encuentre dentro de una región
+pertenece a un tipo de tumor. También nos proporciona la tasa de error aparente.
+
+
+```{r}
+library(klaR)
+partimat(tipo ~ radius + texture + perimeter + area + smoothness, 
+         data=Wisconsin, method="lda")
+
+partimat(tipo ~ compactness + concavity + concavepoints + symmetry + fractal, 
+         data=Wisconsin, method="lda")
+```
+
+Al hacer este gráfico vemos que el mayor ratio de error nos lo prorporciona la comparación entre *texture* y *smoothness* y la de *symmetry* con *fractal*. 
+
+### Matriz de confusión 
+
+La matriz de confusión nos proporcionará la tabla de aciertos donde se genera la tasa de error aparente previamente definida. 
+
+```{r}
+table(predict(discriminante)$class,Wisconsin$tipo)
+```
+En la siguiente tabla podemos ver que existen 35 individuos que no clasifican bien. 
+
+```{r}
+(1 - sum(predict(discriminante)$class == Wisconsin$tipo) / discriminante$N)*100
+```
+Nos hemos equivocado en un 6.15% de las observaciones
+
+### Predicciones
+
+En este apartado vamos a realizar la predicción de dos tandas de valores que hemos elegido. 
+
+```{r}
+nuevas.obs <- data.frame(rbind(c(13,18,80,400,0.10,0.09,0.04,0.03,0.2,0.2,0.05),c(20,20,100,500,0.25,0.1,0.05,0.04,0.25,0.25,0.1)))
+names(nuevas.obs) <- names(Wisconsin[1:10])
+predict(discriminante, nuevas.obs)$class
+predict(discriminante, nuevas.obs)$posterior
+```
+
+Siendo el primer valor predicho maligno con un 65% y el segundo también maligno, con una probabilidad cercana al 100%. 
+
+\newpage
+
+## Ejercicio 2
+
+*El fichero de datos (discriminante.txt) contiene para 37 individuos los datos correspondientes a 13 variables*
+*denominadas X1, X2, . . . , X13 y una última variable que clasifica a las observaciones en tres grupos.*
+*Realizar un análisis discriminante completo.*
+
+
+Empezaremos leyendo los datos:
+
+```{r}
+datos<- read.csv("discriminante.txt", sep="")
+```
+
+Realizamos una pequeña visualización de los datos:
+
+```{r}
+origen<- c("1","2","3")
+datos$discriminante<-factor(datos$discriminante,labels=origen)
+str(datos)
+```
+
+```{r}
+summary(datos)
+```
+
+Graficamos la función:
+
+```{r}
+scatterplotMatrix(datos[1:13])
+```
+```{r}
+pairs.panels(datos[1:13],
+gap = 0,
+bg = c("pink", "yellow", "blue")[datos$discriminante],
+pch = 21)
+
+```
+
+Es difícil realizar un análisis a partir de esta gráfica, ya que son muchos datos. Por lo que no podemos concluir que haya diferentes agrupaciones de las variables dependiendo del discriminante. A continuacuón, analizaremos si siguen una distribución normal:
+
+```{r}
+stat.desc(datos[,-14],basic=FALSE,norm=TRUE)
+
+```
+
+No todas las variables cumplen la hipótesis de normalidad. Sin embargo, continuaremos con el ejemplo.
+
+Para el análisis discriminante usaremos la funcion $lda$
+
+```{r}
+disc <- lda(discriminante~., data = datos)
+disc
+```
+Vemos como las probabilidades de pertenecer al discriminante 2 es mayor (37,83%) que al 1 (32.43%) y al 3 (29.72%). También podemos ver las medias de los grupos. Contrastaremos que medias son diferentes con un MANOVA
+
+
+```{r}
+anova<-manova(cbind (datos$X1,datos$X2,datos$X3,datos$X4,datos$X5,datos$X6,datos$X7,datos$X8,datos$X9,datos$X10,datos$X11,datos$X12,datos$X13) ~ datos$discriminante)
+summary(anova)
+```
+Concluimos que las medias son diferentes.
+Finalmente, tendremos dos funciones discriminantes. Además, tenemos lo que explica cada función, la primera un 88,46% y la segunda un 11,54%.
+
+```{r}
+disc$svd
+```
+Con esta orden podemos ver como la primera función es mucho más discriminante.
+
+Si graficamos:
+
+```{r}
+plot(disc,col = as.integer(datos$discriminante))
+```
+
+Vemos como los tres discriminantes están bastante dispersos, aunque observamos que el 1 se agrupa a la izquierda y el tercero a la derecha.
+
+```{r}
+plot(disc, dimen = 1,type="b")
+```
+
+Vemos como en esta función habrá tres grupos claros, valores de entre -1 y -5 para el grupo 1, entre -3 y 2 para el grupo 2 y -1 y 5 para el grupo 3.
+
+```{r}
+lda <- cbind(datos, predict(disc)$x)
+ggplot(lda, aes(LD1, LD2)) +
+geom_point(aes(color = discriminante))
+```
+
+Podemos ver como los grupos están bastante dispersos.
+
+Otra forma de ver como clasifican las funciones discriminantes es:
+
+```{r}
+discriminante.predicciones <- predict(disc)
+ldahist(data = discriminante.predicciones$x[,1], g=datos$discriminante)
+```
+
+```{r}
+ldahist(data = discriminante.predicciones$x[,2], g=datos$discriminante)
+```
+
+Podemos obsercar como la primera función discriminante clasifica a los individuos mejor que la segunda, aunque en ambas se superponen.
+
+Si hubiese más de dos funciones discriminantes podriamos usar la orden pairs:
+
+```{r}
+pairs(disc)
+```
+
+A coninuación vemos una matriz de gráficos para cada combinación de dos variables.
+
+```{r}
+library("klaR")
+partimat(discriminante ~ X1 + X2 + X3 + X4 + X5 + X6 + X7 , data=datos, method="lda")
+partimat(discriminante ~ X8 + X9 + X10 + X11 + X12 + X13 , data=datos, method="lda")
+
+```
+A continuación veremos la matriz de confusión, la cual es la tabla de aciertos de donde se genera la tasa de error aparente.
+
+```{r}
+table(predict(disc)$class,datos$discriminante)
+```
+Así, observamos que nuestra función discriminante solo falla en 4 individuos, es decir, hay cuatro individuos que no los clasifica bien.
+
+```{r}
+(1 - sum(predict(disc)$class == datos$discriminante) / disc$N)*100
+```
+Es decir, nos hemos equivocado en un 10.81% de las observaciones.
+
+```{r}
+tabla<-table(predict(disc)$class,datos$discriminante)
+sum(diag(tabla))/sum(tabla)
+```
+Por lo que hemos tenido un porcentaje de aciertos del 89.18%.
+
+Para continuar, vamos a predecir el valor de un nuevo individuo:
+
+```{r}
+prediccion<-predict(disc,newdata=data.frame(X1=4, X2=3, X3=4, X4=5,X5=6,X6=2,X7=4,X8=3,X9=4,X10=5,X11=7,X12=2,X13=6))
+prediccion$class
+
+```
+```{r}
+prediccion
+```
+Para este valor nos da la puntuación en cada función discriminante (47.64 y -23.91). También nos dice que va a ser ese valor predicho del grupo 3 con una probabilidad de 1, y lo demás con probabilidad prácticamente 0.
+
+Si por ejemplo tuviésemos varios valores para predecir haríamos:
+
+```{r}
+nuevas.obs <- data.frame(rbind(c(4,3,4,5,6,2,4,3,4,5,7,2,6),c(2,2,1.6,0.3)))
+names(nuevas.obs) <- names(datos[1:13])
+predict(disc, nuevas.obs)$class
+
+```
+```{r}
+predict(disc, nuevas.obs)$posterior
+```
+
+Siendo el primer valor predicho del grupo 3 con probabilidad 1 y el segundo con probabilidad casi nula.
+
+Ahora pasaremos al análisis cuadrático:
+
+
+```{r}
+cuadratico <- qda(discriminante ~ X1 + X2 + X3 + X4 + X5 + X6 + X7, datos)
+cuadratico2<- qda(discriminante ~ X8 + X9 + X10 + X11 + X12 + X13, datos)
+cuadratico
+cuadratico2
+```
+
+Si vemos los gráficos parciales vemos la gran diferencia de un método a otro ya que podemos ver como las regiones no son lineales:
+
+```{r}
+partimat(discriminante ~ X1 + X2 + X3+ X4 + X5 + X6 + X7, data=datos, method="qda")
+partimat(discriminante ~ X8 + X9 + X10 + X11 + X12 + X13, data=datos, method="qda")
+```
+
+Realizaremos las predicciones para comprobar si obtenemos los mismos resultados:
+
+```{r}
+predict(cuadratico, nuevas.obs)$class
+```
+```{r}
+predict(cuadratico, nuevas.obs)$posterior
+```
+
+Vemos que las categorias observadas no son las mismas que en el caso lineal. Veremos el porcentaje de acierto:
+
+```{r}
+table(predict(cuadratico)$class,datos$discriminante)
+```
+
+```{r}
+(1 - sum(predict(cuadratico)$class == datos$discriminante) / cuadratico$N)*100
+```
+
+
+\newpage
+
+
+
+## Ejercicio 3. 
+
+*Se desea estudiar la ansiedad de un grupo de exfumadores. Para ello se clasifica la ansiedad en tres grupos (1, 2 y 3)* *según la intensidad con que se manifiesten los síntomas de esta. Se obtiene una muestra para cada grupo y se les miden a* *todos los individuos 3 variables X1, X2 y X3 relacionadas con sus esquemas de comportamiento. Se desea obtener una función* *discriminante lineal para poder clasificar en un grupo u otro a un individuo, en base a las variables X1, X2 y* *X3. Los datos se encuentran en el fichero discriminante2.txt.*
+
+
+*Realizar un análisis discriminante completo y predecir a qué grupo de ansiedad pertenecerá con mayor probabilidad un individuo con valores X1=7.5, X2=9 y X3=2*
+
+
+```{r librerias y carga}
+
+datos<- read.table("discriminante2.txt", header = T)
+summary(datos)
+
+```
+En primer lugar transformamos los grupos de individuos en los distintos factores que clasifican a nuestros individuos segun la intensidad de la ansiedad
+
+```{r data}
+datos$ansiedad<-as.factor(datos$ansiedad)
+```
+
+
+### Plots
+
+Podemos representar el comportamiento de los fumadores durante el experimento de la siguiente manera
+
+```{r plots}
+scatterplotMatrix(datos[2:4])
+
+```
+
+
+
+
+```{r}
+pairs.panels(datos[2:4],gap = 0,bg = c("red", "green", "blue")[datos$ansiedad],pch =21)
+```
+
+
+Se pueden apreciar distintas agrupaciones de las variables dependiendo del nivel de ansiedad que tengan los individuos. Para poder asegurarnos que la técnica del análisis discriminante es adecuado para nuestro conjunto de datos, tenemos que comprobar la hipótesis de normalidad
+
+
+### Supuestos previos
+
+```{r normalidad}
+
+stat.desc(datos[,-1],basic=FALSE,norm=TRUE)
+```
+
+
+Con los datos obtenidos podemos concluir que, dado que los índices de asimetría y curtosis estan entre (-2,2) y los tipificados entre (-1,1). Dado que ambos se cumplen se puede intuir la normalidad de la poblacion. Lo comprobamos mediante el test de normalidad tanto marginal como en conjunto:
+
+```{r mvn}
+library(MVN)
+mvn(datos[2:4], univariateTest = "Lillie")
+
+```
+
+
+A pesar de que los indices de asimetría y curtosis, la normalidad multidimensional no se cumple en estos datos, aun así, habría que comprobar la hipotesis de igualdad de matriz de covarianzas, para determinar si, en el caso de que se diese la normalidad multidimensional, elegir el analisis discriminante lineal (LDA) o cuadrático (QDA).
+
+
+
+### LDA
+
+```{r}
+lineal <- lda(ansiedad~., data = datos)
+lineal
+```
+
+Podemos destacar la proporción de pertenencia al grupo 3 de ansiedad, correspondiente al 41% de la poblacion. Tambien se pueden apreciar como las medias se reducen considerablemente en la característica número 3 de medición, aunque para contrastar la igualdad de la media de los grupos usamos MANOVA
+
+```{r manova}
+#manova(datos)
+anova<-manova(cbind (datos$X1,datos$X2,datos$X3) ~ datos$ansiedad)
+summary(anova)
+```
+
+Como se puede apreciar, el p-valor es menor de 0.05 y, por lo tanto, en análisis de la varianza multidimensional nos indica que las medias de los grupos no son iguales. 
+Las dos funciones discriminantes son :
+
+
+$LD1= 2.762*X1 - 1.1803*X2 - 0.0102*X3$
+$LD2= -0.8956*X1 - 0.33036*X2 - 0.47168*X3$
+
+
+Y la proporción de individuos que explica cada función discriminante es, para LD1 el 99.88% y para LD2 el 0.12%, usando la siguiente orden
+
+
+```{r prop}
+lineal$svd
+```
+
+Se puede ver como la primera función es mucho más discriminante
+
+```{r}
+plot(lineal,col = as.integer(datos$ansiedad))
+```
+
+Aunque el análisis discriminante lineal clasifica bien, los grupos 1 y 2 se encuentran un poco superpuestos
+
+```{r super}
+lda <- cbind(datos, predict(lineal)$x)
+ggplot(lda, aes(LD1, LD2)) +
+geom_point(aes(color = ansiedad))
+```
+
+
+
+
+```{r}
+discriminante.predicciones <- predict(lineal)
+ldahist(data = discriminante.predicciones$x[,1], g=datos$ansiedad) #LDA1
+ldahist(data = discriminante.predicciones$x[,2], g=datos$ansiedad) #LDA2
+```
+
+Vemos como la segunda funcion discriminante clasifica peor a los individuos, ya que se superponen mucho mas los datos que en la primera.
+Podemos tambien representar, para cada dos parejas de variables, el area de clasificación y el error aparente
+
+```{r pairs}
+partimat(ansiedad ~ .,data=datos, method="lda")
+
+```
+
+
+
+
+### Matriz de confusión
+
+Esta matriz nos proporciona el numero de acierto que hemos tenido en nuestras predicciones comparandolas con los resultados reales
+
+```{r}
+table(predict(lineal)$class,datos$ansiedad)
+
+```
+
+La funcion discriminante falla solo en 4 individuos, en las columnas y filas 1 y 2, como hemos visto anteriormente los grupos 1 y 2 estaban un poco superpuestos, lo que puede producir este tipo de 'fallos'. La proporción de individuos que hemos fallado al clasificar con nuestro modelo se puede calcular de la siguiente manera:
+
+
+```{r pro}
+(1 - sum(predict(lineal)$class == datos$ansiedad) / lineal$N)*100
+```
+
+El 11.76% de los individuos no han sido bien clasificados, quizás habría que probar otros modelos de clasificacion...
+
+
+
+### QDA
+
+Hemos visto que el porcentaje de individuos que no se ha clasificado bien podría ser alto en ciertos casos, para intentar solventar el problema, vamos a realizar el análisis discriminante cuadrático, que no incluye la hipótesis de que la matriz de covarianzas sea constante.
+
+```{r qda}
+boxM(datos[,-1],datos$ansiedad)
+```
+Vemos que se rechaza la hipotesis nula de igualdad en la matriz de covarianzas entre grupos, por lo que, si se diese la normalidad, este sería el método óptimo a aplicar
+
+```{r modelo}
+cuadratico <- qda(ansiedad ~ ., datos)
+cuadratico
+```
+Las probabilidades de pertenencia a cada uno de los grupos no cambia, tampoco lo hacen las medias de los grupos para cada variable, sin embargo, deberiamos notar las diferencias entre los métodos en la calidad de las predicciones y en el error asociado
+
+```{r parti}
+partimat(ansiedad ~ .,data=datos, method="qda")
+```
+
+
+
+### Matriz de confusion (cuadrático)
+
+```{r confm}
+table(predict(cuadratico)$class,datos$ansiedad)
+
+```
+
+En este caso, vemos que hemos fallado en 3 individuos, menos que en el análisis lineal. La proporción de error de clasificacion es
+
+```{r propp2}
+(1 - sum(predict(cuadratico)$class == datos$ansiedad) / cuadratico$N)*100
+```
+La proporción de fallo se ha reducido, considerando este modelo mejor a la hora de clasificar nuevos individuos. Esta característica se puede ver tambien con el area bajo la curva ROC de las predicciones generadas por estos modelos.
+
+
+
+### CLASIFICACIÓN
+
+
+Dado el individuo con características X1= 7.5, X2=9 y X3=2
+Clasificar al individuo
+
+
+Pese a que en las conclusiones anteriores hemos resuelto que el modelo cuadrático es mejor para clasificar, vamos a usar tambien el modelo lineal y a compararlo con el que se supone, que es el mejor modelo, para comprobar si concuerdan los resultados.
+
+
+```{r pred}
+indiv<- predict(lineal,newdata=data.frame(X1=7.5,X2=9,X3=2))
+indiv
+```
+La predicción nos indica que este individuo se clasificará en el grupo 2 con una probabilidad de 99.38%, vamos a comparar los resultados con el modelo QDA (Debería ser el bueno)
+
+```{r fin}
+indiv<-predict(cuadratico,newdata=data.frame(X1=7.5,X2=9,X3=2))
+indiv
+```
+En este caso los resultados son los mismos, pero con un porcentaje de pertenencia al grupo 2 menor, aun así, podemos determinar que el individuo de caracteristicas X1=7.5, X2=9 y X3=2 se clasificará en el grupo 2 mediante el método análisis discriminante
+
+

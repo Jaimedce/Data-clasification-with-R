@@ -1,0 +1,1225 @@
+---
+title: "Ejercicios análisis cluster"
+output: pdf_document
+date: "2023-05-11"
+---
+
+## Ejercicio 1
+
+Comenzamos llamando a las correspondientes librerías para comenzar el análisis e importando el dataframe
+para el mismo.  
+
+```{r}
+library("MVA")
+library("readr")
+#install.packages("MVA")
+library(mvtnorm)
+#install.packages("mvtnorm")
+cluster <- read.delim("C:/Users/tharu/OneDrive/Desktop/Estadística/TERCERO/2º CUATRI/ÁREAS DE APLICACIÓN/cluster.txt")
+head(cluster)
+```
+
+Vemos que existe una variable llamada "pais" que nos indica el nombre del mismo. A continuación, transformamos el dataframe para que esa variable nos indique el nombre de los registros, calculamos las distancias euclídeas entre las variables escaladas y representamos la matriz correspondiente. 
+
+```{r}
+#Transformamos el dataframe
+cluster<-data.frame(cluster[,-1], row.names = cluster$pais)
+head(cluster)
+
+#Calculamos las distancias
+distancias<-dist(scale(cluster), method = "euclidean")
+distancias
+
+#Vemos la matriz de distancias
+as.matrix(distancias)[1:5,1:5]
+```
+Una vez calculada esta matriz, realizamos sobre ella el Análisis Cluster. Lo realizaremos mediante 3 métodos: *complete*, *single* y *average*. 
+
+
+```{r}
+dist1 <- hclust(distancias, method = "complete"); dist1
+dist2 <- hclust(distancias, method = "single"); dist2
+dist3 <- hclust(distancias, method = "average"); dist3
+dist4<-hclust(distancias, method = "ward.D");dist4
+dist5<-hclust(distancias, method = "ward.D2");dist5
+dist6<-hclust(distancias, method = "centroid");dist6
+```
+
+Exponemos los gráficos calculados por estos métodos: 
+
+```{r}
+plot(dist1)
+abline(h=5,col="blue") #línea de corte azul
+plot(dist2)
+abline(h=4,col="blue") 
+plot(dist3)
+abline(h=4.5,col="blue")
+plot(dist4)
+abline(h=4.5,col="blue")
+plot(dist5)
+abline(h=5.5,col="blue")
+plot(dist6)
+abline(h=3,col="blue")
+```
+Según vemos en los gráficos que han sido ejecutados podemos sacar conclusiones sobre el númeo de clusters que queremos para cualquier método. Nos damos cuenta de que el gráfico generado por el método "single" es algo distinto y se presupone una dificultad añadida a la hora de interpretarlo, con resultados parecidos al método de los centroides. Seguidamente vemos a que grupo pertenece cada país, además de realizar gráficos más completos. 
+
+```{r}
+grp1 <- cutree(dist1, k = 6)
+head(grp1, n = 24); ## Esto se lo quitaria si luego haces ya la tabla
+grp2 <- cutree(dist2, k = 5)
+head(grp2, n = 24)
+grp3 <- cutree(dist3, k = 5)
+head(grp3, n = 24)
+grp4 <- cutree(dist6, k = 5)
+head(grp3, n = 24)
+grp5 <- cutree(dist6, k = 6)
+head(grp3, n = 24)
+grp6 <- cutree(dist6, k = 7)
+head(grp3, n = 24)
+
+```
+
+```{r}
+table(grp1)
+table(grp2)
+table(grp3)
+table(grp4)
+table(grp5)
+table(grp6)
+```
+
+```{r}
+C1<-cutree(dist1, k=6, h=NULL) #k es el número de cluster
+C1
+C2<-cutree(dist2, k=5, h=NULL) 
+C2
+C3<-cutree(dist3, k=5, h=NULL) 
+C3
+
+C11<-cutree(dist1, k=NULL, h=8) #O con distancia concreta
+C11
+C22<-cutree(dist2, k=NULL, h=8) 
+C22
+C33<-cutree(dist3, k=NULL, h=8) 
+C33
+```
+
+```{r}
+library(graphics)
+plot(as.dendrogram(dist1))
+rect.hclust(dist1, k = 6, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos<-rect.hclust(dist1, k = 6, border = 3:6)
+grupos
+
+plot(as.dendrogram(dist2))
+rect.hclust(dist2, k = 5, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos2<-rect.hclust(dist2, k = 5, border = 3:6)
+grupos2
+
+plot(as.dendrogram(dist3))
+rect.hclust(dist3, k = 5, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos3<-rect.hclust(dist3, k = 5, border = 3:6)
+grupos3
+
+
+plot(as.dendrogram(dist4))
+rect.hclust(dist4, k = 5, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos4<-rect.hclust(dist4, k = 5, border = 3:6)
+grupos4
+
+
+plot(as.dendrogram(dist5))
+rect.hclust(dist5, k = 6, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos5<-rect.hclust(dist5, k = 6, border = 3:6)
+grupos5
+
+plot(as.dendrogram(dist6))
+rect.hclust(dist6, k = 7, border = 3:6)
+#si lo guardamos en una lista nos devuelve los individuos de cada grupo
+grupos6<-rect.hclust(dist6, k = 7, border = 3:6)
+grupos6
+```
+
+Vemos que los modelos tienden a crear un cluster más o menos grande con respecto a los demás, esto posiblemente se deba a que gran parte de los países de la unión europea tienen una situación económico-política similar. También podemos representar estos cluster a través de otro tipo de gráficos: 
+
+```{r}
+library(ggplot2)
+library(igraph)
+library("factoextra")
+
+fviz_dend(dist1, cex = 1, type = c("circular"),ggtheme = theme_gray()) #circular
+fviz_dend(dist2, cex = 1, type = c("circular"),ggtheme = theme_gray()) 
+fviz_dend(dist3, cex = 1, type = c("circular"),ggtheme = theme_gray()) 
+fviz_dend(dist4, cex = 1, type = c("circular"),ggtheme = theme_gray())
+fviz_dend(dist5, cex = 1, type = c("circular"),ggtheme = theme_gray())
+fviz_dend(dist6, cex = 1, type = c("circular"),ggtheme = theme_gray())
+
+
+fviz_dend(dist1, cex = 1, type = c("phylogenic"),ggtheme = theme_gray()) #filogenetico
+fviz_dend(dist2, cex = 1, type = c("phylogenic"),ggtheme = theme_gray()) 
+fviz_dend(dist3, cex = 1, type = c("phylogenic"),ggtheme = theme_gray()) 
+fviz_dend(dist4, cex = 1, type = c("phylogenic"),ggtheme = theme_gray()) 
+fviz_dend(dist5, cex = 1, type = c("phylogenic"),ggtheme = theme_gray()) 
+```
+Podemos ver como las salidas de los diferentes métodos con estos gráficos no son muy distintas, solo las salidas de los métodos "single" y "centroid" parecen arrojar resultados más lineales y simétricos, posiblemente debido a su estructura escalonada. El siguiente paquete nos puede servir para representar de una forma distinta lo ya antes mencionado.
+
+```{r}
+library(cluster)
+
+cluster.2 <- agnes(x = cluster, # datos
+stand = TRUE,
+metric = "euclidean",
+method = "complete"
+)
+print(cluster.2)
+plot(cluster.2)
+
+cluster.3 <- agnes(x = cluster, # datos
+stand = TRUE,
+metric = "euclidean",
+method = "single"
+)
+print(cluster.3)
+plot(cluster.3)
+
+cluster.4 <- agnes(x = cluster, # datos
+stand = TRUE,
+metric = "euclidean",
+method = "average"
+)
+print(cluster.4)
+plot(cluster.4)
+
+
+cluster.5 <- agnes(x = cluster, # datos
+stand = TRUE,
+metric = "euclidean",
+method = "ward"
+)
+print(cluster.5)
+plot(cluster.5)
+```
+
+## Comparación de dendogramas
+
+A continuación vamos a proceder a comparar los diferentes tipos de análisis hechos: 
+
+```{r}
+library(dendextend)
+
+dendograma1 <- as.dendrogram (dist1)
+dendograma2 <- as.dendrogram (dist2)
+dendograma3 <- as.dendrogram (dist3)
+dendograma4 <- as.dendrogram (dist4)
+dendograma5 <- as.dendrogram (dist5)
+dendograma6 <- as.dendrogram (dist6)
+```
+
+```{r}
+listadendogramas <- dendlist(dendograma1, dendograma2)
+dendlist(dendograma1, dendograma2) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+listadendogramas <- dendlist(dendograma1, dendograma3)
+dendlist(dendograma1, dendograma3) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+listadendogramas <- dendlist(dendograma1, dendograma4)
+dendlist(dendograma1, dendograma4) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+
+listadendogramas <- dendlist(dendograma1, dendograma5)
+dendlist(dendograma1, dendograma5) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+listadendogramas <- dendlist(dendograma1, dendograma6)
+dendlist(dendograma1, dendograma6) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+
+listadendogramas <- dendlist(dendograma2, dendograma3)
+dendlist(dendograma2, dendograma3) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+listadendogramas <- dendlist(dendograma2, dendograma4)
+dendlist(dendograma2, dendograma4) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+
+listadendogramas <- dendlist(dendograma2, dendograma5)
+dendlist(dendograma2, dendograma5) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+listadendogramas <- dendlist(dendograma2, dendograma6)
+dendlist(dendograma2, dendograma6) %>%
+  untangle(method = "step1side") %>% 
+  tanglegram()
+
+```
+
+
+
+```{r}
+dendlist(dendograma1, dendograma2) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma1, dendograma3) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma1, dendograma4) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma1, dendograma5) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma1, dendograma6) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma2, dendograma3) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma2, dendograma4) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma2, dendograma5) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma2, dendograma6) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma3, dendograma5) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma3, dendograma6) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma4, dendograma5) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma5, dendograma6) %>%
+untangle(method = "step1side") %>%
+entanglement()
+```
+
+
+Siguiendo las comparaciones mostradas anteriormente podemos ver como las parejas "single"-"wardD", "single"-"wardD2" y "average"-"wardD2" son los que mayor valores tienen y, por lo tanto, mejores; en contraposicion tenemos que el menor valor de todos (0) es entre la pareja "ward"-"wardD2". Podíamos intuir esto de una manera más o menos clara en los gráficos de los dendogramas por separado ya que tenía una forma mucho menos interpretable. Podemos realizar este mismo análisis a través de muestras aleatorias de los datos.
+
+```{r}
+set.seed(123)
+muestra <- sample(1:24, 12) #muestra de tamaño 12
+cluster2 <- cluster[muestra,1:11]
+distancias2 <- dist(cluster2, method = "euclidean")
+```
+
+```{r}
+clustermuestra1<- hclust(distancias2, method = "complete")
+clustermuestra2 <- hclust(distancias2, method = "single")
+clustermuestra3 <- hclust(distancias2, method = "average")
+clustermuestra4<- hclust(distancias2, method = "ward")
+clustermuestra5 <- hclust(distancias2, method = "ward.D2")
+clustermuestra6 <- hclust(distancias2, method = "centroid")
+
+
+dendograma11 <- as.dendrogram (clustermuestra1)
+dendograma22 <- as.dendrogram (clustermuestra2)
+dendograma33 <- as.dendrogram (clustermuestra3)
+dendograma44 <- as.dendrogram (clustermuestra4)
+dendograma55 <- as.dendrogram (clustermuestra5)
+dendograma66 <- as.dendrogram (clustermuestra6)
+
+#lista con los dos dendogramas
+dend_list <- dendlist(dendograma11, dendograma22)
+dendlist(dendograma11, dendograma22) %>% 
+untangle(method = "step1side") %>%
+tanglegram()
+
+dend_list <- dendlist(dendograma11, dendograma33)
+dendlist(dendograma11, dendograma33) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+dend_list <- dendlist(dendograma11, dendograma44)
+dendlist(dendograma11, dendograma44) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+dend_list <- dendlist(dendograma11, dendograma55)
+dendlist(dendograma11, dendograma55) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma11, dendograma66)
+dendlist(dendograma11, dendograma66) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+dend_list <- dendlist(dendograma22, dendograma33)
+dendlist(dendograma11, dendograma22) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+dend_list <- dendlist(dendograma22, dendograma44)
+dendlist(dendograma11, dendograma44) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+dend_list <- dendlist(dendograma22, dendograma55)
+dendlist(dendograma11, dendograma55) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+dend_list <- dendlist(dendograma22, dendograma66)
+dendlist(dendograma11, dendograma66) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma33, dendograma44)
+dendlist(dendograma33, dendograma44) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma33, dendograma55)
+dendlist(dendograma33, dendograma55) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma33, dendograma66)
+dendlist(dendograma33, dendograma66) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma44, dendograma55)
+dendlist(dendograma44, dendograma55) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+dend_list <- dendlist(dendograma44, dendograma66)
+dendlist(dendograma44, dendograma66) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+dend_list <- dendlist(dendograma55, dendograma66)
+dendlist(dendograma55, dendograma66) %>%
+untangle(method = "step1side") %>% 
+tanglegram()
+
+
+
+#entaglement 
+dendlist(dendograma11, dendograma22) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma11, dendograma33) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma11, dendograma44) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma11, dendograma55) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma11, dendograma66) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma22, dendograma33) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma22, dendograma44) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma22, dendograma55) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma22, dendograma66) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma33, dendograma44) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma33, dendograma55) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+dendlist(dendograma33, dendograma66) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma44, dendograma55) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+dendlist(dendograma44, dendograma66) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+
+
+dendlist(dendograma55, dendograma66) %>%
+untangle(method = "step1side") %>%
+entanglement()
+```
+
+## Número óptimo de clusters
+
+```{r}
+library(clValid)
+#install.packages("clValid")
+
+comparar1 <- clValid(cluster2, nClust = 2:6,
+                    clMethods = c("hierarchical","kmeans","pam", "diana"),
+                    method = "complete",
+                    validation = "stability")
+summary(comparar1)
+plot(comparar1)
+
+comparar2 <- clValid(cluster2, nClust = 2:6,
+                     clMethods = c("hierarchical","kmeans","pam", "diana"),
+                     method = "single",
+                     validation = "stability")
+summary(comparar2)
+plot(comparar2)
+
+comparar3 <- clValid(cluster2, nClust = 2:6,
+                     clMethods = c("hierarchical","kmeans","pam", "diana"),
+                     method = "average",
+                     validation = "stability")
+summary(comparar3)
+plot(comparar3)
+
+
+
+comparar4 <- clValid(cluster2, nClust = 2:6,
+                     clMethods = c("hierarchical","kmeans","pam", "diana"),
+                     method = "ward",
+                     validation = "stability")
+summary(comparar4)
+plot(comparar4)
+
+
+```
+
+Vemos que para todos los análisis nos piden un número de 6 clusters. Seguiremos con lo planteado desde el principio porque nos parece un número óptimo de clusters y no haremos caso a esta recomendación. 
+
+
+## Idondeidad del modelo
+
+Vamos a pasar a la parte en la que calcularemos que método es el más eficaz para estos datos. 
+
+```{r}
+coecof1<- cophenetic(dist1)
+coecof2<- cophenetic(dist2)
+coecof3<- cophenetic(dist3)
+coecof4<- cophenetic(dist4)
+coecof5<- cophenetic(dist5)
+coecof6<- cophenetic(dist6)
+
+list(c("complete",cor(distancias, coecof1)),
+c("single",cor(distancias, coecof2)),
+c("average",cor(distancias, coecof3)),
+c("ward",cor(distancias, coecof4)),
+c("wardD2",cor(distancias, coecof5)),
+c("centroid",cor(distancias, coecof6)))
+```
+
+Vemos que la salida más óptima es la de centroide. Podemos calcular además el grado de similitud entre lad distintas soluciones: 
+
+```{r}
+d1 <- as.dendrogram(hclust(distancias,method = "complete") )
+d2 <- as.dendrogram(hclust(distancias,method = "single") )
+d3 <- as.dendrogram(hclust(distancias,method = "average") )
+d4 <- as.dendrogram(hclust(distancias,method = "ward.D") )
+d5 <- as.dendrogram(hclust(distancias,method = "ward.D2") )
+d6 <- as.dendrogram(hclust(distancias,method = "centroid") )
+dend_list <- dendlist("Complete" = d1, "Single" = d2,
+"Average" = d3, "Ward" = d4, "Ward.D2" = d5, "Centroid" = d6)
+corelaciones <- cor.dendlist(dend_list)
+round(corelaciones, 2)
+```
+
+Vemos resultados similares a los conseguidos en la comparación de dendogramas. 
+
+```{r}
+library(corrplot)
+corrplot(corelaciones, "pie", "lower")
+```
+
+## Mapas de calor
+
+Los mapas de calor son útiles para ver de que manera se distribuyen los individuos en el cluster. 
+
+```{r}
+heatmap(scale(cluster), scale = "row")
+```
+
+## Método del codo para la eleccion de numero de clusters optimo
+ 
+```{r }
+library(NbClust)
+NC<-NbClust(cluster,distance="euclidean",min.nc=2,max.nc=8,method="ward.D",index="alllong")
+```
+
+
+
+## EJERCICIO 2
+
+Empezaremos leyendo las librerías y los datos:
+```{r}
+library("tinytex")
+library(MVA)
+library(mvtnorm)
+library(graphics)
+library(ggplot2)
+library(igraph)
+library(factoextra)
+library(cluster)
+library(dendextend)
+library(corrplot)
+library(clValid)
+library(NbClust)
+
+datos <- read.delim("C:/Users/tharu/OneDrive/Desktop/Estadística/TERCERO/2º CUATRI/ÁREAS DE APLICACIÓN/cluster2.txt")
+head(datos)
+```
+```{r}
+summary(datos)
+```
+
+Vemos un pequeño análisis estadístico, como su media, mínimo, etc.
+
+Primero, veamos y que tipo de dato es cada variable y si tiene valores perdidos.
+```{r}
+str(datos)
+```
+```{r}
+which(is.na(datos))
+```
+Como todos los datos son numéricos y no hay valores perdidos, continuamos con el análisis.
+
+
+Primero, vamos a calcular la matriz de distancias. La calcularemos con la distancia euclídea. Tambien al ser medidas diferentes tipificaremos.
+
+```{r}
+distancias<-dist(scale(datos[,-1]),method = "euclidean") #quitamos la variable provincia.
+distancias
+```
+
+A simple vista, la primera unión sera el individuo 4 con el 3, ya que es el valor mas pequeño.
+
+```{r}
+as.matrix(distancias)[1:5,1:5] #distancia por grupos
+```
+Una vez que tenemos la matriz de distancias, sobre ella es sobre la que se realiza el Análisis Cluster. Primero realizaremos el método de Ward.
+
+```{r}
+clusterS<-hclust(distancias, method = "ward.D")
+clusterS
+```
+La solución de este análisis cluster es por vía del dendograma, que es la representación gráfica de los grupos. Vamos a cortar, por ejemplo, a una distancia de h=7.
+
+```{r}
+plot(clusterS)
+abline(h=7,col="blue") #línea de corte azul
+```
+Nos quedamos con 5 grupos, ya que son los que cortan la línea.
+
+
+```{r}
+grp <- cutree(clusterS, k = 5)
+head(grp, n = 51)
+```
+Podemos ver a qué grupo pertenece cada individuo: el 1 al 1, el 2 al 2...
+
+```{r}
+table(grp)
+```
+Y, también podemos ver como el grupo que más individuos tiene es el 2, y el que menos el 5.
+
+Si por ejemplo quisiéramos hacerlo en cuatro cluster:
+
+```{r}
+C2<-cutree(clusterS, k=4, h=NULL) #k es el número de cluster
+C2
+```
+```{r}
+table(C2)
+```
+El grupo con más individuos sería el 2 y el que menos el 4.
+
+o a una distancia concreta, en este caso de 6:
+
+```{r}
+C3<-cutree(clusterS, k=NULL, h=6)
+C3
+```
+```{r}
+table(C3)
+```
+Los grupos con más individuos serían el 1 y el 3, y el que menos el 6.
+
+Otra forma de representar este dendograma es:
+
+```{r}
+plot(as.dendrogram(clusterS))
+rect.hclust(clusterS, k = 5, border = 3:6)
+grupos<-rect.hclust(clusterS, k = 5, border = 3:6)
+```
+
+En la que hemos encerrado cada grupo por un rectángulo de color, para poder identificarlos más fácil
+
+```{r}
+grupos
+```
+Podemos observar más fácilmente a qué grupo pertenece cada individuo.
+
+Más formas de representar los cluster son:
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("rectangle"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("circular"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("phylogenic"),ggtheme = theme_gray())
+```
+
+Ahora, utilizaremos otro paquete para realizar análisis cluster, con las ordenes diana y agnes, donde realizaremos un análisis cluster utilizando el método "DIANA".
+
+```{r}
+cluster4 <- diana(datos, stand = TRUE,metric = "euclidean" )
+print(cluster4)
+```
+```{r}
+plot(cluster4)
+```
+```{r}
+pltree(cluster4)
+```
+También usaremos los métodos gráficos del ggplot2
+```{r}
+fviz_dend(cluster4, cex = 0.6, k = 4)
+```
+
+Donde dividiríamos los individuos en 4 grupos, diferenciados por colores.
+
+```{r}
+cluster5 <- agnes(x = datos,
+stand = TRUE,
+metric = "euclidean",
+method = "ward"
+)
+plot(cluster5)
+
+```
+
+```{r}
+fviz_dend(cluster5, cex = 0.5,
+k = 4, # grupos
+palette = "jco" # Color
+)
+
+```
+
+Para determinar si la solución es correcta, tomaremos varios métodos de análisis y compararemos si las soluciones por diferentes métodos es la misma.
+
+```{r}
+clusteraverage<- hclust(distancias, method = "average")# cluster vecino más próximo
+clusterward.D <- hclust(distancias, method = "ward.D2")# cluster metodo de wardD2
+plot(clusteraverage)
+
+```
+
+```{r}
+plot(clusterward.D)
+```
+```{r}
+# creamos los 2 dendogramas
+dendograma1<- as.dendrogram (clusteraverage)
+dendograma2<- as.dendrogram (clusterward.D)
+#lista con los dos dendogramas
+listadendogramas <- dendlist(dendograma1, dendograma2)
+dendlist(dendograma1, dendograma2) %>%
+  untangle(method = "step1side") %>% #
+  tanglegram()           #si no estuvisese bien hecho saldria una linea cruzada
+```
+Hay líneas cruzadas, lo que significa que el análisis no está bien hecho.
+
+La orden entanglement da una medida de como se relacionan estos dendogramas. 
+```{r}
+dendlist(dendograma1, dendograma2) %>%
+untangle(method = "step1side") %>%
+entanglement()
+```
+Dado que no es 0, concluimos que no son iguales. Sin embargo, tomaremos muestras del conjunto de datos para comparar soluciones.
+
+```{r}
+set.seed(123)
+muestra <- sample(1:20, 10) #muestra de tamaño 10
+medidas2 <- datos[muestra,-1]
+distancias2 <- dist(medidas2, method = "euclidean")
+library(dendextend)
+clustermuestra1<- hclust(distancias2, method = "average")
+clustermuestra2 <- hclust(distancias2, method = "ward.D2")
+plot(clustermuestra1)
+
+```
+
+```{r}
+plot(clustermuestra2)
+```
+```{r}
+dendograma1 <- as.dendrogram (clustermuestra1)
+dendograma2 <- as.dendrogram (clustermuestra2)
+#lista con los dos dendogramas
+dend_list <- dendlist(dendograma1, dendograma2)
+dendlist(dendograma1, dendograma2) %>%
+untangle(method = "step1side") %>% #
+tanglegram()
+
+```
+```{r}
+dendlist(dendograma1, dendograma2) %>%
+untangle(method = "step1side") %>%
+entanglement()
+
+```
+Para una muestra de tamaño 10, las soluciones serían las mismas. Como es un tamaño bastante pequeño no podemos concluir nada.
+
+Para determinar el número optimo de cluster existen varios procedimientos:
+```{r}
+comparar <- clValid(medidas2, nClust = 2:6,
+clMethods = c("hierarchical","kmeans","pam", "diana"),
+method = "average",
+validation = "stability")
+summary(comparar)
+
+```
+
+Por estos métodos decidiríamos por 2 cluster.
+```{r}
+plot(comparar)
+```
+
+Ahora, vamos a calcular la correlación entre la matriz de distancias inicial y la matriz cofenética, para determinar qué método de análisis cluster es más óptimo.
+
+```{r}
+coecof<- cophenetic(clusterS)
+cor(distancias, coecof)
+```
+Cuanto mayor sea este coeficiente mejor será el análisis. Por ejemplo si queremos comparar diferentes métodos podemos hacer:
+
+```{r}
+dend1 <- hclust(distancias, method = "complete")
+dend2 <- hclust(distancias, method = "single")
+dend3 <- hclust(distancias, method = "average")
+dend4 <- hclust(distancias, method = "centroid")
+dend5 <- hclust(distancias, method = "ward.D2")
+plot(dend1)
+```
+```{r}
+plot(dend2)
+```
+
+```{r}
+plot(dend3)
+```
+
+```{r}
+plot(dend4)
+```
+
+```{r}
+plot(dend5)
+```
+
+```{r}
+coecof<- cophenetic(clusterS)
+coecof1<- cophenetic(dend1)
+coecof2<- cophenetic(dend2)
+coecof3<- cophenetic(dend3)
+coecof4<- cophenetic(dend4)
+coecof5<- cophenetic(dend5)
+list(c("wardD2",cor(distancias, coecof)),
+     c("complete",cor(distancias, coecof1)),
+     c("single",cor(distancias, coecof2)),
+     c("average",cor(distancias, coecof3)),
+     c("centroid",cor(distancias, coecof4)),
+     c("ward.D2",cor(distancias, coecof5))) 
+```
+Vemos que el valor más alto no es con el que trabajamos al principio, sino "centroid".
+
+Por lo que deberíamos interpretar esas salidas con 2 cluster que fue nuestra la decisión optima de cluster:
+
+```{r}
+plot(dend4)
+```
+```{r}
+fviz_dend(dend4, cex = 1, type = c("rectangle"),ggtheme = theme_gray(),k=2)
+
+```
+
+```{r}
+fviz_dend(dend3, cex = 1, type = c("circular"),ggtheme = theme_gray(),k=2)#
+```
+```{r}
+fviz_dend(dend3, cex = 1, type = c("phylogenic"),ggtheme = theme_gray(),k=2)
+```
+
+Si calculamos las correlaciones entre estos salidas podemos ver el grado de similitud entre las posibles soluciones (el valor 1 es que son idénticas)
+```{r}
+d <- as.dendrogram(hclust(distancias, method = "ward.D2") )
+d1 <- as.dendrogram(hclust(distancias,method = "complete") )
+d2 <- as.dendrogram(hclust(distancias,method = "single") )
+d3 <- as.dendrogram(hclust(distancias,method = "average") )
+d4 <- as.dendrogram(hclust(distancias,method = "centroid"))
+d5 <- as.dendrogram(hclust(distancias,method = "ward.D"))
+dend_list <- dendlist("ward.d"=d, "Complete" = d1, "Single" = d2,
+"Average" = d3, "Centroid" = d4, "ward.D"=d5)
+corelaciones <- cor.dendlist(dend_list)
+round(corelaciones, 2)
+```
+```{r}
+corrplot(corelaciones, "pie", "lower")
+```
+Como podemos observar, las soluciones con máyor grado de similitud son "Ward.D" y "ward.d", es decir, que la estructura de clusters es similar (tiene sentido, ya que son similares), y las que tienen menor grado de similitud son "ward.d" y "centroid"
+
+Finalmente, realizamos el mapa de calor donde se marca el análisis cluster y cómo se van uniendo los individuos:
+
+```{r}
+heatmap(scale(datos[,-1]), scale = "row")
+```
+
+```{r}
+NC<-NbClust(scale(datos[,-1]),distance="euclidean",min.nc=2,max.nc=6,
+method="average",index="alllong")
+
+```
+```{r}
+NC$All.index
+```
+```{r}
+NC$Best.nc
+```
+```{r}
+NC$Best.partition
+```
+
+
+A continuación, para concluir, vamos a realizar un análisis cluster por vários métodos más. Empezaremos por el método complete: 
+
+```{r}
+clusterS<-hclust(distancias, method = "complete")
+clusterS
+plot(clusterS)
+abline(h=4,col="red") #línea de corte rojo en h=4
+```
+Nos quedamos con 5 grupos, ya que son los que cortan la línea.
+
+
+```{r}
+grp <- cutree(clusterS, k = 5)
+head(grp, n = 51)
+```
+Podemos ver a qué grupo pertenece cada individuo: el 1 al 1, el 2 al 1... (ya difiere del análisis "Ward.D)
+
+```{r}
+table(grp)
+```
+Observamos que el grupo 1 y 2 tienen los mismos individuos.
+
+Otra forma de representar este dendograma es:
+
+```{r}
+plot(as.dendrogram(clusterS))
+rect.hclust(clusterS, k = 5, border = 3:6)
+grupos<-rect.hclust(clusterS, k = 5, border = 3:6)
+```
+
+En la que hemos encerrado cada grupo por un rectángulo de color, para poder identificarlos más fácil
+
+```{r}
+grupos
+```
+Podemos observar más fácilmente a qué grupo pertenece cada individuo.
+
+Más formas de representar los cluster son:
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("rectangle"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("circular"),ggtheme = theme_gray())#
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("phylogenic"),ggtheme = theme_gray())
+```
+
+
+
+
+
+
+Donde dividiríamos los individuos en 4 grupos, diferenciados por colores.
+
+```{r}
+cluster5 <- agnes(x = datos,
+stand = TRUE,
+metric = "euclidean",
+method = "complete"
+)
+plot(cluster5)
+```
+
+```{r}
+fviz_dend(cluster5, cex = 0.5,
+k = 4, # grupos
+palette = "jco" # Color
+)
+
+```
+Ahora, vamos a realizar un análisis cluster por el método single: 
+
+```{r}
+clusterS<-hclust(distancias, method = "single")
+clusterS
+plot(clusterS)
+abline(h=1.5,col="red") #línea de corte rojo en h=1.5
+```
+Es imposible saber cuantos grupos corta la línea, así que nos quedaremos por ejemplo con 8:
+```{r}
+grp <- cutree(clusterS, k = 8)
+head(grp, n = 51)
+```
+```{r}
+plot(as.dendrogram(clusterS))
+rect.hclust(clusterS, k = 8, border = 3:6)
+grupos<-rect.hclust(clusterS, k = 8, border = 3:6)
+```
+Observamos que la mayoría de individuos pertenecen al grupo 1, por lo que este método sería poco eficiente.
+
+Más formas de representar los cluster son:
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("rectangle"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("circular"),ggtheme = theme_gray())#
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("phylogenic"),ggtheme = theme_gray())
+```
+Continuamos con el metódo average
+```{r}
+clusterS<-hclust(distancias, method = "average")
+clusterS
+plot(clusterS)
+abline(h=1.3,col="red") #línea de corte rojo en h=1.3
+```
+Nos quedamos con 3 grupos, ya que son los que cortan la línea.
+
+
+```{r}
+grp <- cutree(clusterS, k = 3)
+head(grp, n = 51)
+```
+Podemos ver a qué grupo pertenece cada individuo: el 1 al 1, el 2 al 1... 
+
+```{r}
+table(grp)
+```
+Observamos que destaca sobre todo el grupo 1, muy por encima del 3.
+
+Otra forma de representar este dendograma es:
+
+```{r}
+plot(as.dendrogram(clusterS))
+rect.hclust(clusterS, k = 3, border = 3:6)
+grupos<-rect.hclust(clusterS, k = 3, border = 3:6)
+```
+
+En la que hemos encerrado cada grupo por un rectángulo de color, para poder identificarlos más fácil
+
+```{r}
+grupos
+```
+
+Podemos observar más fácilmente a qué grupo pertenece cada individuo.
+
+Más formas de representar los cluster son:
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("rectangle"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("circular"),ggtheme = theme_gray())#
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("phylogenic"),ggtheme = theme_gray())
+```
+
+
+
+
+
+Donde dividiríamos los individuos en 4 grupos, diferenciados por colores.
+
+```{r}
+cluster5 <- agnes(x = datos,
+stand = TRUE,
+metric = "euclidean",
+method = "average"
+)
+plot(cluster5)
+```
+
+```{r}
+fviz_dend(cluster5, cex = 0.5,
+k = 3, # grupos
+palette = "jco" # Color
+)
+
+```
+Para concluir, realizaremos el método Ward.D2
+
+```{r}
+clusterS<-hclust(distancias, method = "ward.D2")
+clusterS
+plot(clusterS)
+abline(h=4,col="red") #línea de corte rojo en h=4
+```
+Nos quedamos con 7 grupos, ya que son los que cortan la línea.
+
+
+```{r}
+grp <- cutree(clusterS, k = 7)
+head(grp, n = 51)
+```
+Podemos ver a qué grupo pertenece cada individuo: el 1 al 1, el 2 al 2... 
+
+```{r}
+table(grp)
+```
+Observamos que destacan el 4 y el 1
+
+Otra forma de representar este dendograma es:
+
+```{r}
+plot(as.dendrogram(clusterS))
+rect.hclust(clusterS, k = 7, border = 3:6)
+grupos<-rect.hclust(clusterS, k = 7, border = 3:6)
+```
+
+En la que hemos encerrado cada grupo por un rectángulo de color, para poder identificarlos más fácil
+
+```{r}
+grupos
+```
+
+Podemos observar más fácilmente a qué grupo pertenece cada individuo.
+
+Más formas de representar los cluster son:
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("rectangle"),ggtheme = theme_gray())
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("circular"),ggtheme = theme_gray())#
+```
+
+```{r}
+fviz_dend(clusterS, cex = 1, type = c("phylogenic"),ggtheme = theme_gray())
+```
+
+
+
+
+
+Donde dividiríamos los individuos en 7 grupos, diferenciados por colores.
+
+
+```{r}
+fviz_dend(cluster5, cex = 0.5,
+k = 7, # grupos
+palette = "jco" # Color
+)
+
+```
